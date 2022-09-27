@@ -1,0 +1,1237 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 1366px;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+:root {
+    --default-color: #214E41;
+    --default-color-hover: #21cf9d;
+}
+
+
+/* Описание шапки */
+
+header {
+    padding: 35px 45px;
+    background-color: #fff;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 15% auto;
+}
+
+header h1 a {
+    color: var(--default-color);
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--default-color);
+    transition-duration: .3s;
+    white-space: nowrap;
+}
+
+header nav a:not(:first-child) {
+    margin-left: 50px;
+}
+
+header nav a:hover {
+    color: var(--default-color-hover);
+}
+
+header .other-content {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+header .other-content .options {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 30px;
+    align-items: center;
+}
+
+.options .link-get-demo {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    background-color: #43806C;
+    border: none;
+    position: relative;
+    text-align: center;
+    transition-duration: .3s;
+    white-space: nowrap;
+}
+
+.options .link-get-demo:hover {
+    background-color: var(--default-color-hover);
+}
+
+.options .option {
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    position: relative;
+    color: #214E41;
+    transition-duration: .3s;
+    text-decoration: none;
+}
+
+.options .option:hover {
+    color: var(--default-color-hover);
+}
+
+.options .option.do-login:hover::after {
+    color: var(--default-color-hover);
+}
+
+.options .option.do-login::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/down_arrow.svg");
+    background-repeat: no-repeat;
+}
+
+/* Описание первого блока */
+.welcome-area {
+    background-image: url("../images/bg_welcome.jpg");
+    background-size: cover;
+    padding: 15rem 0;
+    position: relative;
+    display: grid;
+}
+
+.info-about-block {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 80%;
+    justify-self: center;
+}
+
+.block__info {
+    display: grid;
+    grid-row-gap: 40px;
+}
+
+.info-about-block .text__info {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--default-color);
+}
+
+.info-about-block .searching-block .invite-to-search {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--default-color);
+}
+
+.info-about-block .searching-block .search-field {
+    margin-top: 16px;
+}
+
+.info-about-block .searching-block .search-field {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.info-about-block .searching-block .search-field input {
+    width: 100%;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #222222;
+    outline: none;
+    border-radius: 6px 0 0 6px;
+    border: none;
+}
+
+.info-about-block .searching-block .search-field button {
+    border-radius: 0 6px 6px 0;
+    border: none;
+    background-color: #43806C;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.info-about-block .searching-block .search-field button:hover {
+    background-color: var(--default-color-hover);
+}
+
+.info-about-block .searching-block .search-field button p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+}
+
+/* Оформление блока с качествами */
+.qualities-block {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 45px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 1px 7px 5px rgba(232, 230, 230, 0.6);
+    width: 80%;
+    height: 170px;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    margin-left: -40%;
+    padding: 50px 80px;
+}
+
+.qualities-block .text-quality-block {
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-row-gap: 7px;
+    color: var(--default-color);
+}
+
+.qualities-block .text-quality-block .title-quality {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.qualities-block .text-quality-block .text-quality {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.quality {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+}
+
+.img-quality-block {
+    display: grid;
+    align-items: center;
+}
+
+/* Оформление блока "почему мы" */
+.why-our-company {
+    display: grid;
+    padding: 15rem 0;
+}
+
+.why-our-company .main-content {
+    width: 70%;
+    justify-self: center;
+}
+
+.title-brella {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #43806C;
+}
+
+.why-our-company .main-content .two-why-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 100px;
+    margin-top: 20px;
+}
+
+.why-our-company .main-content .two-why-blocks .line {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+}
+
+.why-our-company .main-content .info__why .big-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #214E41;
+    line-height: 46px;
+}
+
+.why-our-company .main-content .info__why .default-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    font-family: 'Raleway', sans-serif;
+    color: #757575;
+}
+
+.why-our-company .main-content .info__why {
+    display: grid;
+    grid-row-gap: 35px;
+}
+
+.why-our-company .main-content .stats__why {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    position: relative;
+}
+
+.why-our-company .main-content .stats__why .line {
+    width: 110%;
+    height: 2px;
+    background-color: #F0A446;
+    position: absolute;
+    top: 70%;
+    z-index: 100;
+}
+
+.why-our-company .main-content .stats__why .stats-text {
+    display: grid;
+    align-items: end;
+}
+
+.why-our-company .main-content .stats__why .stats-text .some-text {
+    display: grid;
+    grid-row-gap: 30px;
+}
+
+.why-our-company .main-content .stats__why .stats-text .big-nums {
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--default-color);
+}
+
+.why-our-company .main-content .stats__why .stats-text .default-text {
+    color: var(--default-color);
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.02px;
+}
+
+.why-our-company .main-content .stats__why .stats-text .default-text .underlined {
+    text-decoration: underline;
+}
+
+.why-our-company .main-content .stats__why .stats-graph {
+    margin-left: 50px;
+    position: relative;
+}
+
+.why-our-company .main-content .stats__why .stats-graph .rect {
+    background-color: #43806C;
+    display: block;
+    width: 80px;
+    position: relative;
+}
+
+.why-our-company .main-content .stats__why .stats-graph .rect.lower {height: 150px;}
+.why-our-company .main-content .stats__why .stats-graph .rect.bigger {height: 300px;}
+
+.why-our-company .main-content .stats__why .stats-graph .rects {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 40px;
+    align-items: end;
+}
+
+.why-our-company .main-content .stats__why .stats-graph .rect .amount {
+    position: absolute;
+    top: -20px;
+    color: var(--default-color);
+    left: 50%;
+    margin-left: -25%;
+    width: 50px;
+    text-align: center;
+}
+
+.why-our-company .main-content .stats__why .stats-graph .rect .rect-title{
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    left: 50%;
+    margin-left: -50px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    bottom: -50px;
+}
+
+.why-our-company .main-content .stats__why .text-outer {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+
+.why-our-company .main-content .stats__why .text-outer p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #757575;
+}
+
+/* Оформление блока с последними новостями */
+.brings {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.brings .block {
+    padding: 135px;
+}
+
+.brings .block:nth-child(1) {
+    background-color: #E3EEED;
+}
+
+.brings .block:nth-child(2) {
+    background-color: var(--default-color);
+}
+
+.brings .main-content__last-new .new {
+    margin-top: 30px;
+    font-size: 27px;
+    color: #43806C;
+    position: relative;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.brings .main-content__last-new .new:hover {
+    text-decoration: underline;
+}
+
+.brings .main-content__last-new .new.active {
+    color: var(--default-color);
+    font-weight: 700;
+}
+
+.new.active::after {
+    content: "";
+    background-image: url("../images/right_arrow.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 60px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.brings .main-content__last-new *:not(:first-child) {
+    margin-top: 23px;
+}
+
+.brings .main-content__last-new p {
+    font-size: 27px;
+    font-weight: 400;
+    color: #43806C;
+}
+
+.brings .main-content__info-new {
+    overflow-y: hidden;
+}
+
+.news-line {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+}
+
+.brings .main-content__info-new .block-new {
+    opacity: 0;
+    height: 300px;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.brings .main-content__info-new .block-new.active {
+    display: grid;
+    grid-row-gap: 35px;
+    height: 300px;
+    opacity: 1;
+}
+
+.brings .main-content__info-new p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #fff;
+}
+
+.block.info-brings {
+    display: grid;
+    align-content: center;
+}
+
+
+/* Оформление блока с планом */
+.our-plan {
+    display: grid;
+    padding: 10rem 0;
+}
+
+.our-plan .content-plan {
+    width: 80%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 85px;
+}
+
+.title-brella.bold {
+    font-weight: 700;
+    color: #43806C;
+}
+
+.title-brella.bold.bolder {
+    font-weight: 900;
+}
+
+.info-text__plan {
+    margin-top: 20px;
+}
+
+.default-text-plan {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 35px;
+    color: #757575;
+}
+
+.our-plan .content-plan .big-text {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--default-color);
+    line-height: 40px;
+}
+
+.our-plan .img-block {
+    display: block;
+    height: 100%;
+    background-image: url("../images/our_plan.png");
+    background-size: cover;
+}
+
+.numbers-block {
+    margin-top: 100px;
+    width: 80%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-column-gap: 25px;
+}
+
+.numbers-block .num-block {
+    display: grid;
+    grid-row-gap: 15px;
+}
+
+.numbers-block .num-block .head-number {
+    color: #F0A446;
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.numbers-block .num-block .head-number.letter-spacing {
+    letter-spacing: -12px;
+}
+
+.numbers-block .num-block .text-number {
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--default-color);
+}
+
+/* Описание блока с гифкой и опытом работы с компанией */
+.gif-experience {
+    display: grid;
+}
+
+.content-block__gif-experience {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 80%;
+    justify-self: center;
+}
+
+.text-exp {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.text-exp .big-text {
+    font-weight: 700;
+    font-size: 35px;
+    color: var(--default-color);
+}
+
+.text-exp .default-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02px;
+    margin-top: 35px;
+}
+
+.special-p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02px;
+    color: var(--default-color);
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.special-p:hover {
+    color: var(--default-color-hover);
+}
+
+.special-p:hover::before {
+    background-color: var(--default-color-hover);
+}
+
+.special-p::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: var(--default-color);
+    position: absolute;
+    left: 50%;
+    margin-left: -45%;
+    bottom: -5px;
+    transition-duration: .3s;
+}
+
+.play-block {
+    margin-top: 25px;
+}
+
+.gif-block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gif-block img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Описание блока для соискателей */
+.for-employers {
+    display: grid;
+    padding: 10rem 0;
+    background-image: url("../images/bg_employers.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content__for-employers {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 80%;
+    justify-self: center;
+}
+
+.text__for-employers {
+    margin-top: 20px;
+}
+
+.text__for-employers .big-text {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--default-color);
+}
+
+.text__for-employers .default-text {
+    margin-top: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02px;
+    color: #757575;
+}
+
+.special-block {
+    margin-top: 25px;
+}
+
+/* Описание блока с компаниями */
+.backed-by {
+    padding: 10rem 0;
+    display: grid;
+    position: relative;
+}
+
+.block-under-line {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    right: 50%;
+    margin-right: -47.5%;
+    display: block;
+    height: 1px;
+    width: 95%;
+    background-color: #C7C7C75E;
+}
+
+.backed-by .big-title-block {
+    display: grid;
+    justify-content: center;
+}
+
+.backed-by .big-title-block .big-title__text {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--default-color);
+    white-space: nowrap;
+}
+
+.global-container-slider {
+    margin-top: 7rem;
+    padding: 0 7rem;
+    justify-self: center;
+    position: relative;
+}
+
+.slider {
+    height: 70px;
+    overflow-x: hidden;
+}
+
+.slider-block {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 80px;
+}
+
+.slider-block .block {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.slider-line {
+    display: flex;
+    position: relative;
+    transition-duration: .3s;
+    left: 0;
+}
+
+.controller {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    color: var(--default-color);
+    transition-duration: .3s;
+}
+
+.controller.prev {
+    left: 2rem;
+}
+
+.controller.next {
+    right: 2rem;
+}
+
+.controller:hover {
+    color: var(--default-color-hover);
+}
+
+/* Описание блока с объявлениями */
+.adv-section {
+    padding: 10rem 0;
+    display: grid;
+}
+
+.adv__content {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-column-gap: 40px;
+    width: 80%;
+    justify-self: center;
+}
+
+.adv__block {
+    display: grid;
+    grid-template-rows: 250px auto;
+    grid-row-gap: 20px;
+}
+
+.adv__block .type {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05px;
+    color: #43806C;
+    text-transform: uppercase;
+}
+
+.adv__block .link {
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--default-color);
+    line-height: 26px;
+}
+
+.adv__block .link:hover {
+    text-decoration: underline;
+}
+
+.adv__text {
+    display: grid;
+    grid-row-gap: 15px;
+}
+
+/* Описание блока с приглашением */
+.explore-solution {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.for-bg-block {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/invite_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.invite-block {
+    background-color: #E3EEED;
+    display: grid;
+    padding: 10rem;
+}
+
+.invite-container-text {
+    display: grid;
+}
+
+.invite__container-text .big-text {
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 46px;
+    color: var(--default-color);
+}
+
+.invite__container-text .big-text:not(:first-child) {
+    margin-top: 45px;
+}
+
+.accept-block {
+    margin-top: 60px;
+}
+
+.accept__link {
+    background-color: #43806C;
+    border-radius: 6px;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.02px;
+    text-align: center;
+    transition-duration: .3s;
+}
+
+.accept__link:hover {
+    background-color: var(--default-color-hover);
+}
+
+/* Описание подвала сайта */
+footer {
+    background-color: var(--default-color);
+    display: grid;
+    grid-template-areas: 
+        "top-footer"
+        "middle-line"
+        "bottom-footer"
+    ;
+    padding: 100px 120px 50px 120px;
+    color: #fff;
+    position: relative;
+}
+
+.top-footer {
+    grid-area: top-footer;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 5rem;
+    padding-bottom: 95px;
+}
+
+.top-footer .left-block {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 110px;
+}
+
+.top-footer .logo .big-logo {
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.top-footer .links {
+    font-family: 'Raleway', sans-serif;
+}
+
+.top-footer .links .title-links {
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.02px;
+    white-space: nowrap;
+}
+
+.top-footer .links a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    text-decoration: none;
+    display: block;
+}
+
+.top-footer .links a:hover {
+    text-decoration: underline;
+}
+
+.top-footer .links a {
+    margin-top: 15px;
+}
+
+.top-footer .right-block {
+    display: grid;
+    font-family: 'Raleway', sans-serif;
+}
+
+.top-footer .right-block .title {
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.top-footer .right-block .text {
+    margin-top: 19px;
+}
+
+.input-email-block {
+    margin-top: 16px;
+    position: relative;
+}
+
+.input-email-block input {
+    padding: 22px;
+    background-color: var(--default-color);
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    width: 90%;
+}
+
+.input-email-block input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.input-email-block .search {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-color: #fff;
+    right: 50px;
+    top: 0;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.social-medias-links {
+    margin-top: 30px;
+}
+
+.social-medias-links a {
+    text-decoration: none;
+    transition-duration: .3s;
+}
+
+.social-medias-links a:not(:first-child) {
+    margin-left: 25px;
+}
+
+.social-medias-links a:hover {
+    opacity: .5;
+}
+
+.line-middle-footer {
+    grid-area: middle-line;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+}
+
+.bottom-footer {
+    grid-area: bottom-footer;
+    display: grid;
+    margin-top: 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-bottom .default-text:not(:first-child) {
+    margin-top: 20px;
+}
+
+.special-info {
+    margin-top: 90px;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.special-info .copyright {
+    justify-self: start;
+}
+
+.special-info .links {
+    justify-self: end;
+}
+
+.special-info .links a {
+    color: #fff;
+    text-decoration: none;
+    transition-duration: .3s;
+}
+
+.special-info .links a:hover {
+    color: #757575;
+}
+
+@media (max-width: 750px) {
+    .info-about-block {
+        grid-template-columns: unset;
+        width: 40%;
+    }
+
+    header {
+        grid-template-columns: 5% auto;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header nav a {
+        font-size: 22px;
+    }
+
+    header nav a {
+        margin-left: 5rem;
+    }
+
+    header .other-content .options {
+        margin-left: 5rem;
+    }
+
+    .qualities-block .text-quality-block .title-quality {
+        font-size: 25px;
+    }
+
+    .qualities-block .text-quality-block .text-quality {
+        font-size: 20px;
+    }
+
+    .qualities-block {
+        height: 230px;
+        bottom: -150px;
+    }
+
+    .quality {
+        grid-column-gap: 30px;
+    }
+
+    .title-brella {
+        font-size: 26px;
+    }
+
+    .why-our-company .main-content .info__why .big-text {
+        font-size: 40px;
+    }
+
+    .why-our-company .main-content .info__why .default-text {
+        font-size: 22px;
+    }
+
+    .why-our-company .main-content .stats__why .stats-text .big-nums {
+        font-size: 80px;
+    }
+
+    .why-our-company .main-content .stats__why .stats-text .default-text {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .why-our-company .main-content .stats__why .line {
+        width: 50%;
+        right: -30px;
+    }
+    
+    .why-our-company .main-content .stats__why .rect .amount {
+        font-size: 20px;
+        top: -30px !important;
+        margin-left: -30% !important;
+    }
+
+    .why-our-company .main-content .stats__why .stats-graph .rect .rect-title {
+        font-size: 20px;
+    }
+
+    .why-our-company .main-content .stats__why .text-outer p {
+        font-size: 22px;
+    }
+
+    .brings .main-content__info-new p {
+        font-size: 22px;
+    }
+
+    .our-plan .content-plan .big-text {
+        font-size: 37px;
+    }
+
+    .default-text-plan {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    .numbers-block .num-block .head-number {
+        font-size: 75px;
+    }
+
+    .numbers-block .num-block .text-number {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .text-exp .big-text {
+        font-size: 37px;
+    }
+
+    .text-exp .default-text {
+        font-size: 27px;
+        line-height: 40px;
+    }
+    
+    .special-p {
+        font-size: 27px;
+    }
+
+    .text__for-employers .big-text {
+        font-size: 37px;
+    }
+
+    .text__for-employers .default-text {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    .adv__block .type {
+        font-size: 23px;
+    }
+
+    .adv__block .link {
+        font-size: 28px;
+    }
+
+    .accept__link {
+        font-size: 25px;
+    }
+
+    .top-footer .links .title-links {
+        font-size: 23px;
+    }
+
+    .top-footer .links a {
+        font-size: 23px;
+    }
+
+    .top-footer .right-block .title {
+        font-size: 23px;
+    }
+
+    .top-footer .right-block .text {
+        font-size: 23px;
+    }
+
+    .input-email-block input {
+        font-size: 23px;
+    }
+
+    .social-medias-links a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bottom-footer .default-text {
+        font-size: 23px;
+    }
+
+    .copyright {
+        font-size: 23px;
+    }
+    
+    .special-info .links a {
+        font-size: 23px;
+    }
+}
