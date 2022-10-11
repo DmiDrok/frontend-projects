@@ -26,3 +26,11 @@ main > * {
 main > *.showing {
     opacity: 1;
 }
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+}

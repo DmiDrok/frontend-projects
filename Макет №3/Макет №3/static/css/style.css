@@ -3,7 +3,7 @@
 body {
     font-family: 'Inter', sans-serif;
     min-width: 644px;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     margin: 0 auto;
     overflow-x: hidden;
 }
@@ -324,8 +324,11 @@ body.unscroll {
 }
 
 .what-we-can {
-    padding: 95px 155px;
     margin: 121px 0 0 0;
+}
+
+.what-we-can .container {
+    padding: 95px 155px;
 }
 
 .what-we-can .container {
@@ -377,7 +380,7 @@ body.unscroll {
     line-height: 27px;
 }
 
-.about-lessons {
+.about-lessons .container {
     padding: 95px 155px;
 }
 
@@ -474,8 +477,10 @@ body.unscroll {
 
 .included-items {
     background: #017CFF;
+}
+
+.included-items .container {
     padding: 95px 105px;
-    position: relative;
 }
 
 .included-items .square {
@@ -552,7 +557,7 @@ body.unscroll {
     text-align: center;
 }
 
-.course-curriculum {
+.course-curriculum .container {
     padding: 95px 300px;
 }
 
@@ -668,9 +673,8 @@ body.unscroll {
     margin-top: 16.89px;
 }
 
-.answers-on-questions {
+.answers-on-questions .container {
     padding: 120px 320px;
-    position: relative;
 }
 
 .answers-on-questions .items .item {
@@ -695,10 +699,12 @@ body.unscroll {
 }
 
 .tariffs {
-    padding: 122px 105px;
     background: #E48D8B;
     color: #fff;
-    position: relative;
+}
+
+.tariffs .container {
+    padding: 122px 105px;
 }
 
 .tariffs .container .title {
@@ -816,9 +822,8 @@ body.unscroll {
     bottom: 0;
 }
 
-.praises {
+.praises .container {
     padding: 96px 105px;
-    position: relative;
 }
 
 .praises .container .title {
@@ -1056,7 +1061,7 @@ body.unscroll {
         display: none;
     }
 
-    .on-points {
+    .on-points .container {
         padding: 90px 100px;
     }
 }
@@ -1076,7 +1081,7 @@ body.unscroll {
 }
 
 @media (max-width: 900px) {
-    .tariffs {
+    .tariffs .container {
         padding: 122px 45px;
     }
 
@@ -1088,11 +1093,11 @@ body.unscroll {
 }
 
 @media (max-width: 850px) {
-    .what-we-can {
+    .what-we-can .container {
         padding: 95px 50px;
     }
 
-    .about-lessons {
+    .about-lessons .container {
         padding: 95px 50px;
     }
 

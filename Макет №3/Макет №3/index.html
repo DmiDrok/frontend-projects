@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="static/css/prod.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>Макет №3</title>
 </head>
 <body>
+<section class="content">
     <!-- Предупреждение на самом верху -->
     <section class="notice">
         <p class="notice__text">
@@ -19,7 +20,7 @@
     <main>
         <!-- Шапка -->
         <header class="header">
-            <div class="header__container">
+            <div class="header__container container">
                 <h1 class="header__logo">Coursely</h1>
                 <p class="header__text">LAUNCH A SUCCESSFUL PODCAST</p>
                 <a href="#" class="header__btn-link link-enroll">Enroll Now</a>
@@ -114,10 +115,10 @@
 
         <!-- Блок "что включено" -->
         <section class="included-items">
-            <div class="square red"></div>
-            <div class="square blue"></div>
-
             <div class="container">
+                <div class="square red"></div>
+                <div class="square blue"></div>
+
                 <h3 class="title">What's Included?</h3>
                 <div class="items">
                     <div class="item">
@@ -324,9 +325,9 @@
 
         <!-- Ответы на вопросы -->
         <section class="on-points answers-on-questions">
-            <div class="square red"></div>
-
             <div class="container">
+                <div class="square red"></div>
+
                 <h3 class="title">The Course Curriculum</h3>
                 <div class="items themes">
                     <div class="item theme">
@@ -412,9 +413,8 @@
 
         <!-- Тарифы -->
         <section class="tariffs">
-            <div class="square blue"></div>
-
             <div class="container">
+                <div class="square blue"></div>
                 <h3 class="title">It's Time to Start Your Podcast</h3>
                 <div class="tariffs-chooses">
                     <div class="tariffs__essential tariff">
@@ -471,9 +471,8 @@
 
         <!-- Отзывы (похвалы) от студентов -->
         <section class="praises">
-            <div class="square blue"></div>
-
             <div class="container">
+                <div class="square blue"></div>
                 <h3 class="title">More Praise From our Students</h3>
 
                 <div class="items">
@@ -591,7 +590,7 @@
 
     <!-- Подвал -->
     <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container container">
             <div class="footer__left">
                 <h3 class="footer__logo">Coursely</h3>
                 <p class="text">The last landing page you'll ever need to launch your next course.</p>
@@ -621,6 +620,7 @@
             </div>
         </div>
     </footer>
+</section>
 
     <!-- Подключение JS-файла -->
     <script src="static/js/script.js"></script>
