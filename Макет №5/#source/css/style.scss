@@ -1,0 +1,523 @@
+// Импорт обнуляющих стилей
+@import "nullstyle.scss";
+
+// Импорт шрифтов
+@import "fonts.scss";
+
+
+$text-color: #E4E4E4;
+// $bg-medium: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+$bg-dark: #262626;
+$bg-medium: #3E3E3E;
+
+body {
+	font-family: "Arodora Pro";
+	overflow-x: hidden;
+	min-width: 1260px;
+}
+
+main {
+	min-height: 100%;
+	width: 100%;
+}
+
+// Описание приветственного блока
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $text-color;
+	background: $bg-dark;
+	// min-height: 100%;
+	// height: 100%;
+}
+
+.header {
+	padding: 40px 0;
+	display: flex;
+	justify-content: center;
+
+	.container {
+		max-width: 1110px;
+	}
+
+	.header__row {
+		display: flex;
+
+		.logo {
+			color: #fff;
+			display: flex;
+			align-items: center;
+
+			.logo__text {
+				margin: 0 0 0 10px;
+				font-size: 18px;
+				line-height: 18px;
+				font-weight: 400;
+				font-family: "Nico Moji";
+			}
+		}
+
+		.nav {
+			margin: 0 0 0 220px;
+			display: flex;
+			align-items: center;
+
+			.nav__link {
+				position: relative;
+				color: $text-color;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 21px;
+
+				&:not(:first-child) {
+					margin: 0 0 0 145px;
+				}
+
+				&.active::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 1px;
+					background-color: #E2A300;
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+				}
+			}
+		}
+	}
+}
+
+
+.welcome {
+	.container {
+		max-width: 1220px;
+		max-height: 523px;
+		overflow: hidden;
+	}
+
+	.welcome__row {
+		display: flex;
+		align-items: center;
+
+		.welcome__text {
+			font-family: "NEXT ART";
+			margin: 0 0 150px 0;
+
+			.head {
+				.big {
+					text-transform: uppercase;
+				}
+
+				.suptitle {
+					font-size: 48px;
+					font-weight: 600;
+					line-height: 54.4px;
+				}
+
+				.title {
+					font-size: 72px;
+					font-weight: 700;
+					line-height: 81.6px;
+				}
+			}
+
+			.content {
+				margin: 27px 0 0 0;
+
+				.subtitle {
+					font-family: "Arodora Pro";
+					font-size: 18px;
+					font-weight: 300;
+					line-height: 21px;
+				}
+
+				.contact {
+					margin: 27px 0 0 0;
+
+					.contact__button {
+						padding: 14px 40px;
+						font-size: 18px;
+						font-weight: 700;
+						color: #000;
+						line-height: 20.4px;
+						text-transform: uppercase;
+						background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+						box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+						cursor: pointer;
+						border-radius: 6px;
+						transition-duration: .3s;
+
+						&:hover {
+							box-shadow: 0px 2px 19px rgba(226, 158, 0, 0.8);
+						}
+
+						&:active {
+							box-shadow: 0px 2px 3px rgba(226, 158, 0, 0.1);
+						}
+					}
+				}
+			}
+		}
+
+		.welcome__image {
+			margin: 0 0 0 129px;
+			position: relative;
+			img {
+				width: 632px;
+				height: auto;
+			}
+		}
+	}
+}
+
+// Второй блок (умения / качества)
+.qualities {
+	padding: 113px 0;
+	background: $bg-medium;
+	display: flex;
+	justify-content: center;
+
+	.container {
+		// max-width: 1180px;
+	}
+
+	.qualities__row {
+		display: flex;
+		flex-direction: column;
+
+		.line {
+			display: flex;
+			justify-content: center;
+
+			&:not(:first-child) {
+				margin: 30px 0 0 0;
+			}
+
+			.block {
+				width: 270px;
+				height: 270px;
+				background-color: #2A2A2A;
+				border-radius: 29px;
+				box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+				display: flex;
+			    justify-content: center;
+			    align-items: center;
+
+				&:not(:first-child) {
+					margin: 0 0 0 40px;
+				}
+
+				.block__content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					color: $text-color;
+
+					.image {
+						width: 66px;
+						height: 66px;
+					}
+
+					.text {
+						font-size: 24px;
+						font-weight: 300;
+						line-height: 28.51px;
+						margin: 37px 0 0 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Блок о себе
+.about {
+	background: $bg-medium;
+	color: $text-color;
+	display: flex;
+	justify-content: center;
+	padding: 100px 0;
+
+	.container {
+		max-width: 1224px;
+
+		.about__row {
+			position: relative;
+
+			.circle {
+				position: absolute;
+			}
+
+			.circle_1 {
+				left: -550px;
+				top: -100px;
+			}
+
+			.circle_2 {
+				right: -370px;
+				top: -100px;
+			}
+
+			.circle_3 {
+				right: -370px;
+				bottom: -100px;
+			}
+
+			.about__info {
+				display: flex;
+
+				.about__image {
+					z-index: 100;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 330px;
+					height: 378px;
+					border-radius: 14px;
+					background: #2C2C2C;
+				}
+
+				.about__image_1 {
+					position: absolute;
+					top: -50px;
+					left: -300px;
+				}
+
+				.about__image_2 {
+					position: absolute;
+					bottom: -50px;
+					left: -300px;
+					width: 307px;
+					height: 339px;
+				}
+
+				.about__image_3 {
+					position: absolute;
+					right: -300px;
+					bottom: 50%;
+					margin-bottom: -215px;
+					width: 330px;
+					height: 485px;
+				}
+
+				.text-col {
+					width: 496px;
+					padding: 63px;
+					background: #2C2C2C;
+					border-radius: 14px;
+					position: relative;
+
+					h3 {
+						font-family: "NEXT ART";
+						font-size: 48px;
+						font-weight: 400;
+						line-height: 54px;
+						position: absolute;
+						top: -24px;
+					}
+
+					p {
+						font-size: 20px;
+						font-weight: 300;
+						line-height: 23.76px;
+						letter-spacing: 1%;
+						color: $text-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Блок - портфолио
+.portfolio {
+	display: flex;
+	justify-content: center;
+	background: $bg-dark;
+	color: $text-color;
+	padding: 100px 0 150px 0;
+
+	.container {
+		max-width: 1170px;
+	}
+
+	.portfolio__row {
+		.portfolio__title {
+			font-family: "NEXT ART";
+			font-size: 48px;
+			line-height: 54.4px;
+			text-transform: uppercase;
+			color: #fff;
+			text-align: center;
+		}
+
+		.outer-slider {
+			position: relative;
+
+			.slider__nav {
+				position: absolute;
+				background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				color: #fff;
+				top: 50%;
+				margin-top: -30px;
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&.prev {
+					left: -100px;
+				}
+
+				&.next {
+					right: -100px;
+				}
+			}
+		}
+
+		.slider {
+			background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+			box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+			border-radius: 29px;
+			width: 970px;
+			height: 600px;
+			margin: 50px 0 0 0;
+			position: relative;
+			overflow-x: hidden;
+
+			.slider__line {
+				position: relative;
+				display: flex;
+				left: 0;
+				transition: all ease 1s;
+			}
+
+			.slider__block {
+				padding: 50px;
+				display: flex;
+
+				.image-block {
+					img {
+						border-radius: 30px;
+					}
+				}
+
+				.text-block {
+					margin: 0 0 0 50px;
+					text-align: center;
+
+					.as-title {
+						font-weight: 300;
+						font-size: 24px;
+						line-height: 28.51px;
+					}
+
+					.as-text {
+						font-weight: 300;
+						font-size: 18px;
+						line-height: 21.38px;
+						margin: 30px 0 0 0;
+					}
+
+					.more-block {
+						margin: 30px 0 0 0;
+
+						.more__link {
+							color: #E2A100;
+							font-size: 18px;
+							font-weight: 300;
+							line-height: 21.38px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	background: $bg-medium;
+	color: $text-color;
+
+	.container {
+		max-width: 900px;
+		padding: 50px;
+	}
+
+	.footer__row {
+		display: flex;
+		.footer__col:not(:first-child) {
+			margin: 0 0 0 115px;
+		}
+
+		.footer__col {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+
+			.footer__link, .col__title {
+				color: $text-color;
+				font-weight: 300;
+				font-size: 18px;
+				line-height: 21px;
+
+				&.footer__link:hover {
+					text-decoration: underline;
+				}
+
+				&.col__title {
+					cursor: default;
+				}
+			}
+
+			.footer__link:not(:first-child) {
+				margin: 18px 0 0 0;
+			}
+
+			.footer__logo {
+				display: flex;
+				align-items: center;
+
+				.logo__text {
+					margin: 0 0 0 10px;
+					font-family: "Nico Moji";
+					font-weight: 400;
+					font-size: 18px;
+					color: #fff;
+				}
+			}
+
+			.copyright {
+				margin: 63px 0 0 0;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 21.38px;
+			}
+
+			&:nth-child(3) {
+				margin: 0 0 0 56px;
+			}
+
+			.anchor-up {
+				position: absolute;
+				top: 0;
+				right: -100px;
+				width: 60px;
+				height: 60px;
+				background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+		}
+	}
+}
