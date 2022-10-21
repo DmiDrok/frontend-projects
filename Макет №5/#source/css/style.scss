@@ -28,8 +28,6 @@ main {
 	align-items: center;
 	color: $text-color;
 	background: $bg-dark;
-	// min-height: 100%;
-	// height: 100%;
 }
 
 .header {
@@ -180,7 +178,7 @@ main {
 	justify-content: center;
 
 	.container {
-		// max-width: 1180px;
+		max-width: 1180px;
 	}
 
 	.qualities__row {

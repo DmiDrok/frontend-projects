@@ -285,6 +285,9 @@ main {
         -ms-flex-pack: center;
             justify-content: center;
 }
+.qualities .container {
+    max-width: 1180px;
+}
 .qualities .qualities__row {
     display: -webkit-box;
     display: -ms-flexbox;
