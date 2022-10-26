@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 350px;
+}
+
+.slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    position: relative;
+}
+.slider__line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.slider__block {
+    margin: 0px 10px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 10%;
+            flex: 0 1 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 32px;
+    -webkit-box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
+            box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
+    cursor: pointer;
+    -webkit-transition: -webkit-box-shadow ease 0.2s, -webkit-box-flex ease-in 0.5s;
+    transition: -webkit-box-shadow ease 0.2s, -webkit-box-flex ease-in 0.5s;
+    transition: box-shadow ease 0.2s, flex ease-in 0.5s;
+    transition: box-shadow ease 0.2s, flex ease-in 0.5s, -webkit-box-shadow ease 0.2s, -webkit-box-flex ease-in 0.5s, -ms-flex ease-in 0.5s;
+    overflow: hidden;
+}
+.slider__block:hover {
+    -webkit-box-shadow: 0 0 10px rgba(50, 50, 50, 0.7);
+            box-shadow: 0 0 10px rgba(50, 50, 50, 0.7);
+}
+.slider__block:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.slider__block img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 32px;
+    -webkit-transition: all ease 0.6s;
+    transition: all ease 0.6s;
+}
+.slider__block.active {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 80%;
+            flex: 0 1 80%;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+}
+.slider__block.active img {
+    max-width: 100%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.slider__nav {
+    position: absolute;
+    bottom: -50px;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.slider__nav .nav {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: orangered;
+    margin: 0 5px;
+    cursor: pointer;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.slider__nav .nav:hover {
+    -webkit-box-shadow: 0 0 5px rgba(50, 50, 50, 0.5);
+            box-shadow: 0 0 5px rgba(50, 50, 50, 0.5);
+}
+.slider__nav .nav:active {
+    background: yellow;
+}
+.slider__nav .nav.active {
+    background: yellow;
+}
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.loading img {
+    width: 100px;
+    height: 100px;
+}
