@@ -1,0 +1,14 @@
+.order {
+    padding: 18px 52px;
+    background: #FFCA42;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.57px;
+    text-transform: capitalize;
+    color: #1B3764;
+}
+
+.order.in-header {
+    margin: 0 0 0 51px;
+}

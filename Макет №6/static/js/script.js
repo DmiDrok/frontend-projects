@@ -1,0 +1,1 @@
+function setWelcomeBlockOnFullScreen(){var e=document.querySelector(".welcome"),t=document.querySelector(".welcome__right"),o=document.querySelector(".header"),l=window.innerHeight-parseFloat(getComputedStyle(o).height)-2*parseFloat(getComputedStyle(e).paddingTop);t.style.height=l+"px"}try{setWelcomeBlockOnFullScreen()}catch(e){console.error(e)}
