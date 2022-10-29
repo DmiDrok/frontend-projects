@@ -1,0 +1,1439 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Lato:wght@300;400;700;900&display=swap');
+// font-family: 'Cardo', serif;
+// font-family: 'Lato', sans-serif;
+
+
+@import "./nullstyle.scss";
+@import "./all.scss";
+
+$color-1: #e9e7e7;
+$color-2: #232323;
+
+html, body {
+    min-width: 320px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    // >* {
+    //     transition: opacity ease .5s;
+    //     opacity: 0;
+    // }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для шапки сайта
+.header {
+    background: $color-1;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        padding: 78.5px 115px 50px 115px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    &.hide {
+        .header__nav {
+            left: -9999px;
+        }
+
+        .header__button {
+            top: -9999px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 920px) {
+            flex-direction: column;
+
+            .header__button {
+                margin: 50px 0 0 0;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        
+        left: 0;
+        position: relative;
+        transition: all ease 1s;
+    }
+
+    &__button {
+        top: 0;
+        position: relative;
+        transition: all ease 1.5s;
+    }
+
+    &__link {
+        color: #858588;
+        font-family: Arial;
+        font-size: 17px;
+
+        &:not(:first-child) {
+            margin: 0 0 0 80px;
+
+            @media (max-width: 480px) {
+                margin: 0 0 0 40px;
+            }
+        }
+
+        &.active {
+            color: $color-2;
+            font-weight: bold;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для первого блока сайта
+.welcome {
+    background: $color-1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+
+    &.hide {
+        .welcome__text {
+            left: -9999px;
+        }
+
+        .welcome__image {
+            right: -9999px;
+        }
+    }
+
+    .left {
+        left: 0;
+        bottom: -370px;
+        width: 608px;
+        height: 849px;
+        opacity: 0.2;
+    }
+
+    .right {
+        right: 0;
+        bottom: -80px;
+        width: 120px;
+        height: 407px;
+    }
+
+    .container {
+        max-width: 1200px;
+        z-index: 1;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1110px) {
+            .welcome__text, .welcome__image {
+                flex: 0 1 50%;
+            }
+
+            .welcome__image img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            flex-direction: column-reverse;
+
+            .welcome__image {
+                margin: 0;
+
+                @media (max-width: 570px) {
+                    padding: 0 20px;
+                }
+            }
+
+            .welcome__text {
+                margin: 50px 0 0 0;
+                padding: 0 50px;
+            }
+        }
+    }
+
+    &__text {
+        transition: all ease .6s;
+        position: relative;
+        left: 0;
+
+        .as-title {
+            font-family: "Cardo", serif;
+            font-size: 81.5px;
+            font-weight: 700;
+            line-height: 81px;
+            letter-spacing: -0.025em;
+            color: $color-text;
+        }
+
+        .as-text {
+            margin: 35px 0 0 0;
+
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+            color: $color-text;
+        }
+
+        .action-btn {
+            margin: 45px 0 0 0;
+        }
+
+        @media (max-width: 490px) {
+            padding: 0 15px !important;
+            
+            .as-title {
+                font-size: 60px;
+            }
+
+            .action-btn {
+                margin: 45px auto 0 auto;
+            }
+        }
+    }
+
+    &__image {
+        margin: 0 0 0 110px;
+
+        transition: all ease .6s;
+        position: relative;
+        right: 0;
+
+        @media (max-width: 1240px) {
+            margin: 0 0 0 40px;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание блока с созданием воспоминаний
+.create {
+    background: $color-text;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &.hide {
+        .action-btn {
+            left: -9999px;
+        }
+
+        .as-title {
+            right: -9999px;
+        }
+
+        .as-text {
+            opacity: 0;
+            top: -9999px;
+        }
+
+        .zigzag.left {
+            left: -9999px;
+        }
+
+        .zigzag.right {
+            right: -9999px;
+        }
+    }
+
+    .zigzag {
+        transition: all ease .5s;
+
+        @media (max-width: 470px) {
+            max-width: 100%;
+            opacity: .7;
+        }
+
+        &.left {
+            left: 0;
+            top: 50px;
+        }
+
+        &.right {
+            right: 0;
+            bottom: 50px;
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 52px 0;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text-content {
+        max-width: 450px;
+        text-align: center;
+
+        .as-title {
+            font-family: "Cardo", serif;
+            font-size: 55.5px;
+            font-weight: 700;
+            line-height: 55px;
+            letter-spacing: -0.025em;
+            color: $color-1;
+
+            position: relative;
+            right: 0;
+            transition: right ease .5s;
+        }
+
+        .as-text {
+            margin: 33px 0 0 0;
+
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+            color: $color-1;
+
+            position: relative;
+            opacity: 1;
+            top: 0;
+            transition: opacity linear 1s, top ease .5s;
+        }
+
+        .action-btn {
+            margin: 37.5px auto 0 auto;
+            position: relative;
+            left: 0;
+            transition: left ease 1s;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для блока со статьями
+.articles {
+    display: flex;
+    justify-content: center;
+    background: $color-1;
+    padding: 167px 0;
+    position: relative;
+
+    &.hide {
+        .article:nth-child(1) {
+            left: -9999px;
+        }
+
+        .article:nth-child(3) {
+            right: -9999px;
+        }
+
+        .zigzag.left {
+            top: -9999px;
+        }
+
+        .zigzag.right {
+            right: -9999px;
+        }
+    }
+
+    .zigzag {
+        transition: all ease .5s;
+
+        &.left {
+            left: 0;
+            top: 20px;
+        }
+
+        &.right {
+            right: 0;
+            bottom: 30px;
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &__row {
+        display: flex;
+
+        @media (max-width: 1230px) {
+            padding: 0 30px;
+        }
+
+        @media (max-width: 780px) {
+            flex-direction: column;
+            align-items: center;
+
+            .article {
+                margin: 0;
+                width: 80%;
+
+                &__photo {
+                    align-self: center;
+                }
+
+                &:not(:first-child) {
+                    margin: 80px 0 0 0 !important;
+                }
+            }
+        }
+    }
+
+    .article {
+        display: flex;
+        flex: 1 1 33.333%;
+        flex-direction: column;
+
+        position: relative;
+        transition: all ease 1s;
+
+        &:nth-child(1) {
+            left: 0;
+        }
+
+        &:nth-child(3) {
+            right: 0;
+        }
+
+        &:not(:first-child) {
+            margin: 0 0 0 60px;
+        }
+
+        &__photo {
+            position: relative;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -30px;
+                background-color: #232323;
+                width: 52px;
+                height: 3px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &__about {
+            margin: 55px 0 0 0;
+        }
+
+        &__title {
+            font-family: "Cardo", serif;
+            font-size: 36.4px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: -0.025em;
+            color: #232323;
+        }
+
+        &__text {
+            margin: 36px 0 0 0;
+
+            font-weight: 400;
+            font-family: Lato;
+            font-size: 16.7px;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            color: #232323;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для блока с местами
+
+.places {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 100px 0 50px 0;
+    background: $color-1;
+
+    &.hide {
+        .places__title {
+            left: -9999px;
+
+            .zigzag {
+                left: -9999px;
+            }
+        }
+
+        .places__text {
+            right: -9999px;
+        }
+
+        >.zigzag {
+            right: -9999px;
+        }
+
+        .left-image {
+            left: -9999px;
+        }
+
+        .top-image {
+            right: -9999px;
+        }
+
+        .places__bottom {
+            .default {
+                right: -9999px;
+            }
+
+            .big {
+                right: -9999px;
+            }
+        }
+    }
+    
+    >.zigzag {
+        transition: all ease 1.5s;
+        right: 0;
+        opacity: .2;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__top {
+        text-align: center;
+        color: #232323;
+        position: relative;
+
+        .places__title {
+            font-family: "Cardo", serif;
+            font-weight: 700;
+            font-size: 97.7px;
+            line-height: 97px;
+            letter-spacing: -0.025em;
+            z-index: 1;
+
+            position: relative;
+            left: 0;
+            transition: all ease .5s;
+        
+            .zigzag {
+                left: 10px;
+                bottom: -170px;
+                max-width: 100%;
+                transition: all ease 1.5s;
+
+                @media (max-width: 1100px) {
+                    left: 50%;
+                    bottom: -310px;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .places__text {
+            margin: 62px 0 0 0;
+            font-family: Lato;
+            font-size: 25px;
+            line-height: 1.2;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            color: #232323;
+            z-index: 1;
+
+            position: relative;
+            right: 0;
+            transition: all ease 1s;
+        }
+    }
+
+    &__bottom {
+        margin: 250px 0 0 0;
+        display: flex;
+
+        @media (max-width: 1110px) {
+            flex-direction: column;
+
+            .right-content {
+                margin: 0 !important;
+                padding: 0 20px;
+            }
+
+            .left-image {
+                align-self: center;
+            }
+
+            .top-image {
+                display: none;
+            }
+        }
+
+        .left-image {
+            position: relative;
+            left: 0;
+            transition: all ease 2s;
+
+            @media (max-width: 650px) {
+                padding: 0 20px;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .zigzag {
+                left: 0px;
+                transform: translate(-50%, -50%);
+                top: 50%;
+            }
+        }
+
+        .top-image {
+            position: relative;
+            right: 0;
+            transition: all ease 2s;
+        }
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 0 43px;
+        }
+
+        .text-here {
+            display: flex;
+            margin: 80px 0 0 0;
+
+            p {
+               flex: 0 1 50%; 
+            }
+
+            .big {
+                font-family: "Cardo", serif;
+                font-weight: 700;
+                font-size: 36.4px;
+                line-height: 50px;
+                text-decoration: underline;
+                letter-spacing: -0.025em;
+                color: #232323;
+
+                position: relative;
+                right: 0;
+                transition: all ease 2s;
+            }
+
+            .default {
+                font-weight: 400;
+                font-size: 16.7px;
+                line-height: 1.2;
+                font-weight: 400;
+                letter-spacing: -0.025em;
+                color: #232323;
+                margin: 0 0 0 46px;
+
+                display: flex;
+                flex-direction: column;
+
+                position: relative;
+                right: 0px;
+                transition: all ease 2.5s;
+            }
+
+            @media (max-width: 480px) {
+                flex-direction: column;
+                align-items: center;
+
+                .default {
+                    margin: 40px 0;
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для блока с мотивацией
+
+.motivation {
+    display: flex;
+    justify-content: center;
+    background: $color-text;
+    position: relative;
+
+    &.hide {
+        .motivation__title {
+            left: -9999px;
+        }
+
+        .motivation__rows .row {
+            left: -9999px;
+        }
+
+        .motivation__photo {
+            right: -9999px;
+        }
+
+        .zigzag {
+            left: -9999px;
+        }
+    }
+
+    .zigzag {
+        max-width: 100%;
+
+        left: 0;
+        bottom: 0;
+        transition: all ease 1s;
+    }
+
+    .container {
+        padding: 150px 0;
+        max-width: 1440px;
+
+        @media (max-width: 1400px) {
+            padding: 150px 30px;
+        }
+    }
+
+    &__row {
+        color: $color-1;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1200px) {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .motivation__rows {
+                margin: 50px 0 0 0;
+            }
+
+            .motivation__text {
+                margin: 50px 0 0 0;
+            }
+
+            .motivation__photo {
+                margin: 0;
+                
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    &__photo {
+        margin: 0 0 0 110px;
+
+        position: relative;
+        right: 0;
+        transition: all ease 1.5s;
+    }
+
+    &__title {
+        font-family: "Cardo", serif;
+        font-weight: 700;
+        font-size: 55.5px;
+        line-height: 55px;
+        letter-spacing: -0.025em;
+
+        position: relative;
+        left: 0;
+        transition: all ease 1s;
+    }
+
+    &__rows {
+        margin: 110px 0 0 0;
+
+        .row {
+            position: relative;
+            left: 0;
+            transition: all ease 1.5s;
+
+            &__title {
+                font-size: 25px;
+                line-height: 1.2;
+                font-weight: 900;
+                letter-spacing: -0.025em;
+            }
+
+            &__text {
+                margin: 20px 0 0 0;
+                font-size: 16.7px;
+                line-height: 1.2;
+                font-weight: 400;
+                letter-spacing: -0.025em;
+            }
+
+            &:nth-child(2) {
+                transition-delay: .5s;
+            }
+        }
+
+        .row:not(:first-child) {
+            margin: 62.5px 0 0 0;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для блока с вопросами
+.answers {
+    display: flex;
+    justify-content: center;
+    background: $color-1;
+    position: relative;
+
+    .container {
+        padding: 170px 0;
+        max-width: 1215px;
+        color: $color-text;
+
+        @media (max-width: 1250px) {
+            padding: 170px 20px;
+        }
+    }
+
+    &.hide {
+        .answers__title {
+            left: -9999px;
+        }
+
+        .answers__photo {
+            right: -9999px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        // align-items: center;
+
+        @media (max-width: 1050px) {
+            flex-direction: column-reverse;
+
+            .answers__photo {
+                margin: 0;
+                align-self: center;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .answers__points {
+                margin: 50px 0 0 0;
+
+                .small-plus {
+                    margin: 0 0 0 50px;
+                }
+            }
+        }
+    }
+
+    &__photo {
+        margin: 0 0 0 80px;
+
+        position: relative;
+        right: 0;
+        transition: all ease 1s;
+
+        @media (max-width: 1130px) {
+            margin: 0 0 0 30px;
+        }
+    }
+
+    &__title {
+        font-family: "Cardo", serif;
+        font-weight: 700;
+        font-size: 81.5px;
+        line-height: 81px;
+        letter-spacing: -0.025em;
+
+        position: relative;
+        left: 0;
+        transition: all ease .6s;
+    }
+
+    @media (max-width: 530px) {
+        &__title {
+            font-size: 50px;
+            line-height: 65px;
+        }
+
+        .clickable-points {
+            margin: 40px 0 0 0 !important;
+        }
+    }
+
+    .clickable-points {
+        margin: 105px 0 0 0;
+        display: flex;
+        flex-direction: column;
+
+        &__point {
+            border-top: 3px solid $color-text;
+            padding: 20px 40px;
+            cursor: pointer;
+            transition: background ease .5s;
+            overflow: hidden;
+
+            &:last-child {
+                border-bottom: 3px solid $color-text;
+            }
+
+            &.active {
+                background: $color-text;
+                border-top: 3px solid $color-1;
+                
+                h3 {
+                    color: $color-1;
+                }
+
+                .clickable-points__answer {
+                    color: $color-1;
+                    display: block;
+                    opacity: 1;
+                }
+
+                .small-plus {
+                    position: relative;
+
+                    &__line {
+                        background: $color-1;
+                    }
+
+                    &__line:nth-child(1) {
+                        transform: rotate(90deg);
+                    }
+                    
+                }
+            }
+        }
+
+        &__question {
+            font-size: 16.7px;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            color: $color-text;
+
+            h3 {
+                display: flex;
+                justify-content: space-between;
+            }
+            .small-plus {
+                position: relative;
+
+                &__line {
+                    position: absolute;
+                    display: block;
+                    width: 3px;
+                    height: 19px;
+                    background: #000;
+                    transition: all ease .3s;
+
+                    &:nth-child(2) {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        &__answer {
+            padding: 30px 0 0 0;
+            font-size: 16.7px;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            color: $color-text;
+            opacity: 0;
+            transition: all ease .3s;
+            display: none;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для блока с отзывами
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    background: $color-1;
+    position: relative;
+
+    &.hide {
+        .zigzag.left {
+            left: -9999px;
+        }
+
+        .zigzag.right {
+            right: -9999px;
+        }
+
+        .reviews__title {
+            top: -9999px;
+        }
+    }
+
+    .zigzag {
+        max-width: 100%;
+        transition: all ease 1s;
+
+        &.left {
+            left: 0;
+            top: 0;
+
+            @media (max-width: 1100px) {
+                opacity: .5;
+            }
+        }
+
+        &.right {
+            right: 0;
+            bottom: 0;
+            transition-delay: 1s;
+        }
+    }
+
+    .container {
+        padding: 50px 0 85px 0;
+        max-width: 1210px;
+        width: 100%;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: "Cardo", serif;
+        font-weight: 700;
+        font-size: 81.5px;
+        line-height: 81px;
+        letter-spacing: -0.025em;
+        color: $color-text;
+        text-align: center;
+
+        position: relative;
+        top: 0;
+        transition: all ease 1.2s;
+    }
+
+    .container-slider {
+        margin: 70px 0 0 0;
+
+        position: relative;
+        transition: all ease 1.3s;
+
+        &__nav {
+            position: absolute;
+            width: 86px;
+            height: 76px;
+            border: 3px solid $color-text;
+            background: $color-1;
+            z-index: 1;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+            cursor: pointer;
+            transition: all ease .3s;
+
+            transform: translate(-50%, -50%);
+            top: 50%;
+
+            &:hover {
+                color: $color-1;
+                background: $color-text;
+            }
+
+            &:active {
+                opacity: .8;
+            }
+
+            &.prev {
+                left: 0px;
+            }
+
+            &.next {
+                right: 0px;
+                transform: translate(50%, -50%);
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1355px) {
+            width: 80% !important;
+            align-self: center;
+        }
+
+        @media (max-width: 500px) {
+            width: 70% !important;
+
+            .customer {
+                padding: 30px 10px 70px 10px;
+            }
+        }
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 100%;
+
+        &__line {
+            display: flex;
+            position: relative;
+            left: 0;
+            transition: left .5s ease;
+        }
+
+        .customer {
+            min-width: 390px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 40px 70px 40px;
+            border: 3px solid $color-text;
+            border-radius: 10px;
+            cursor: default;
+
+            &:not(:first-child) {
+                margin: 0 0 0 20px;
+            }
+
+            &__text {
+                margin: 45px 0 0 0;
+                text-align: center;
+            }
+
+            &__about {
+                margin: 25px 0 0 0;
+            }
+
+            &__name {
+                font-size: 25px;
+                line-height: 1.2;
+                font-weight: 900;
+                letter-spacing: -0.025em;
+                color: $color-text;
+            }
+
+            &__about {
+                font-size: 16.7px;
+                line-height: 1.2;
+                font-weight: 400;
+                letter-spacing: -0.025em;
+                color: #6d6d6d;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для блока с подпиской почты
+
+.mail {
+    display: flex;
+    justify-content: center;
+    background: $color-1;
+
+    .container {
+        padding: 115px 0 115px 0;
+        max-width: 1215px;
+
+        @media (max-width: 1230px) {
+            padding: 115px 20px 115px 20px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 42.7% auto;
+        grid-template-areas: "mail-form mail-photo";
+        align-items: center;
+
+        @media (max-width: 1080px) {
+            grid-template-columns: unset;
+            grid-template-areas: 
+                "mail-photo"
+                "mail-form"
+            ;
+
+            .mail__photo {
+                margin: 0;
+            }
+
+            .mail__form {
+                margin: 50px 0 0 0;
+            }
+        }
+    }
+
+    &__form {
+        grid-area: mail-form;
+
+        form {
+            margin: 60px 0 0 0;
+            display: flex;
+            flex-direction: column;
+
+            .mail__element:not(:first-child) {
+                margin: 22.5px 0 0 0;
+            }
+
+            .mail__element {
+                padding: 10px 20px;
+                background: none;
+                border: 2px solid $color-text;
+                border-radius: 5px;
+
+                &::placeholder {
+                    font-size: 20.9px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    color: $color-text;
+                }
+
+                & {
+                    font-size: 20.9px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    color: $color-text;
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+
+            .action-btn {
+                margin: 58px 0 0 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__title {
+        font-family: "Cardo", serif;
+        font-size: 81.5px;
+        font-weight: 700;
+        line-height: 81px;
+        letter-spacing: -0.025em;
+        color: $color-text;
+
+        @media (max-width: 450px) {
+            font-size: 60px;
+        }
+    }
+
+    &__photo {
+        margin: 0 0 0 90px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+// Описание для подвала
+.footer {
+    display: flex;
+    justify-content: center;
+    background: #c4c4c4;
+    position: relative;
+
+    &.hide {
+        .zigzag.left {
+            left: -9999px;
+        }
+    }
+
+    .zigzag {
+        max-width: 100%;
+        transition: all ease .6s;
+
+        &.left {
+            left: 0;
+            bottom: 40px;
+        }
+
+        @media (max-width: 810px) {
+            opacity: .7;
+            
+            &.left {
+                bottom: 0;
+            }
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 115px 0 115px 0;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-areas: 
+            "logo links"
+            "disc disc"
+        ;
+        grid-column-gap: 120px;
+
+        @media (max-width: 1240px) {
+            grid-column-gap: 30px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 1100px) {
+            grid-template-areas: 
+                "logo"
+                "links"
+                "disc"
+            ;
+            grid-row-gap: 50px;
+            justify-content: center;
+            justify-items: center;
+        }
+    }
+
+    .logo {
+        grid-area: logo;
+        cursor: default;
+
+        h3 {
+            font-family: "Cardo", serif;
+            font-weight: 700;
+            font-family: Cardo;
+            font-size: 63.4px;
+            line-height: 63px;
+            letter-spacing: -0.025em;
+            color: $color-text;
+        }
+    }
+
+    &__links {
+        grid-area: links;
+
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-size: 25.1px;
+            line-height: 50px;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            color: $color-text;
+        }
+
+        .links {
+            margin: 15px 0 0 0;
+            display: flex;
+
+            &__state {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    font-size: 20.9px;
+                    line-height: 50px;
+                    font-weight: 400;
+                    letter-spacing: -0.025em;
+                    color: $color-text;
+                    white-space: nowrap;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                a:not(:first-child) {
+                    margin: 10px 0 0 0;
+                }
+            }
+
+            &__state:not(:first-child) {
+                margin: 0 0 0 90px;
+
+                @media (max-width: 920px) {
+                    margin: 0 0 0 60px;
+                }
+            }
+
+            @media (max-width: 775px) {
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                grid-gap: 40px;
+
+                .links__state {
+                    margin: 0;
+                }
+            }
+
+            @media (max-width: 390px) {
+                grid-template-columns: unset;
+            }
+        }
+    }
+
+    .disclaimer {
+        grid-area: disc;
+        margin: 120px 0 0 0;
+        justify-self: center;
+
+        p {
+            font-family: Lato;
+            font-size: 20.9px;
+            line-height: 50px;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            color: $color-text;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            margin: 0;
+        }
+    }
+}
