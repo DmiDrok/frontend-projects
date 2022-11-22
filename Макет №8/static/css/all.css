@@ -1,0 +1,82 @@
+.container {
+  max-width: 1140px;
+}
+
+.orange {
+  color: #fe7654;
+}
+
+.section-text {
+  text-align: center;
+}
+
+.section-title {
+  opacity: 0.8;
+  font-family: "Open Sans";
+  font-size: 50px;
+  line-height: 45px;
+  font-weight: 600;
+  color: #000;
+}
+
+.section-about {
+  opacity: 0.7;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #414141;
+  margin: 20px 0 0 0;
+}
+
+.more-btn {
+  position: relative;
+  width: 228px;
+  height: 55px;
+  background-color: #ffffff;
+  box-shadow: 1px 6px 14px 0px rgba(20, 20, 21, 0.09);
+  border-radius: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-btn:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  left: 50px;
+}
+.more-btn:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: rotate(90deg);
+  display: block;
+  left: 50px;
+}
+.more-btn span {
+  opacity: 0.8;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #000000;
+}
+.more-btn.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.more-btn.not-plus:after {
+  display: none;
+}
+.more-btn.not-plus:before {
+  display: none;
+}/*# sourceMappingURL=all.css.map */

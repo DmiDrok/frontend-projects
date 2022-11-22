@@ -206,7 +206,7 @@ function setObserver() {
   }
 
   const observer = new IntersectionObserver(removeOpacity, {threshold: 0.2})
-  Array.from(document.querySelector("main").children).forEach(child => observer.observe(child))
+  Array.from(document.querySelector(".wrapper").children).forEach(child => observer.observe(child))
 }
 
 try {
