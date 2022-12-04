@@ -1,0 +1,118 @@
+@import "./functions.scss";
+@import "./variables.scss";
+
+// Описание подвала
+.footer {
+  border-top: 1px solid #F4F4F4;
+
+  &__row {
+    padding: rem(34) rem(40);
+    background: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+      "footer-text footer-contacts footer-mail"
+    ;
+    justify-items: center;
+
+    a {
+      color: #8B8B8B;
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+        "footer-text footer-text"
+        "footer-contacts footer-mail"
+      ;
+      row-gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: rem(34) rem(20);
+    }
+  }
+
+  &__copyright {
+    font-family: Montserrat;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(24);
+  }
+
+  &__about {
+    margin: rem(11) 0 0 0;
+
+    color: #8B8B8B;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: rem(16);
+  }
+
+  &__text {
+    grid-area: footer-text;
+  }
+
+  &__address {
+    display: flex;
+    position: relative;
+    margin: rem(18) 0 0 0;
+
+    color: #8B8B8B;
+    font-style: normal;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(24);
+    white-space: nowrap;
+
+    span {
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    p {
+      margin: 0 0 0 rem(22.5);
+    }
+  }
+
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    grid-area: footer-contacts;
+  }
+
+  &__mail {
+    grid-area: footer-mail;
+  }
+
+  @media (max-width: 760px) {
+    &__mail {
+      display: none;
+    }
+
+    &__row {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "footer-text footer-contacts";
+    }
+  }
+
+  @media (max-width: 610px) {
+    &__row {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "footer-text"
+        "footer-contacts"
+      ;
+      justify-items: stretch;
+    }
+  }
+}

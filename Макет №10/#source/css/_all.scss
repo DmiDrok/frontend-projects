@@ -1,0 +1,559 @@
+@import "./functions.scss";
+
+// Стили для 'хлебных крошек'
+.bread-crumbs {
+  display: flex;
+
+  .crumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    &__link, &__text {
+      font-size: rem(12);
+      font-weight: 400;
+      line-height: rem(15);
+      color: #8B8B8B;
+      white-space: nowrap;
+    }
+
+    &__link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__crumb:not(:last-child)::after {
+    content: "";
+
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    margin: 0 rem(8);
+  }
+}
+
+// Заголовок некоторых блоков
+.block-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: rem(29);
+  text-align: center;
+}
+
+// Кнопка 'показать ещё' в каталоге, отзывах
+.show-more {
+  padding: rem(13) 0;
+  color: #000;
+
+  display: flex;
+  justify-content: center;
+  background: #F4F4F4;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all ease .5s;
+
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: rem(16);
+
+  &:hover {
+    background: #e5e5e5;
+    text-decoration: underline;
+  }
+
+  &:active {
+    transition: all ease .1s;
+    background: #fbfafa;
+  }
+}
+
+// Общий контейнер
+.row-container {
+  padding: 0 rem(40);
+
+  &.safe { padding: 0; }
+
+  @media (max-width: 600px) {
+    padding: 0 2%;
+  }
+}
+
+// Стили для 'этапов', 'шагов'
+.point {
+  &__title {
+    margin: rem(16) 0 0 0;
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: rem(20);
+  }
+
+  &__about {
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: rem(15);
+
+    margin: rem(8) 0 0 0;
+    color: #8B8B8B;
+  }
+
+  @media (max-width: 610px) {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas: 
+      "point-icon point-title"
+      "point-icon point-text"
+    ;
+    grid-template-rows: min-content !important;
+
+    &__image {
+      justify-self: center;
+      grid-area: point-icon;
+    }
+
+    &__title {
+      margin: 0;
+      grid-area: point-title;
+    }
+
+    &__about {
+      margin: rem(8) 0 0 0 !important;
+      grid-area: point-text;
+    }
+  }
+}
+
+// Стили для кнопки с заявкой
+.send-request {
+  border: 2px dashed $color-1;
+  border-radius: 9px;
+  color: #000;
+  transition: all ease .5s;
+
+  &:hover {
+    background: $color-1;
+    color: #fff;
+  }
+
+  &__row {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__text {
+    text-align: center;
+
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: rem(20);
+  }
+
+  &__image {
+    margin: rem(19) 0 0 0;
+  }
+}
+
+// Стили для блока с контактными телефонами
+.telephones {
+  &__telephone {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(27);
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #8B8B8B;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      margin: 0 rem(8) 0 0;
+      transform: translate(0, 5%);
+    }
+  }
+
+  &__telephone:not(:first-child) {
+    margin: rem(4) 0 0 0;
+  }
+}
+
+// Стили для блока с почтой
+.mail {
+  display: flex;
+  align-items: center;
+
+  &__mail-string {
+    color: $color-1 !important;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(24);
+
+    display: flex;
+    align-items: center;
+
+    span {
+      display: flex;
+      align-items: center;
+      margin: 0 rem(7) 0 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Стили для блока с телефоном
+.telephone {
+  justify-self: end;
+  display: grid;
+  row-gap: rem(2);
+
+  text-align: end;
+
+  &__link {
+    color: #CD0000;
+    font-size: rem(22);
+    font-weight: 700;
+    line-height: rem(27);
+    white-space: nowrap;
+  }
+
+  &__text {
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: rem(17);
+  }
+}
+
+// Кнопка расширенного поиска
+.more-button {
+  display: flex;
+  position: relative;
+  padding: rem(8) rem(40) rem(8) rem(16);
+
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: rem(16);
+  color: $color-1;
+
+  border: 1px solid #CACACA;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &.active {
+    background: $color-1;
+    padding: rem(8) rem(16);
+    color: #fff;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  span::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    
+    position: absolute;
+    right: rem(20);
+    top: 50%;
+    transform: translate(0, -20%);
+    background: url("../img/arrow_down.svg") no-repeat;
+  }
+}
+
+// Элемент статуса 'в наличии' и т.д...
+.status {
+  margin: rem(8) 0 0 0;
+
+  padding: rem(4.5) rem(10);
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: rem(16);
+  border-radius: 35px;
+  color: #fff;
+
+  &.in-case { background: #73DB43; }
+  &.in-order { background: #EBB428; }
+}
+
+// Значения - характеристики машины
+.qualities-field {
+  margin: rem(8) 0 0 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content;
+  column-gap: 8px;
+
+  &__name {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(17);
+    color: #8B8B8B;
+  }
+
+  &__value {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(17);
+    // margin: 0 0 0 rem(8);
+  }
+}
+
+// Описание блока видео
+.video {
+  color: #000;
+  transition: all ease .6s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__block-title {
+    text-align: left;
+  }
+
+  &__name {
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: rem(20);
+
+    margin: rem(12) 0 0 0;
+  }
+
+  &__info {
+    margin: rem(8) 0 0 0;
+  }
+}
+
+// Описание верхней части некоторых страниц
+.content-top {
+  &__header {
+    margin: rem(21) 0 0 0;
+
+    .status {
+      margin: 0 0 0 rem(12);
+    }
+  }
+
+  &__title {
+    font-size: rem(32);
+    font-weight: 700;
+    line-height: rem(39);
+
+    @media (max-width: 430px) {
+      font-size: rem(24);
+    }
+  }
+}
+
+// Описание блока с контактами
+.contacts {
+  margin: rem(47) 0 0 0;
+
+  &__row {
+    // padding: 0 rem(43);
+
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+  }
+
+  &__line {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: 
+      "contacts-list contacts-telephones contacts-mail"
+    ;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      grid-template-areas: 
+        "contacts-list contacts-list"
+        "contacts-telephones contacts-mail"
+      ;
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__block-title {
+    text-align: left;
+  }
+
+  &__address {
+    margin: rem(15) 0 0 0;
+    
+    font-size: rem(18);
+    font-weight: 500;
+    line-height: rem(31);
+    font-style: normal;
+    white-space: nowrap;
+
+    @media (max-width: 450px) {
+      white-space: normal;
+    }
+  }
+
+  &__list {
+    grid-area: contacts-list;
+    margin: rem(15) 0 0 0;
+  }
+
+  &__item {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(27);
+    color: #8B8B8B;
+
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin: rem(4) 0 0 0;
+    }
+  }
+
+  &__telephone {
+    color: $color-1;
+    margin: 0 0 0 rem(10.5);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__image {
+    transform: translate(0, 20%);
+  }
+
+  &__telephones {
+    grid-area: contacts-telephones;
+    transform: translate(0, 25%)
+  }
+
+  &__mail {
+    grid-area: contacts-mail;
+  }
+}
+
+// Описание блока с обратной связью
+.feedback {
+  position: relative;
+  margin: rem(37) 0 0 0;
+  height: 500px;
+
+  &.medium { height: 650px; }
+
+  &__row {
+    padding: 0 !important;
+    position: absolute;
+    z-index: 1;
+
+    left: rem(43);
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 36%;
+
+    @media (max-width: 880px) {
+      width: 50%;
+    }
+  }
+
+  .block-form {
+    background: #fff;
+    padding: rem(24);
+    border-radius: 6px;
+    box-shadow: 0px 9px 34px rgba(58, 68, 83, 0.24);
+
+    &__title {
+      font-size: rem(24);
+      font-weight: 700;
+      line-height: rem(29);
+    }
+
+    &__form {
+      margin: rem(24) 0 0 0;
+      display: grid;
+      row-gap: rem(16);
+    }
+
+    input, textarea {
+      padding: rem(12) rem(18);
+      font-size: rem(13);
+      font-weight: 400;
+      line-height: rem(16);
+      background: #F1F1F1;
+      border-radius: 2px;
+      resize: none;
+    }
+
+    &__field {
+      display: grid;
+      row-gap: rem(9);
+    }
+
+    &__complete {
+      margin: rem(24) 0 0 0;
+
+      background: $color-1;
+      border-radius: 4px;
+      color: #fff;
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: rem(20);
+      padding: rem(12.5);
+
+      @media (max-width: 390px) {
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+
+// Описание табов - селекторов
+.selectors {
+  display: flex;
+  border-bottom: 1px solid #E2E2E2;
+
+  &__selector {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(20);
+    cursor: pointer;
+    color: #8B8B8B;
+    padding: rem(12) rem(4);
+    white-space: nowrap;
+
+    &.active { color: #000; border-bottom: 2px solid $color-1; }
+    &:not(:first-child) { margin: 0 0 0 rem(32); }
+  }
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    &__selector { margin: 0 !important; }
+  }
+}
+
+// Описание блока, который показывается по нажатию на табы
+.info__block {
+  display: none;
+  transition: all ease .3s;
+  &.active { display: block; }
+}

@@ -1,0 +1,22 @@
+@import "./functions.scss";
+@import "./variables.scss";
+
+body .wrapper {
+  .options__area_catalog {
+    position: static !important;
+    transform: unset !important;
+    width: 100% !important;
+    transform: none !important;
+    bottom: 0 !important;
+  }
+
+  .content__options_catalog {
+    padding: rem(23) rem(41) rem(38) rem(23) !important;
+    display: grid !important;
+    background: #F7F7F9;
+  }
+
+  .content__catalog_on-catalog {
+    margin: rem(24) 0 rem(81) 0 !important;
+  }
+}

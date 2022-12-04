@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы</title>
+
+  <link rel="shortcut icon" href="./static/img/logo.svg">
+  <link rel="stylesheet" href="./static/fonts/fonts.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+  
+  <div class="wrapper">
+    <div class="wrapper__dark-fullscreen"></div>
+
+    <aside class="sidebar">
+      <div class="sidebar__row">
+
+        <a href="./index.html" class="sidebar__logo logo">
+          <img src="./static/img/logo.svg" alt="">
+          <h1>Tosei</h1>
+        </a>
+
+        <nav class="sidebar__nav nav">
+          <ul class="nav__list">
+            <li class="nav__link"><a href="#">Услуги</a></li>
+            <li class="nav__link"><a href="./catalog.html">Каталог техники</a></li>
+            <li class="nav__link"><a href="#">Аукционы</a></li>
+
+            <li class="nav__link nav__link_more">
+              <a href="#">Информация</a>
+              <ul class="nav__list nav__list_more">
+                <li class="nav__link"><a href="#">Вопрос ответ</a></li>
+                <li class="nav__link"><a href="./read.html">Как читать аукционный лист</a></li>
+                <li class="nav__link"><a href="#">Распилы, Карпилы, Конструкторы</a></li>
+                <li class="nav__link"><a href="#">Оформление распилов/конструкторов</a></li>
+                <li class="nav__link"><a href="#">Определение даты выпуска</a></li>
+                <li class="nav__link"><a href="#">Расписание судов</a></li>
+                <li class="nav__link"><a href="#">Адреса и контакты CBX</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__link"><a href="#">О нас</a></li>
+            <li class="nav__link active"><a href="./reviews.html">Отзывы</a></li>
+            <li class="nav__link"><a href="./contacts.html">
+              Контакты
+              <div class="sidebar__links">
+                <a href="#" class="sidebar__link"><img src="./static/img/whatsapp.svg" alt="whatsapp"></a>
+                <a href="#" class="sidebar__link"><img src="./static/img/inst.svg" alt="instagramm"></a>
+                <a href="#" class="sidebar__link"><img src="./static/img/youtube.svg" alt="youtube"></a>
+              </div>
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <aside class="sidebar-mobile">
+
+      <div class="sidebar-mobile__dark-fullscreen"></div>
+
+      <div class="sidebar-mobile__row">
+        <div class="sidebar-mobile__close close">
+          <img src="./static/img/cross.svg" alt="">
+        </div>
+
+        <nav class="sidebar-mobile__nav mobile-nav">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link">Услуги</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="./catalog.html" class="mobile-nav__link">Каталог техники</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link">Аукционы</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link mobile-nav__link_more">Информация</a>
+              <ul class="mobile-nav__list mobile-nav__list_more">
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Вопрос ответ</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="./read.html" class="mobile-nav__link mobile-nav__link_add">Как читать аукционный лист</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Распилы, Карпилы, Конструкторы</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Оформление распилов/конструкторов</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Определение даты выпуска</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Расписание судов</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Адреса и контакты CBX</a></li>
+              </ul>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link">О нас</a>
+            </li>
+            <li class="mobile-nav__elem active">
+              <a href="./reviews.html" class="mobile-nav__link">Отзывы</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="./contacts.html" class="mobile-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-mobile__bottom">
+          <p class="sidebar-mobile__telephone telephone">
+            <a href="tel:8 800 250-78-07" class="telephone__link">8 800 250-78-07</a>
+            <span class="telephone__text">Бесплатный звонок по всей России</span>
+          </p>
+
+          <div class="sidebar-mobile__links">
+            <a href="#" class="sidebar__link"><img src="./static/img/whatsapp.svg" alt="whatsapp"></a>
+            <a href="#" class="sidebar__link"><img src="./static/img/inst.svg" alt="instagramm"></a>
+            <a href="#" class="sidebar__link"><img src="./static/img/youtube.svg" alt="youtube"></a>
+          </div>
+        </div>
+      </div>
+      
+    </aside>
+
+    <section class="content">
+
+      <div class="content__container container">
+        <header class="header">
+          <p class="header__note">Автомобили из японии с <br> доставкой по всей России</p>
+
+          <p class="header__telephone telephone">
+            <a href="tel:8 800 250-78-07" class="telephone__link">8 800 250-78-07</a>
+            <span class="telephone__text">Бесплатный звонок по всей России</span>
+          </p>
+
+          <div class="header__burger burger">
+            <p class="burger__line"></p>
+            <p class="burger__line"></p>
+          </div>
+        </header>
+
+        <div class="content__contacts content-top contacts">
+          <div class="contacts__row row-container">
+            <div class="bread-crumbs">
+              <div class="bread-crumbs__crumb crumb">
+                <a href="./index.html" class="crumb__link">Главная</a>
+              </div>
+  
+              <div class="bread-crumbs__crumb crumb">
+                <a href="./reviews.html" class="crumb__link">Отзывы</a>
+              </div>
+            </div>
+
+            <div class="content-top__header">
+              <h3 class="content-top__title car__brand-title">
+                Отзывы
+              </h3>
+            </div>
+            
+            <div class="reviews-info info">
+              <div class="reviews-info__selectors selectors">
+                <p class="selectors__selector active">Видео отзывы</p>
+                <p class="selectors__selector">Отзывы в соцсетях</p>
+                <p class="selectors__selector">О нас говорят</p>
+              </div>
+
+              <div class="info__block info__videos active">
+                <div class="info__reviews on-reviews-page reviews">
+                  <div class="reviews__row row-container safe">      
+                    <div class="reviews__line">
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info__block info__social">
+                <div class="info__reviews on-reviews-page reviews">
+                  <div class="reviews__row row-container safe">      
+                    <div class="reviews__line">
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info__block info__talk">
+                <div class="info__reviews on-reviews-page reviews">
+                  <div class="reviews__row row-container safe">      
+                    <div class="reviews__line">
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <!--========-->
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review1.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Генадий Сергеевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review2.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Ольга Архипова</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review3.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Николай Евгеньевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+        
+                      <a href="#" class="reviews__item">
+                        <div class="reviews__image">
+                          <img src="./static/img/review4.png" alt="">
+                          <div class="reviews__play">
+                            <img src="./static/img/yt.svg" alt="">
+                          </div>
+                        </div>
+        
+                        <div class="reviews__info">
+                          <div class="reviews__value">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                            <img src="./static/img/star-fill.svg" alt="">
+                          </div>
+                          <h3 class="reviews__author">Роман Юрьевич</h3>
+                          <p class="reviews__model">Toyota Allion</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__row row-container">
+
+            <div class="footer__text">
+              <h3 class="footer__copyright">© Тосэй 2021. Все права защищены</h3>
+              <p class="footer__about">
+                Продажа грузовой и спецтехники, легковых автомобилей, водной техники. Любая техника из Японии, США, Кореи, Китая и Сингапура. Авто с аукционов.
+              </p>
+              <address class="footer__address">
+                <span><img src="./static/img/geo.svg" alt=""></span>
+                <p>Владивосток, ул. Фадеева, д. 47, строение 1</p>
+              </address>
+            </div>
+
+            <div class="footer__contacts telephones">
+              <a href="tel:+79841981118" class="footer__telephone telephones__telephone">
+                <span><img src="./static/img/tel.svg" alt=""></span>
+                +7 (984) 198-11-18
+              </a>
+              <a href="tel:+79841981118" class="footer__telephone telephones__telephone">
+                <span><img src="./static/img/tel.svg" alt=""></span>
+                +7 (984) 198-11-18
+              </a>
+            </div>
+
+            <div class="footer__mail mail">
+              <a href="mailto:spec@tosei.ru" class="footer__mail-string mail__mail-string">
+                <span><img src="./static/img/mail.svg" alt=""></span>
+                spec@tosei.ru
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </div>
+
+  <script src="./static/js/adaptive.js"></script>
+  <script src="./static/js/script.js"></script>
+
+  <!-- Настройка slick-слайдера -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./static/js/slick.min.js"></script>
+  <script src="./static/js/slider.js"></script>
+</body>
+</html>

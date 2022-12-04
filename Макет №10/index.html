@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная страница</title>
+
+  <link rel="shortcut icon" href="./static/img/logo.svg">
+  <link rel="stylesheet" href="./static/fonts/fonts.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+  
+  <div class="wrapper">
+    <div class="wrapper__dark-fullscreen"></div>
+
+    <aside class="sidebar">
+      <div class="sidebar__row">
+
+        <a href="./index.html" class="sidebar__logo logo">
+          <img src="./static/img/logo.svg" alt="">
+          <h1>Tosei</h1>
+        </a>
+
+        <nav class="sidebar__nav nav">
+          <ul class="nav__list">
+            <li class="nav__link"><a href="#">Услуги</a></li>
+            <li class="nav__link"><a href="./catalog.html">Каталог техники</a></li>
+            <li class="nav__link"><a href="#">Аукционы</a></li>
+
+            <li class="nav__link nav__link_more">
+              <a href="#">Информация</a>
+              <ul class="nav__list nav__list_more">
+                <li class="nav__link"><a href="#">Вопрос ответ</a></li>
+                <li class="nav__link"><a href="./read.html">Как читать аукционный лист</a></li>
+                <li class="nav__link"><a href="#">Распилы, Карпилы, Конструкторы</a></li>
+                <li class="nav__link"><a href="#">Оформление распилов/конструкторов</a></li>
+                <li class="nav__link"><a href="#">Определение даты выпуска</a></li>
+                <li class="nav__link"><a href="#">Расписание судов</a></li>
+                <li class="nav__link"><a href="#">Адреса и контакты CBX</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__link"><a href="#">О нас</a></li>
+            <li class="nav__link"><a href="./reviews.html">Отзывы</a></li>
+            <li class="nav__link"><a href="./contacts.html">
+              Контакты
+              <div class="sidebar__links">
+                <a href="#" class="sidebar__link"><img src="./static/img/whatsapp.svg" alt="whatsapp"></a>
+                <a href="#" class="sidebar__link"><img src="./static/img/inst.svg" alt="instagramm"></a>
+                <a href="#" class="sidebar__link"><img src="./static/img/youtube.svg" alt="youtube"></a>
+              </div>
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <aside class="sidebar-mobile">
+
+      <div class="sidebar-mobile__dark-fullscreen"></div>
+
+      <div class="sidebar-mobile__row">
+        <div class="sidebar-mobile__close close">
+          <img src="./static/img/cross.svg" alt="">
+        </div>
+
+        <nav class="sidebar-mobile__nav mobile-nav">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link">Услуги</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="./catalog.html" class="mobile-nav__link">Каталог техники</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link">Аукционы</a>
+            </li>
+            <li class="mobile-nav__elem mobile-nav__elem_more">
+              <a href="#" class="mobile-nav__link">Информация</a>
+              <ul class="mobile-nav__list mobile-nav__list_more">
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Вопрос ответ</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="./read.html" class="mobile-nav__link mobile-nav__link_add">Как читать аукционный лист</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Распилы, Карпилы, Конструкторы</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Оформление распилов/конструкторов</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Определение даты выпуска</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Расписание судов</a></li>
+                <li class="mobile-nav__elem mobile-nav__elem_add"><a href="#" class="mobile-nav__link mobile-nav__link_add">Адреса и контакты CBX</a></li>
+              </ul>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="#" class="mobile-nav__link">О нас</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="./reviews.html" class="mobile-nav__link">Отзывы</a>
+            </li>
+            <li class="mobile-nav__elem">
+              <a href="./contacts.html" class="mobile-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-mobile__bottom">
+          <p class="sidebar-mobile__telephone telephone">
+            <a href="tel:8 800 250-78-07" class="telephone__link">8 800 250-78-07</a>
+            <span class="telephone__text">Бесплатный звонок по всей России</span>
+          </p>
+
+          <div class="sidebar-mobile__links">
+            <a href="#" class="sidebar__link"><img src="./static/img/whatsapp.svg" alt="whatsapp"></a>
+            <a href="#" class="sidebar__link"><img src="./static/img/inst.svg" alt="instagramm"></a>
+            <a href="#" class="sidebar__link"><img src="./static/img/youtube.svg" alt="youtube"></a>
+          </div>
+        </div>
+      </div>
+      
+    </aside>
+
+    <section class="content">
+      <div class="content__container container">
+        <header class="header">
+          <p class="header__note">Автомобили из японии с <br> доставкой по всей России</p>
+
+          <p class="header__telephone telephone">
+            <a href="tel:8 800 250-78-07" class="telephone__link">8 800 250-78-07</a>
+            <span class="telephone__text">Бесплатный звонок по всей России</span>
+          </p>
+
+          <div class="header__burger burger">
+            <p class="burger__line"></p>
+            <p class="burger__line"></p>
+          </div>
+        </header>
+
+        <div class="content__options options">
+          <div class="options__under under">
+            <img src="./static/img/under_options.png" alt="" class="under__image">
+            <p class="under__text">
+              Доставим любую технику из <br> Японии за 3 недели
+            </p>
+          </div>
+
+          <div class="options__area options-area">
+            <div class="options-area__row">
+
+              <form action="#" method="POST" name="options" class="options-area__form form">
+                <div class="form__line form__top">
+                  <label class="form__field field">
+                    <input type="checkbox" id="check1">
+                    <span class="check-style"></span>
+                    <span>Полная пошлина</span>
+                  </label>
+
+                  <label class="form__field field">
+                    <input type="checkbox" id="check2">
+                    <span class="check-style"></span>
+                    <span>Распил или конструктор</span>
+                  </label>
+                </div>
+
+                <div class="form__line form__middle">
+                  <div class="form__field field">
+                    <h3 class="field__title">Тип техники</h3>
+
+                    <div class="form__select-block select-block">
+                      <select name="select1">
+                        <option selected>Не выбрано</option>
+                        <option value="value1">Value-1</option>
+                        <option value="value2">Value-2</option>
+                        <option value="value3">Value-3</option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                  <div class="form__field field">
+                    <h3 class="field__title">Производитель</h3>
+                    <div class="form__select-block select-block">
+                      <select name="select1">
+                        <option selected>Не выбрано</option>
+                        <option value="value1">Value-1</option>
+                        <option value="value2">Value-2</option>
+                        <option value="value3">Value-3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form__field field">
+                    <h3 class="field__title">Марка</h3>
+                    <div class="form__select-block select-block">
+                      <select name="select1">
+                        <option selected>Не выбрано</option>
+                        <option value="value1">Value-1</option>
+                        <option value="value2">Value-2</option>
+                        <option value="value3">Value-3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form__field field field-ages">
+                    <h3 class="field__title">Год выпуска</h3>
+                    <div class="ages">
+                      <div class="form__select-block select-block">
+                        <select name="select1">
+                          <option selected>От</option>
+                          <option value="value1">Value-1</option>
+                          <option value="value2">Value-2</option>
+                          <option value="value3">Value-3</option>
+                        </select>
+                      </div>
+
+                      <div class="form__select-block select-block">
+                        <select name="select1">
+                          <option selected>До</option>
+                          <option value="value1">Value-1</option>
+                          <option value="value2">Value-2</option>
+                          <option value="value3">Value-3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="middle__more more-mobile more-button">
+                    <span>Расширенный поиск</span>
+                  </div>
+
+                  <div class="form__button">
+                    <button type="submit" class="options__start-search">
+                      Найти
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form__line form__bottom bottom">
+                  <p class="bottom__text">
+                    Автомобилей в наличии: <span class="cars-count red">256</span>
+                  </p>
+
+                  <p class="bottom__more-button more-button">
+                    <span>Расширенный поиск</span>
+                  </p>
+                </div>
+
+                <div class="form__more">
+                  <div class="form__line form__middle">
+                    <div class="form__field field">
+                      <h3 class="field__title">Тип техники</h3>
+  
+                      <div class="form__select-block select-block">
+                        <select name="select1">
+                          <option selected>Не выбрано</option>
+                          <option value="value1">Value-1</option>
+                          <option value="value2">Value-2</option>
+                          <option value="value3">Value-3</option>
+                        </select>
+                      </div>
+  
+                    </div>
+  
+                    <div class="form__field field">
+                      <h3 class="field__title">Производитель</h3>
+                      <div class="form__select-block select-block">
+                        <select name="select1">
+                          <option selected>Не выбрано</option>
+                          <option value="value1">Value-1</option>
+                          <option value="value2">Value-2</option>
+                          <option value="value3">Value-3</option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <div class="form__field field">
+                      <h3 class="field__title">Марка</h3>
+                      <div class="form__select-block select-block">
+                        <select name="select1">
+                          <option selected>Не выбрано</option>
+                          <option value="value1">Value-1</option>
+                          <option value="value2">Value-2</option>
+                          <option value="value3">Value-3</option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <div class="form__field field field-ages">
+                      <h3 class="field__title">Год выпуска</h3>
+                      <div class="ages">
+                        <div class="form__select-block select-block">
+                          <select name="select1">
+                            <option selected>От</option>
+                            <option value="value1">Value-1</option>
+                            <option value="value2">Value-2</option>
+                            <option value="value3">Value-3</option>
+                          </select>
+                        </div>
+  
+                        <div class="form__select-block select-block">
+                          <select name="select1">
+                            <option selected>До</option>
+                            <option value="value1">Value-1</option>
+                            <option value="value2">Value-2</option>
+                            <option value="value3">Value-3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="content__catalog catalog">
+          <div class="catalog__row row-container">
+            <div class="catalog__head">
+              <h3 class="catalog__title">
+                Популярные автомобили
+              </h3>
+
+              <div class="catalog__options">
+                <label class="catalog__radio-block">
+                  <input name="type-car" type="radio" class="catalog__radio" checked>
+                  <span class="catalog__radio-style"></span>
+                  <p>Любые</p>
+                </label>
+                <label class="catalog__radio-block">
+                  <input name="type-car" type="radio" class="catalog__radio">
+                  <span class="catalog__radio-style"></span>
+                  В наличии
+                </label>
+                <label class="catalog__radio-block">
+                  <input name="type-car" type="radio" class="catalog__radio">
+                  <span class="catalog__radio-style"></span>
+                  Под заказ
+                </label>
+              </div>
+
+              <div class="catalog__list car-list">
+                
+                <a href="./car.html" class="car-list__card card">
+                  <div class="card__row">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="./static/img/car1-big.png" media="(max-width: 840px)">
+                        <source srcset="./static/img/car1.png" media="(max-width: 5920px)">
+                        <img src="./static/img/car1.png" alt="">
+                      </picture>
+                    </div>
+
+                    <div class="card__qualities qualities">
+                      <div class="qualities__col">
+                        <h3 class="qualities__car-brand">
+                          Honda Fit
+                        </h3>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Объем двигателя</span>
+                          <span class="qualities-field__value">1,2 л.с.</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Год</span>
+                          <span class="qualities-field__value">2015 г.</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Пробег</span>
+                          <span class="qualities-field__value">34 000 км</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__value">Под полную пошлину</span>
+                        </p>
+                      </div>
+
+                      <div class="qualities__col">
+                        <h3 class="qualities__car-brand">
+                          &nbsp;
+                        </h3>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Привод</span>
+                          <span class="qualities-field__value">Задний</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">КПП</span>
+                          <span class="qualities-field__value">Автомат</span>
+                        </p>
+                      </div>
+
+                      <div class="card__price price">
+                        <h3 class="price__title">Стоимость во Владивостоке</h3>
+                        <p class="price__value">630 000 ₽</p>
+                        <p class="price__status in-case status">В наличии</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="./car.html" class="car-list__card card">
+                  <div class="card__row">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="./static/img/car2-big.png" media="(max-width: 840px)">
+                        <source srcset="./static/img/car2.png" media="(max-width: 5920px)">
+                        <img src="./static/img/car2.png" alt="">
+                      </picture>
+                    </div>
+
+                    <div class="card__qualities qualities">
+                      <div class="qualities__col">
+                        <h3 class="qualities__car-brand">
+                          BMW - X5 2005
+                        </h3>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Объем двигателя</span>
+                          <span class="qualities-field__value">230 л.с.</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Год</span>
+                          <span class="qualities-field__value">2005 г.</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Пробег</span>
+                          <span class="qualities-field__value">110 000 км</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__value">Под полную пошлину</span>
+                        </p>
+                      </div>
+
+                      <div class="qualities__col">
+                        <h3 class="qualities__car-brand">
+                          &nbsp;
+                        </h3>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Привод</span>
+                          <span class="qualities-field__value">Полный</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">КПП</span>
+                          <span class="qualities-field__value">Автомат</span>
+                        </p>
+                      </div>
+
+                      <div class="card__price price">
+                        <h3 class="price__title">Стоимость в Японии</h3>
+                        <p class="price__value">275 000 ₽</p>
+                        <p class="price__status in-order status">Под заказ</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="./car.html" class="car-list__card card">
+                  <div class="card__row">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="./static/img/car3-big.png" media="(max-width: 840px)">
+                        <source srcset="./static/img/car3.png" media="(max-width: 5920px)">
+                        <img src="./static/img/car3.png" alt="">
+                      </picture>
+                    </div>
+
+                    <div class="card__qualities qualities">
+                      <div class="qualities__col">
+                        <h3 class="qualities__car-brand">
+                          Toyota Prius
+                        </h3>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Объем двигателя</span>
+                          <span class="qualities-field__value">109 л.с.</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Год</span>
+                          <span class="qualities-field__value">2009 г.</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Пробег</span>
+                          <span class="qualities-field__value">57 000 км</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__value">Под полную пошлину</span>
+                        </p>
+                      </div>
+
+                      <div class="qualities__col">
+                        <h3 class="qualities__car-brand">
+                          &nbsp;
+                        </h3>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">Привод</span>
+                          <span class="qualities-field__value">Передний</span>
+                        </p>
+
+                        <p class="qualities-field">
+                          <span class="qualities-field__name">КПП</span>
+                          <span class="qualities-field__value">Автомат</span>
+                        </p>
+                      </div>
+
+                      <div class="card__price price">
+                        <h3 class="price__title">Стоимость в Японии</h3>
+                        <p class="price__value">310 000 ₽</p>
+                        <p class="price__status in-case status">В наличии</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="./catalog.html" class="catalog__show-more show-more">Показать ещё</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__advantages advantages">
+          <div class="advantages__row row-container">
+            <h3 class="advantages__block-title block-title">
+              Наши преимущества
+            </h3>
+
+            <div class="advantages__line">
+
+              <div class="advantages__item point">
+                <div class="advantages__image point__image">
+                  <img src="./static/img/adv1.svg" alt="">
+                </div>
+                <h3 class="advantages__title point__title">20 лет на рынке</h3>
+                  <p class="advantages__about point__about">
+                    Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит таможенное оформление
+                  </p>
+              </div>
+
+              <div class="advantages__item point">
+                <div class="advantages__image point__image">
+                  <img src="./static/img/adv1.svg" alt="">
+                </div>
+                <h3 class="advantages__title point__title">Доставка по РФ</h3>
+                  <p class="advantages__about point__about">
+                    Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит таможенное оформление
+                  </p>
+              </div>
+
+              <div class="advantages__item point">
+                <div class="advantages__image point__image">
+                  <img src="./static/img/adv1.svg" alt="">
+                </div>
+                <h3 class="advantages__title point__title">Персональный менеджер</h3>
+                  <p class="advantages__about point__about">
+                    Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит таможенное оформление
+                  </p>
+              </div>
+
+              <div class="advantages__item point">
+                <div class="advantages__image point__image">
+                  <img src="./static/img/adv1.svg" alt="">
+                </div>
+                <h3 class="advantages__title point__title">Собственное представительство в Японии</h3>
+                  <p class="advantages__about point__about">
+                    Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит таможенное оформление
+                  </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="content__reviews reviews">
+          <div class="reviews__row row-container">
+            <h3 class="reviews__block-title block-title">Отзывы</h3>
+
+            <div class="reviews__line">
+              <a href="#" class="reviews__item">
+                <div class="reviews__image">
+                  <img src="./static/img/review1.png" alt="">
+                  <div class="reviews__play">
+                    <img src="./static/img/yt.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="reviews__info">
+                  <div class="reviews__value">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                  </div>
+                  <h3 class="reviews__author">Генадий Сергеевич</h3>
+                  <p class="reviews__model">Toyota Allion</p>
+                </div>
+              </a>
+
+              <a href="#" class="reviews__item">
+                <div class="reviews__image">
+                  <img src="./static/img/review2.png" alt="">
+                  <div class="reviews__play">
+                    <img src="./static/img/yt.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="reviews__info">
+                  <div class="reviews__value">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star.svg" alt="">
+                  </div>
+                  <h3 class="reviews__author">Ольга Архипова</h3>
+                  <p class="reviews__model">Toyota Allion</p>
+                </div>
+              </a>
+
+              <a href="#" class="reviews__item">
+                <div class="reviews__image">
+                  <img src="./static/img/review3.png" alt="">
+                  <div class="reviews__play">
+                    <img src="./static/img/yt.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="reviews__info">
+                  <div class="reviews__value">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                  </div>
+                  <h3 class="reviews__author">Николай Евгеньевич</h3>
+                  <p class="reviews__model">Toyota Allion</p>
+                </div>
+              </a>
+
+              <a href="#" class="reviews__item">
+                <div class="reviews__image">
+                  <img src="./static/img/review4.png" alt="">
+                  <div class="reviews__play">
+                    <img src="./static/img/yt.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="reviews__info">
+                  <div class="reviews__value">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                    <img src="./static/img/star-fill.svg" alt="">
+                  </div>
+                  <h3 class="reviews__author">Роман Юрьевич</h3>
+                  <p class="reviews__model">Toyota Allion</p>
+                </div>
+              </a>
+            </div>
+
+            <a href="./reviews.html" class="reviews__show-more show-more">Еще отзывы</a>
+          </div>
+        </div>
+
+        <div class="content__process process">
+          <div class="process__row row-container">
+            <div class="process__image">
+              <img src="./static/img/process.png" alt="process-photo">
+            </div>
+
+            <div class="process__stages stages">
+              <h3 class="stages__block-title block-title">Как происходит покупка</h3>
+
+              <div class="stages__line">
+
+                <div class="stages__item point">
+                  <div class="stages__image point__image">
+                    <img src="./static/img/point1.png" alt="">
+                  </div>
+                  <h3 class="stages__title point__title">Оставляете заявку</h3>
+                    <p class="stages__about point__about">
+                      Вы оставляете заявку на сайте,  либо связываетесь с нами удобным для вас способом.
+                    </p>
+                </div>
+
+                <div class="stages__item point">
+                  <div class="stages__image point__image">
+                    <img src="./static/img/point2.png" alt="">
+                  </div>
+                  <h3 class="stages__title point__title">Заключаем договор</h3>
+                    <p class="stages__about point__about">
+                      Заключаем договор, Вы вносите гарантийный депозит.
+                    </p>
+                </div>
+
+                <div class="stages__item point">
+                  <div class="stages__image point__image">
+                    <img src="./static/img/point3.png" alt="">
+                  </div>
+                  <h3 class="stages__title point__title">Подбор и покупка авто</h3>
+                    <p class="stages__about point__about">
+                      Вам предлагаются подходящие варианты с аукционов, Вы принимаете решение, автомобиль выкупается.
+                    </p>
+                </div>
+
+                <div class="stages__item point">
+                  <div class="stages__image point__image">
+                    <img src="./static/img/point4.png" alt="">
+                  </div>
+                  <h3 class="stages__title point__title">Доставка в РФ и оформление</h3>
+                    <p class="stages__about point__about">
+                      Мы транспортируем авто в порт Японии, грузим на судно и доставляем во Владивосток, где проходит таможенное оформление
+                    </p>
+                </div>
+
+                <div class="stages__item point">
+                  <div class="stages__image point__image">
+                    <img src="./static/img/point5.png" alt="">
+                  </div>
+                  <h3 class="stages__title point__title">Доставка до вашего города</h3>
+                    <p class="stages__about point__about">
+                      Мы доставляем авто в любой регион России выбранным Вами способом, либо Вы сами забираете его во Владивостоке.
+                    </p>
+                </div>
+
+                <a href="#" class="stages__request send-request">
+                  <div class="send-request__row">
+                    <h3 class="send-request__text">Оставить <br> заявку</h3>
+                    <img src="./static/img/request.svg" alt="request-image" class="send-request__image">
+                  </div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__videos videos">
+          <div class="videos__row row-container">
+            <h3 class="videos__block-title block-title">Наши обзоры</h3>
+
+            <div class="videos__line">
+              <a href="#" class="videos__item video">
+                <div class="video__image">
+                  <img src="./static/img/video1.png" alt="video1-image">
+                </div>
+
+                <div class="video__about">
+                  <h3 class="video__name">Космический Shuttle | HONDA FIT SHUTTLE 2013</h3>
+
+                  <div class="video__info bread-crumbs">
+                    <div class="bread-crumbs__crumb crumb">
+                      <p class="crumb__text">391 просмотр</p>
+                    </div>
+
+                    <div class="bread-crumbs__crumb crumb">
+                      <p class="crumb__text">3 недели назад</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="videos__item video">
+                <div class="video__image">
+                  <img src="./static/img/video2.png" alt="video1-image">
+                </div>
+
+                <div class="video__about">
+                  <h3 class="video__name">Компактный минивен I Toyota Siena 2017 г.</h3>
+                  
+                  <div class="video__info bread-crumbs">
+                    <div class="bread-crumbs__crumb crumb">
+                      <p class="crumb__text">391 просмотр</p>
+                    </div>
+
+                    <div class="bread-crumbs__crumb crumb">
+                      <p class="crumb__text">3 недели назад</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="videos__item video">
+                <div class="video__image">
+                  <img src="./static/img/video3.png" alt="video1-image">
+                </div>
+
+                <div class="video__about">
+                  <h3 class="video__name">Спецтехника по-крупному | KATO KB1500R</h3>
+                  
+                  <div class="video__info bread-crumbs">
+                    <div class="bread-crumbs__crumb crumb">
+                      <p class="crumb__text">391 просмотр</p>
+                    </div>
+
+                    <div class="bread-crumbs__crumb crumb">
+                      <p class="crumb__text">3 недели назад</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <a href="#" class="videos__show-more show-more">Смотреть все обзоры</a>
+          </div>
+        </div>
+
+        <div class="content__contacts contacts">
+          <div class="contacts__row row-container">
+              <h3 class="contacts__block-title block-title">Как с нами связаться?</h3>
+              <address class="contacts__address">Владивосток, ул. Фадеева, д. 47 строение 1</address>
+
+              <div class="contacts__line">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <span class="contacts__image"><img src="./static/img/tel-grey.svg" alt=""></span>
+                    <a href="+74232081118" class="contacts__telephone">+7 (423) 208-11-18</a>&nbsp;- для заказа авто
+                  </li>
+
+                  <li class="contacts__item">
+                    <span class="contacts__image"><img src="./static/img/tel-grey.svg" alt=""></span>
+                    <a href="+79841977778" class="contacts__telephone">+7 (984) 197-77-78</a>&nbsp;- для заказа авто
+                  </li>
+
+                  <li class="contacts__item">
+                    <span class="contacts__image"><img src="./static/img/tel-grey.svg" alt=""></span>
+                    <a href="#" class="contacts__telephone">+7 (423) 208-11-18</a>&nbsp;- для заказа авто
+                  </li>
+                </ul>
+
+              <div class="contacts__telephones telephones">
+                <a href="tel:+79841981118" class="telephones__telephone">
+                  <span><img src="./static/img/tel.svg" alt=""></span>
+                  +7 (984) 198-11-18
+                </a>
+                <a href="tel:+79841977778" class="telephones__telephone">
+                  <span><img src="./static/img/tel.svg" alt=""></span>
+                  +7 (984) 197-77-78
+                </a>
+              </div>
+
+              <div class="mail__mail mail">
+                <a href="mailto:spec@tosei.ru" class="mail__mail-string">
+                  <span><img src="./static/img/mail.svg" alt=""></span>
+                  spec@tosei.ru
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__feedback feedback">
+          <div class="feedback__row row-container">
+            <div class="feedback__block-form block-form">
+              <h3 class="block-form__title">Обратная связь</h3>
+
+              <form action="#" method="POST" class="block-form__form">
+                  <div class="block-form__field">
+                    <label for="username">Ваше имя</label>
+                    <input type="text" name="username" id="username" placeholder="Имя">
+                  </div>
+
+                  <div class="block-form__field">
+                    <label for="telephone">Контактный телефон</label>
+                    <input type="text" name="telephone" id="telephone" placeholder="+7">
+                  </div>
+
+                  <button type="submit" class="block-form__complete">
+                    Проконсультировать бесплатно
+                  </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5afdc1e45571f0dc882527287b4e8e30899bac264b8e879369bdef824fd2b5cf&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__row row-container">
+
+            <div class="footer__text">
+              <h3 class="footer__copyright">© Тосэй 2021. Все права защищены</h3>
+              <p class="footer__about">
+                Продажа грузовой и спецтехники, легковых автомобилей, водной техники. Любая техника из Японии, США, Кореи, Китая и Сингапура. Авто с аукционов.
+              </p>
+              <address class="footer__address">
+                <span><img src="./static/img/geo.svg" alt=""></span>
+                <p>Владивосток, ул. Фадеева, д. 47, строение 1</p>
+              </address>
+            </div>
+
+            <div class="footer__contacts telephones">
+              <a href="tel:+79841981118" class="footer__telephone telephones__telephone">
+                <span><img src="./static/img/tel.svg" alt=""></span>
+                +7 (984) 198-11-18
+              </a>
+              <a href="tel:+79841981118" class="footer__telephone telephones__telephone">
+                <span><img src="./static/img/tel.svg" alt=""></span>
+                +7 (984) 198-11-18
+              </a>
+            </div>
+
+            <div class="footer__mail mail">
+              <a href="mailto:spec@tosei.ru" class="footer__mail-string mail__mail-string">
+                <span><img src="./static/img/mail.svg" alt=""></span>
+                spec@tosei.ru
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </div>
+
+  <script src="./static/js/adaptive.js"></script>
+  <script src="./static/js/script.js"></script>
+</body>
+</html>
