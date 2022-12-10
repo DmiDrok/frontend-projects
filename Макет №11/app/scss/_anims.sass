@@ -1,0 +1,219 @@
+// Описание шапки
+.header
+  &.hide .header__row
+    opacity: 0
+  
+  &__row
+    opacity: 1
+    transition: all ease-in-out 1.3s
+
+// Описание блока с текстом на главном блоке
+.welcome
+  &.hide .welcome__text
+    opacity: 0
+
+  &__text
+    opacity: 1
+    transition: all ease-in 1.7s
+
+
+// Описание блока с преимуществами
+.advantages
+  &.hide .advantages__item
+    opacity: 0
+  
+  &__item
+    opacity: 1
+    transition: all ease 1s
+
+    &_1
+      transition-delay: 0s
+    
+    &_2
+      transition-delay: .5s
+    
+    &_3
+      transition-delay: 1s
+
+// Анимация блока с историей
+.history
+  &.hide .history__about
+    opacity: 0
+    transform: translate(-1000%, 0)
+
+  &.hide .history__image
+    opacity: 0
+    transform: translate(1000%, 0)
+
+  &__about
+    position: relative
+    transform: translate(0, 0)
+    opacity: 1
+    transition: transform ease .5s, opacity ease-out 1s
+
+  &__image
+    position: relative
+    transform: translate(0, 0)
+    opacity: 1
+    transition: transform ease 1s, opacity ease-out 1.5s
+  
+
+// Анимация блока с приглашением заказать столик
+.order
+  &.hide .order__row
+    transform: translate(-1000%, 0)
+
+  &__row
+    position: relative
+    transform: translate(0, 0)
+    transition: all ease 1s
+
+// Анимация блока с блюдами
+.dishes
+  &.hide 
+    .dishes__title
+      opacity: 0
+      animation: none
+    
+    .all-dishes__image img
+      opacity: 0
+      animation: none
+
+    .all-dishes__item
+      animation: none
+
+  &__title
+    animation: title-anim 1.4s linear
+
+  .all-dishes
+    &__image img
+      animation: dish-image-anim 1.6s linear
+    
+    &__item
+      opacity: 0
+      animation: dish-item-anim linear .5s forwards
+
+      &_2
+        animation: dish-item-anim linear .5s 1s forwards
+
+      &_3
+        animation: dish-item-anim linear .5s 2s forwards
+
+
+// Описание блока меню
+.menu
+  &.hide
+    .menu__title
+      opacity: 0
+
+    .menu__line
+      opacity: 0
+
+  &__title
+    transition: all ease 1s
+    opacity: 1
+
+  &__line
+    transition: all linear 1s
+    opacity: 1
+      
+// Описание блока с отзывами
+.reviews
+  &.hide
+    .reviews__line
+      opacity: 0
+
+  &__line
+    transition: all ease 1.5s
+    opacity: 1
+
+// Описание блока с галереей
+.gallery
+  &.hide .gallery__title
+    opacity: 0
+
+  &.hide .gallery__item
+    opacity: 0
+
+    &_1
+      transform: translate(-9999px, 0)
+
+    &_6
+      transform: translate(9999px, 0)
+
+  &__title
+    opacity: 1
+    transition: all ease 1s
+
+  &__item
+    opacity: 1
+    transition: transform ease-out 1.5s, opacity ease 1s
+    transform: translate(0, 0)
+
+    @media (max-width: 550px)
+      transform: unset
+      transform: translate(0, 0)
+      opacity: 1
+
+// Описание блока с поварами
+.cooks
+  &.hide .cooks__title
+    opacity: 0
+
+  &.hide .cooks__line
+    opacity: 0
+
+  &__title
+    opacity: 1
+    transition: all ease 1s
+
+  &__line
+    opacity: 1
+    transition: all ease 1.5s
+
+// Анимация заголовков
+@keyframes title-anim
+  0%
+    opacity: 0
+    letter-spacing: 2rem
+
+  50%
+    opacity: .1
+
+  90%
+    opacity: .3
+
+  100%
+    opacity: 1
+    letter-spacing: unset
+    transform: rotate(0deg)
+
+// Анимация картинки в блоке блюд
+@keyframes dish-image-anim
+  0%
+    opacity: 0
+    transform: rotate(180deg) scale(0.2)
+    border-radius: 90%
+  
+  50%
+    opacity: .5
+    transform: rotate(90deg) scale(0.5)
+    
+  60%
+    border-radius: 90%
+
+  100%
+    opacity: 1
+    transform: rotate(0deg) scale(1)
+    border-radius: 0
+
+// Анимация блюд в блоке блюд
+@keyframes dish-item-anim
+  0%
+    opacity: 0
+
+  50%
+    opacity: .3
+
+  100%
+    opacity: 1
