@@ -50,12 +50,41 @@ function onScrollRemoveHide() {
   }
 }
 
+// ленивая подгрузка
+// function lazyLoad() {
+//   const images = document.querySelectorAll("img")
+//   const options = {
+//     root: null,
+//     rootMargin: "0px",
+//     threshold: 0.1
+//   }
+//   const observer = new IntersectionObserver(handleImg, options)
+
+//   images.forEach(image => observer.observe(image))
+
+//   function handleImg(myImg, observer) {
+//     myImg.forEach(single => {
+//       if (single.isIntersecting) {
+//         loadImg(single.target)
+//       }
+//     })
+//   }
+
+//   function loadImg(img) {
+//     if (img.dataset.src) {
+//       console.log(img.dataset.src)
+//       img.src = img.dataset.src
+//     }
+//   }
+// }
+
 // применить все настраивающие функции
 function applyAll() {
   setWelcomeFullScreen()
     .then(addHideAll)
     .then(onScrollRemoveHide)
   setCorrectBurger()
+  // lazyLoad()
 }
 
 try {

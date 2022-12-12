@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Главная страница</title>
+<link rel="shortcut icon" href="../images/mobile-logo.svg">
+<link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+  
+  <section class="mobile-menu">
+    <div class="mobile-menu__close">
+      <p class="close"></p>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__elem active"><a href="./index.html" class="mobile-menu__link">Главная</a></li>
+        <li class="mobile-menu__elem"><a href="#" class="mobile-menu__link">Меню</a></li>
+        <li class="mobile-menu__elem"><a href="#" class="mobile-menu__link">О нас</a></li>
+        <li class="mobile-menu__elem"><a href="#" class="mobile-menu__link">Бронь</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <main class="main">
+    
+    <header class="header hide">
+  <div class="header__container">
+    <div class="header__row">
+
+      <div class="header__logo">
+        <a href="./index.html">
+          <picture>
+            <source srcset="../images/logo.svg" media="(min-width: 420px)">
+            <source srcset="../images/mobile-logo.svg" media="">
+            <img src="../images/mobile-logo.svg" alt="">
+          </picture>
+        </a href="./index.html">
+      </div>
+
+      <div class="header__options">
+
+        <nav class="header__nav nav">
+          <ul class="nav-list">
+            <li class="nav-list__elem active">
+              <a href="./index.html" class="nav-list__link">Главная</a>
+            </li>
+            <li class="nav-list__elem">
+              <a href="#" class="nav-list__link">Меню</a>
+            </li>
+            <li class="nav-list__elem">
+              <a href="#" class="nav-list__link">О нас</a>
+            </li>
+            <li class="nav-list__elem">
+              <a href="#" class="nav-list__link">Бронь</a>
+            </li>
+            <li class="nav-list__elem nav-list__basket">
+              <a href="#" class="nav-list__link">
+                <img src="../images/basket.svg" alt="basket">
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__activities activities">
+          <a href="tel:+999-888-76-54" class="activities__text">
+            <h3 class="activities__title">+999-888-76-54</h3>
+            <p class="activities__about">
+              Свяжитесь с нами для <br> бронирования
+            </p>
+          </a>
+
+          <a href="#" class="activities__btn">
+            Заказ столика
+          </a>
+        </div>
+
+      </div>
+
+      <div class="header__burger">
+        <div class="burger">
+          <i class="burger__line"></i>
+          <i class="burger__line"></i>
+          <i class="burger__line"></i>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+    <section class="welcome hide">
+      <div class="welcome__container">
+        <div class="welcome__row">
+
+          <div class="welcome__text">
+            <h2 class="welcome__title">
+              <span class="medium">Добро пожаловать в</span>
+              <span class="big">Наш ресторан</span>
+            </h2>
+            <p class="welcome__tagline">
+              ДОМ ЛУЧШЕЙ ЕДЫ
+            </p>
+            <a href="#" class="welcome__btn welcome__menu-link">
+              VIEW MENU
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages hide">
+      <div class="advantages__container">
+        <div class="advantages__row">
+
+          <div class="advantages__line">
+            <div class="advantages__item advantages__item_1 item">
+              <div class="item__icon">
+                <img src="../images/adv1.svg" alt="icon">
+              </div>
+
+              <h4 class="item__title">
+                Магическая <span class="fill">Атмосфера</span>
+              </h4>
+
+              <p class="item__about">
+                В нашем заведении царит магическая атмосфера наполненная вкусными ароматами
+              </p>
+            </div>
+            <div class="advantages__item advantages__item_2 item">
+              <div class="item__icon">
+                <img src="../images/adv1.svg" alt="icon">
+              </div>
+
+              <h4 class="item__title">
+                Лучшее качество <span class="fill">Еды</span>
+              </h4>
+
+              <p class="item__about">
+                Качество нашей <br> Еды - отменное!
+              </p>
+            </div>
+            <div class="advantages__item advantages__item_3 item">
+              <div class="item__icon">
+                <img src="../images/adv1.svg" alt="icon">
+              </div>
+
+              <h4 class="item__title">
+                Недорогая <span class="fill">Еда</span>
+              </h4>
+
+              <p class="item__about">
+                Стоимость нашей Еды
+                зависит только от ее
+                количества. Качество
+                всегда на высоте!
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="history hide">
+      <div class="history__container">
+        <div class="history__row">
+
+          <div class="history__about about">
+            <h3 class="block-title">
+              Наша
+              <span class="fill">История</span>
+            </h3>
+            <p class="about__text">
+              Как и у любого другого самобытного места, у нас есть своя, особая история. Идея ресторана пришла основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана застрял в сотнях километров от ближайшего населенного пункта. Вдали от цивилизации и связи им пришлось навремя обустровать себе нехитрый быт, добывать и готовить себе еду.
+            </p>
+            <div class="about__stats stats">
+              <div class="stats__item item">
+                <h3 class="item__title">93</h3>
+                <p class="item__text">Напитки</p>
+              </div>
+
+              <div class="stats__item item">
+                <h3 class="item__title">206</h3>
+                <p class="item__text">Еда</p>
+              </div>
+
+              <div class="stats__item item">
+                <h3 class="item__title">71</h3>
+                <p class="item__text">Закуски</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="history__image">
+            <img src="../images/history.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order hide">
+      <div class="order__container">
+        <div class="order__row">
+
+          <div class="order__text">
+            <h3 class="order__title fill">Отпразднуйте в одном из <br>самых лучших ресторанов.</h3>
+            <p class="order__subtitle">
+              Только в этом месяце бизнес-ланч от 250 ₽
+            </p>
+          </div>
+
+          <a href="#" class="order__btn">
+            Заказ столика
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="dishes hide">
+      <div class="dishes__container">
+        <div class="dishes__row">
+
+          <h3 class="dishes__title block-title">
+            Наши
+            <span class="fill">Блюда</span>
+          </h3>
+
+          <div class="dishes__all all-dishes">
+            <div class="all-dishes__image">
+              <img src="../images/dishes.jpg" alt="">
+            </div>
+
+            <div class="all-dishes__line">
+              <div class="all-dishes__item all-dishes__item_1 item">
+                <div class="item__image"><img src="../images/dish1.jpg" alt=""></div>
+                <div class="item__name">Гамбургер мини</div>
+                <div class="item__sep"><img src="../images/sep.svg" alt=""></div>
+                <p class="item__price">220 ₽</p>
+              </div>
+
+              <div class="all-dishes__item all-dishes__item_2 item">
+                <div class="item__image"><img src="../images/dish1.jpg" alt=""></div>
+                <div class="item__name">Гамбургер мини</div>
+                <div class="item__sep"><img src="../images/sep.svg" alt=""></div>
+                <p class="item__price">220 ₽</p>
+              </div>
+
+              <div class="all-dishes__item all-dishes__item_3 item">
+                <div class="item__image"><img src="../images/dish1.jpg" alt=""></div>
+                <div class="item__name">Гамбургер мини</div>
+                <div class="item__sep"><img src="../images/sep.svg" alt=""></div>
+                <p class="item__price">220 ₽</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="menu hide">
+      <div class="menu__container">
+        <div class="menu__row">
+
+          <h3 class="menu__title block-title">Наше меню</h3>
+
+          <div class="menu__line">
+            <div class="menu__item item active">
+              <div class="item__image">
+                <div class="item__image-container">
+                  <img src="../images/food1.jpg" alt="">
+                  <p class="item__price">420</p>
+                </div>
+              </div>
+
+              <h3 class="item__name">
+                Гамбургер макси
+              </h3>
+
+              <p class="item__about">
+                Максимально толстый <br> слой мяса
+              </p>
+
+              <a href="#" class="order-button">
+                Заказать
+              </a>
+            </div>
+
+            <div class="menu__item item active">
+              <div class="item__image">
+                <div class="item__image-container">
+                  <img src="../images/food1.jpg" alt="">
+                  <p class="item__price">420</p>
+                </div>
+              </div>
+
+              <h3 class="item__name">
+                Гамбургер макси
+              </h3>
+
+              <p class="item__about">
+                Максимально толстый <br> слой мяса
+              </p>
+
+              <a href="#" class="order-button">
+                Заказать
+              </a>
+            </div>
+
+            <div class="menu__item item active">
+              <div class="item__image">
+                <div class="item__image-container">
+                  <img src="../images/food1.jpg" alt="">
+                  <p class="item__price">420</p>
+                </div>
+              </div>
+
+              <h3 class="item__name">
+                Гамбургер макси
+              </h3>
+
+              <p class="item__about">
+                Максимально толстый <br> слой мяса
+              </p>
+
+              <a href="#" class="order-button">
+                Заказать
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews hide">
+      <div class="reviews__container">
+        <div class="reviews__row">
+
+          <div class="reviews__line">
+            <div class="reviews__item review">
+
+              <p class="review__text">
+                Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!
+              </p>
+
+              <div class="review__visitor visitor">
+                <div class="visitor__photo">
+                  <img src="../images/visitor1.jpg" alt="">
+                </div>
+                <h3 class="visitor__status">Посетитель</h3>
+                <h3 class="visitor__name">Николай</h3>
+              </div>
+
+            </div>
+
+            <div class="reviews__item review">
+
+              <p class="review__text">
+                Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!
+              </p>
+
+              <div class="review__visitor visitor">
+                <div class="visitor__photo">
+                  <img src="../images/visitor1.jpg" alt="">
+                </div>
+                <h3 class="visitor__status">Посетитель</h3>
+                <h3 class="visitor__name">Николай</h3>
+              </div>
+
+            </div>
+
+            <div class="reviews__item review">
+
+              <p class="review__text">
+                Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!
+              </p>
+
+              <div class="review__visitor visitor">
+                <div class="visitor__photo">
+                  <img src="../images/visitor1.jpg" alt="">
+                </div>
+                <h3 class="visitor__status">Посетитель</h3>
+                <h3 class="visitor__name">Николай</h3>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery hide">
+      <svg class="red-svg red-svg-left" width="30" height="100" viewBox="0 0 30 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="100" fill="#FF0000"/>
+      </svg>
+        
+      <svg class="red-svg red-svg-right" width="30" height="100" viewBox="0 0 30 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="100" fill="#FF0000"/>
+      </svg>
+
+      <div class="gallery__container">
+        <div class="gallery__row">
+
+          <h3 class="gallery__title block-title">
+            Галерея
+            <span class="fill">Блюд</span>
+          </h3>
+
+          <div class="gallery__line">
+            <div class="gallery__item gallery__item_1"><img src="../images/gallery1.webp" alt=""></div>
+            <div class="gallery__item gallery__item_2"><img src="../images/gallery2.webp" alt=""></div>
+            <div class="gallery__item gallery__item_3"><img src="../images/gallery3.webp" alt=""></div>
+
+            <div class="gallery__item gallery__item_4"><img src="../images/gallery2.webp" alt=""></div>
+            <div class="gallery__item gallery__item_5"><img src="../images/gallery3.webp" alt=""></div>
+            <div class="gallery__item gallery__item_6"><img src="../images/gallery1.webp" alt=""></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cooks hide">
+      <div class="cooks__row">
+        <div class="cooks__container">
+
+          <h3 class="cooks__title block-title">
+            Наши <span class="fill">Повара</span>
+          </h3>
+          
+          <div class="cooks__line">
+            <div class="cooks__item item">
+              <div class="item__image">
+                <img src="../images/cook1.webp" alt="">
+              </div>
+            </div>
+
+            <div class="cooks__item item">
+              <div class="item__image">
+                <img src="../images/cook2.webp" alt="">
+              </div>
+            </div>
+
+            <div class="cooks__item item">
+              <div class="item__image">
+                <img src="../images/cook3.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer hide">
+      <div class="footer__container">
+        <div class="footer__row">
+
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="../js/jquery.min.js"></script>
+<script src="../js/main.min.js"></script>
+</body>
+</html>

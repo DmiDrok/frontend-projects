@@ -1,29 +1,96 @@
-const { src, dest, watch, parallel, series } = require("gulp")
+const  { src, dest, series, parallel, watch } = require('gulp')
+const browserSync  = require('browser-sync').create()
+const scss         = require('gulp-sass')(require('sass'))
+const concat       = require('gulp-concat')
+const autoprefixer = require('gulp-autoprefixer')
+const uglify       = require('gulp-uglify-es').default
+const babel        = require('gulp-babel')
+const imagemin     = require('gulp-imagemin')
+const del          = require('del')
+const fonter       = require('gulp-fonter-fix')
+const ttf2woff2    = require('gulp-ttf2woff2')
+const fileInclude  = require('gulp-file-include')
 
-const scss         = require("gulp-sass")(require("sass"))
-const concat       = require("gulp-concat")
-const browserSync  = require("browser-sync").create()
-const uglify       = require("gulp-uglify-es").default
-const autoprefixer = require("gulp-autoprefixer")
-const imagemin     = require("gulp-imagemin")
-const del          = require("del")
 
+// используемые пути
+const paths = {
+  app: {
+    root: './app',
+    html: './app/html',
+    css: './app/css',
+    scss: './app/scss',
+    js: './app/js',
+    images: './app/images',
+    fonts: './app/fonts',
+    pages: './app/pages'
+  },
 
-function browsersync() {
+  build: {
+    root: './dist',
+    css: './dist/css',
+    js: './dist/js',
+    images: './dist/images',
+    fonts: './dist/fonts',
+    pages: './app/pages'
+  }
+}
+
+// порт локального сервера
+const PORT = 5555
+
+// настройка браузера
+function browser() {
   browserSync.init({
     server: {
-      baseDir: "app/"
+        baseDir: paths.app.root
     },
-    port: 9000
-  })
+    port: PORT
+  });
 }
 
+// очистка dist
 function cleanDist() {
-  return del("./dist")
+  return del(paths.build.root)
 }
 
+// сборка scss в css
+function styles() {
+  return src(`${paths.app.scss}/**/*.scss`)
+    .pipe(concat('style.min.css'))
+    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 version"] }))
+    .pipe(scss({ outputStyle: 'compressed', grid: true }))
+    .pipe(dest(`${paths.app.css}`))
+    .pipe(browserSync.stream())
+}
+
+// сборка html - файлов в один
+function htmlInclude() {
+  return src(`${paths.app.html}/*.html`)
+    .pipe(fileInclude({ 
+      prefix: '@@',
+      basepath: '@file'
+     }))
+     .pipe(dest(`${paths.app.pages}`))
+     .pipe(browserSync.stream())
+}
+
+// сборка js файлов
+function scripts() {
+  return src([
+      `${paths.app.js}**/*.js`, 
+      `!${paths.app.js}/main.min.js`,
+      `!${paths.app.js}/jquery.min.js`
+    ])
+    .pipe(concat('main.min.js'))
+    .pipe(babel({ presets: ['@babel/env'] }))
+    .pipe(uglify())
+    .pipe(dest(`${paths.app.js}`))
+    .pipe(browserSync.stream())
+}
+
+// сжатие изображений
 function images() {
-  return src("./app/images/**/*")
+  return src([`${paths.app.images}/**/*`])
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -35,52 +102,72 @@ function images() {
         ]
       })
     ]))
-    .pipe(dest("./dist/images"))
-}
-
-function scripts() {
-  return src([
-    "./node_modules/jquery/dist/jquery.js",
-    "./app/js/**/*.js",
-    "!./app/js/main.min.js",
-  ])
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(dest("./app/js"))
+    .pipe(dest(`${paths.build.images}`))
     .pipe(browserSync.stream())
 }
 
-function styles() {
-  return src("./app/scss/style.sass")
-      .pipe(scss({ outputStyle: "compressed" }))
-      .pipe(concat("style.min.css"))
-      .pipe(autoprefixer({ overrideBrowserslist: ["last 10 version"], grid: true }))
-      .pipe(dest("./app/css"))
-      .pipe(browserSync.stream())
+// конвертация otf в ttf
+function otfToTtf() {
+  return src([`${paths.app.fonts}/*.otf`])
+    .pipe(fonter({
+      formats: ['ttf']
+    }))
+    .pipe(dest(`${paths.app.fonts}`))
 }
 
-function build() {
+// конвертация ttf в woff, woff2
+function ttfToWoff() {
+  return src([`${paths.app.fonts}/*.ttf`])
+    .pipe(fonter({
+      formats: ['woff']
+    }))
+    .pipe(dest(`${paths.app.fonts}`))
+    .pipe(src([`${paths.app.fonts}/*.ttf`]))
+    .pipe(ttf2woff2())
+    .pipe(dest(`${paths.app.fonts}`))
+}
+
+// добавляем jquery сразу в прод
+function addJquery() {
+  return src(['./node_modules/jquery/dist/jquery.min.js'])
+    .pipe(dest(`${paths.app.js}`))
+    // .pipe(dest(`${paths.build.js}`))
+}
+
+// начать смотреть за файлами
+function startWatch() {
+  watch([`${paths.app.scss}/**/*.scss`], styles)
+  watch([`${paths.app.js}/**/*.js`, `!${paths.app.js}/main.min.js`], scripts)
+  watch([`${paths.app.html}/**/*.html`], htmlInclude)
+}
+
+// перенос на прод
+function toProd() {
   return src([
-    "./app/css/style.min.css",
-    "./app/fonts/**/*",
-    "./app/js/main.min.js",
-    "./app/*.html"
-  ], { base: "app" })
-    .pipe(dest("./dist"))
+    `${paths.app.pages}/**/*`,
+    `${paths.app.css}/style.min.css`,
+    `${paths.app.js}/main.min.js`,
+    `${paths.app.js}/jquery.min.js`,
+    `${paths.app.fonts}/**/*`,
+  ], { base: 'app' })
+    .pipe(dest(`${paths.build.root}`))
 }
 
-function watching() {
-  watch(["./app/scss/**/*.sass"], styles)
-  watch(["./app/js/**/*.js", "!./app/js/main.min.js"], scripts)
-  watch(["./app/*.html"]).on("change", browserSync.reload)
-}
+// компиляция html, css, js
+exports.compile = series(htmlInclude, styles, scripts)
 
+// отдельные таски
 exports.styles = styles
-exports.watching = watching
-exports.browsersync = browsersync
+exports.html = htmlInclude
 exports.scripts = scripts
 exports.images = images
-exports.cleanDist = cleanDist
+exports.addJq = addJquery
 
-exports.build = series(cleanDist, images, build)
-exports.default = parallel(styles, scripts, browsersync, watching)
+// разные расширения шрифтов по команде
+exports.fonts = series(otfToTtf, ttfToWoff)
+
+// сборка в прод
+exports.build = series(cleanDist, htmlInclude, styles, scripts, images, toProd)
+
+// сборка и запуск live-сервера
+exports.default = parallel(htmlInclude, styles, scripts, addJquery, startWatch, browser)
