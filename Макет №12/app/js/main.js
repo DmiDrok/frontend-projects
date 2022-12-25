@@ -1,12 +1,3 @@
-// настройка корректных размеров шапки
-function setCorrectHeaderSize() {
-  // const header = document.querySelector('.header');
-  // const headerTop = header.querySelector('.header__top');
-  // const headerBottom = header.querySelector('.header__bottom');
-
-  // header.style.height = parseInt(getComputedStyle(headerTop).height) + parseInt(getComputedStyle(headerBottom).height) + "px"; 
-}
-
 // устанавливаем корректное взаимодействие с поиском в шапке
 function setCorrectSearch() {
   const search = document.querySelector(".search__content");
@@ -202,13 +193,19 @@ function setCorrectMenu() {
 
   // по перетаскиваниям определям - будем открывать меню или нет
   let [x1, x2] = [null, null];
+  let [y1, y2] = [null, null];
   document.addEventListener('touchstart', function(event) {
     x1 = event.touches[0].clientX;
+    y1 = event.touches[0].clientY;
   });
   document.addEventListener('touchend', function(event) {
     x2 = event.changedTouches[0].clientX;
+    y2 = event.changedTouches[0].clientY;
 
-    if (Math.abs(x1 - x2) > 120) {
+    console.log(x1, x2);
+    console.log(y1, y2);
+
+    if (Math.abs(x1 - x2) > 120 && Math.abs(y1 - y2) < 100) {
       if (x1 < x2) showMenu();
       else if (x1 > x2) hideMenu();
     }
@@ -231,7 +228,6 @@ function setCorrectMenu() {
 
 // применяем настраивающие функции
 function setAll() {
-  setCorrectHeaderSize();
   setCorrectSearch();
   setCorrectSelect();
   setCorrectFancybox();

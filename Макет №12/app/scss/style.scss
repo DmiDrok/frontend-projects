@@ -5,7 +5,7 @@
 @import "keyframes";
 
 html, body {
-  min-width: 840px;
+  // min-width: 840px;
   background: #fff;
 }
 
@@ -111,6 +111,10 @@ body {
           .list__link {
             font-size: 12px;
             white-space: nowrap;
+
+            @media (max-width: 980px) {
+              font-size: 19px;
+            }
           }
         }
       }
@@ -331,6 +335,7 @@ body {
   position: relative;
   min-height: 630px;
   height: 100vh;
+  max-height: 900px;
   
   &__container {
     height: 100%;
@@ -339,6 +344,10 @@ body {
   &__row {
     height: 100%;
     display: flex;
+
+    @media (max-width: 980px) {
+      justify-content: center;
+    }
   }
 
   &__bg-image {
@@ -513,6 +522,7 @@ body {
     .item {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       transition: opacity ease .5s;
 
       &:hover {
@@ -565,6 +575,7 @@ body {
       background: $color-1;
       padding: 0 30px;
       color: #fff;
+      justify-content: stretch;
 
       &:hover { opacity: 1; }
 
@@ -1167,6 +1178,10 @@ body {
     width: 30px;
     height: 81%;
     z-index: 1;
+    
+    @media (max-width: 900px) {
+      width: 10px;
+    }
 
     &_left {
       background: $color-1;

@@ -32,7 +32,7 @@ function toPug() {
 function toCss() {
   return src('./app/scss/**/*.scss')
     .pipe(concat('style.min.css'))
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer())
     .pipe(dest('./app/css'))
     .pipe(browserSync.stream());

@@ -99,23 +99,8 @@
     top: 50px;
     font-size: 30px;
     color: $color-1;
-    display: none;
     cursor: pointer;
   }
-
-  @media (max-width: 550px) {
-    width: 100%;
-
-    .close {
-      display: inline;
-    }
-
-    .mobile-nav {
-      width: 50%;
-      margin: 0 auto;
-    }
-  }
-
 
   &.active {
     transform: translate(0, 0);
@@ -162,6 +147,23 @@
       &:hover::before {
         width: 100%;
       }
+    }
+  }
+
+  @media (max-width: 980px) {
+    width: 100%;
+
+    .mobile-nav {
+      width: 50%;
+      margin: 0 auto;
+
+      &__link {
+        font-size: 33px;
+      }
+    }
+
+    .close {
+      font-size: 53px;
     }
   }
 }
