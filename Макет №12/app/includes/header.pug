@@ -1,0 +1,59 @@
+//- Шапка сайта
+header.header
+      .header__top
+        .header__container.container.top
+          .header__row.row
+            .language
+              select.language-select(name="language")
+                option(value="English" selected) English 
+                option(value="French") French 
+                option(value="Deutch") Deutch 
+              i(class="fa-sharp fa-solid fa-chevron-down icon")
+
+            .options 
+              a(href="#").options__contact.contacts
+                i(class="fa-solid fa-users icon")
+                span Contact Center
+              div.options__contact.profile 
+                span Country Profile
+                i(class="fa-sharp fa-solid fa-chevron-down icon")
+                .profile__links
+                  ul.list
+                    li.list__elem
+                      a.list__link(href="#") Express delivery
+                    li.list__elem
+                      a.list__link(href="#") Popular destinations
+                    li.list__elem
+                      a.list__link(href="#") Delivery of heavy loads
+                    li.list__elem
+                      a.list__link(href="#") Export for online stores
+                    li.list__elem
+                      a.list__link(href="#") Air transportation
+
+      .header__bottom
+        .header__container.container.top
+          .header__row.row
+            .logo
+              a.logo__link(href="./index.html")
+                img(src="./images/logo.png" alt="logo.png")
+            
+            nav.nav
+              a.nav__link(href="#") Express
+              a.nav__link(href="#") Parcel &amp; Ecommerce
+              a.nav__link.active(href="#") Logistics
+              a.nav__link(href="#") Mail
+              a.nav__link(href="#") Press
+              a.nav__link(href="#") About
+
+            .burger#burger
+              i.burger__line
+              i.burger__line
+              i.burger__line
+
+            .search
+              .search__content
+                i(class="fa-solid fa-magnifying-glass icon")
+              .search__input
+                input(type="text" tabindex=1 name="query" placeholder="Enter..." required)
+                .search__arrow
+                  i(class="fa-solid fa-arrow-right icon")

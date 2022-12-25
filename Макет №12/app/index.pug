@@ -1,0 +1,441 @@
+doctype html
+html(lang="en")
+  include includes/head
+  body 
+    include includes/mobile_menu
+    
+    div.wrapper
+      include includes/header
+
+      //- Уникальное содержимое главной страницы
+      main.main
+        //- Первая секция
+        section.welcome
+          picture
+            source(type="image/webp" srcset="./images/bg1.webp 1x")
+            img.welcome__bg-image(src="./images/bg1.jpg")
+          
+          div.welcome__gradient
+
+          .welcome__container.container.top
+            .welcome__row.row
+              .welcome__content.content
+                h3.content__title We Deliver <br> With Speed
+                p.content__text.
+                  When an unknown printer took a galley of type and scrambled <br>
+                  it to make a type specimen book. It has survived not only five centuries
+                .content__advantages.advantages
+                  p.advantages__advantage Amazing
+                  p.advantages__advantage Quick
+                  p.advantages__advantage 24/7 Supports
+                .content__buttons.buttons
+                  a.buttons__button.buttons__button_yellow.yellow-btn(href="#") Learn More
+                  a.buttons__button.buttons__button_transparent(href="#") DHL Worldwide
+
+        //- Секция с сервисами
+        section.services
+          .services__container.container.top
+            .services__row.row
+              .services__head
+                h4.services__title Awesome Services
+                h6.services__title_back Services
+
+              .services__line
+                a.services__item.item(href="#")
+                  .item__image
+                    picture
+                      source(srcset="./images/2_1.webp 1x")
+                      img(src="./images/2_1.png" alt="")
+                  .item__title Express Services
+                  .item__text When an unknown printer took a galley of type and scrambled it to make a type specimen.
+                  p.item__link(href="#")
+                    span Read More
+                    i(class="fa-solid fa-caret-right icon")
+
+                a.services__item.item(href="#")
+                  .item__image
+                    picture
+                      source(srcset="./images/2_2.webp 1x")
+                      img(src="./images/2_2.png" alt="")
+                  .item__title Parcel &amp; Ecommerce
+                  .item__text When an unknown printer took a galley of type and scrambled it to make a type specimen.
+                  p.item__link(href="#") 
+                    span Read More
+                    i(class="fa-solid fa-caret-right icon")
+
+                a.services__item.item(href="#")
+                  .item__image
+                    picture
+                      source(srcset="./images/2_3.webp 1x")
+                      img(src="./images/2_3.png" alt="")
+                  .item__title Frieght Transport
+                  .item__text When an unknown printer took a galley of type and scrambled it to make a type specimen.
+                  p.item__link(href="#") 
+                    span Read More
+                    i(class="fa-solid fa-caret-right icon")
+                
+                .services__item.item.invite
+                  h5.invite__title DHI Worldwide
+                  p.invite__text.
+                    When an unknown prot printer type and scra
+                  .invite__select
+                    select.invite-select(name="location")
+                      option(value="Location" disabled selected) Location 
+                      option(value="Item 1") Item 1
+                      option(value="Item 2") Item 2 
+                      option(value="Item 3") Item 3 
+                    .invite-arrow
+                      i(class="fa-sharp fa-solid fa-angle-down icon")
+                  .invite__button-block
+                    a.invite__button.yellow-btn(href="#") Explore
+
+        //- Секция с видео
+        section.video
+          picture
+            source(srcset="./images/bg_video.webp 1x")
+            img.video__background-image(src="./images/bg_video.jpg")
+
+          div.video__background-gradient
+          .video__container.container.bottom
+            .video__row.row
+              .video__content
+                h3.video__title One of the best international service provider
+                .video__play-block
+                  a(href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="video" data-caption="                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum officiis impedit tenetur error suscipit unde possimus iusto eum. Vero natus dolores incidunt quo at, doloribus hic vitae eius facere?").video__play
+                    i(class="fa-solid fa-play")
+
+              .video__line
+                .video__item.item
+                  .item__image
+                    picture
+                      source(srcset="./images/3_1.webp 1x")
+                      img(src="./images/3_1.png" alt="")
+                  .item__content
+                    h5.item__title Aerospace Provider
+                    ul.item__list
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span When an unknown printer took.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span Make a type specimen book.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span It has survived.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span Airlines unknown specimen.
+                .video__item.item
+                  .item__image
+                    picture
+                      source(srcset="./images/3_2.webp 1x")
+                      img(src="./images/3_2.png" alt="")
+                  .item__content
+                    h5.item__title Poppins Proved
+                    ul.item__list
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span When an unknown printer took.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span Make a type specimen book.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span It has survived.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span Airlines unknown specimen.
+                .video__item.item
+                  .item__image
+                    picture
+                      source(srcset="./images/3_3.webp 1x")
+                      img(src="./images/3_3.png" alt="")
+                  .item__content
+                    h5.item__title Airline Specimen
+                    ul.item__list
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span When an unknown printer took.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span Make a type specimen book.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span It has survived.
+                      li.item__elem 
+                        i(class="fa-solid fa-caret-right icon")
+                        span Airlines unknown specimen.
+
+        //- Секция с описанием по пунктам (табы)
+        section.points
+          .points__container.container.bottom
+            .points__row.row
+              //- табы тут
+              .points__categories.categories
+                .categories__header
+                  .categories__cat-block.active
+                    span.categories__cat.categories__cat_1.text Express
+                  .categories__cat-block
+                    span.categories__cat.categories__cat_2.text Logistics
+
+                .categories__content
+                  .categories__group-block.categories__group-block_1
+                    .categories__point-block.point-block
+                      .categories__point.point
+                        p.point__text.point-text Track your shipment
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Lorem ipsum
+                    .categories__point-block.point-block
+                      .categories__point.point
+                        p.point__text.point-text New login
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+                    .categories__point-block.point-block
+                      .categories__point.point
+                        p.point__text.point-text Find Dhl point
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+                    .categories__point-block.point-block.active
+                      .categories__point.point
+                        p.point__text.point-text Find a service
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+                  .categories__group-block.categories__group-block_2.hide
+                    .categories__point-block.point-block
+                      .categories__point.point
+                        p.point__text.point-text Track your shipment
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+                    .categories__point-block.point-block
+                      .categories__point.point
+                        p.point__text.point-text New login
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+                    .categories__point-block.point-block
+                      .categories__point.point
+                        p.point__text.point-text Find Dhl point
+                        p.point__arrow.point-arrow
+                          i.line
+                          i(class="fa-sharp fa-solid fa-angle-down icon")
+                        .point__info.point-info
+                          .point-info__title International Services to Another Country
+                          .point-info__items
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Emergency
+                            p.point-info__item.item 
+                              i(class="fa-solid fa-caret-right icon")
+                              span Time Critical
+                            p.point-info__item.item
+                              i(class="fa-solid fa-caret-right icon")
+                              span Less Urgent
+
+
+              .points__image.image-block
+                .image-block__border.image-block__border_yellow
+                .image-block__border.image-block__border_white
+                .image-block__gradient
+                picture
+                  source(srcset="./images/4_1.webp 1x")
+                  img.image-block__image(src="./images/4_1.png" alt="")
+                img.image-block__image.image-block__image_logo(src="./images/logo.png" alt="")
+
+        //- Секция с описанием в виде текста (красная секция)
+        section.about
+          .about__container.container.bottom
+            .about__row.row
+              .about__text-content.text-content
+                h4.text-content__title Excellence. Simply delivered.
+                p.text-content__paragraph.
+                  International express deliveries; global freight forwarding by air, sea, road and rail;
+                  warehousing solutions from packaging, to repairs, to storage; mail deliveries worldwide;
+                  and other customized logistic services – with everything DHL does, we
+                  help connect people and improve their lives.
+              .about__button
+                a.red-button(href="#") Learn more
+
+        //- Секция с компаниями
+        section.companies
+          .companies__container.container.bottom
+            .companies__row.row
+              .companies__line
+                a.companies__item.item(href="#")
+                  picture
+                    source(srcset="./images/company_1.webp 1x")
+                    img(src="./images/company_1.png" alt="")
+                a.companies__item.item(href="#")
+                  picture
+                    source(srcset="./images/company_2.webp 1x")
+                    img(src="./images/company_2.png" alt="")
+                a.companies__item.item(href="#")
+                  picture
+                    source(srcset="./images/company_3.webp 1x")
+                    img(src="./images/company_3.png" alt="")
+                a.companies__item.item(href="#")
+                  picture
+                    source(srcset="./images/company_4.webp 1x")
+                    img(src="./images/company_4.png" alt="")
+
+      //- Подвал
+      footer.footer
+        .footer__container.container.bottom
+          div.footer__line.footer__line_left
+          picture
+            source(srcset="./images/footer_left.webp 1x")
+            img.footer__image.footer__image_left(src="./images/footer_left.png" alt="")
+          picture
+            source(srcset="./images/footer_right.webp 1x")
+            img.footer__image.footer__image_right(src="./images/footer_right.png" alt="")
+          div.footer__line.footer__line_right
+          .footer__row.row
+            nav.nav
+              .nav__item.nav-item
+                h4.nav-item__title Contact Center
+                ul.nav-item__list.list
+                  li.list__elem
+                    a.list__link.link(href="#") 
+                      i(class="fa-solid fa-caret-right icon")
+                      span DHL Express
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span DHL Parcel &amp; Ecommerce
+                  li.list__elem
+                    a.list__link.link(href="#") 
+                      i(class="fa-solid fa-caret-right icon")
+                      span DHL Global Forwarding
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span DHL Freight
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span DHL Supply Chain
+              .nav__item.nav-item
+                h4.nav-item__title About us
+                ul.nav-item__list.list
+                  li.list__elem
+                    a.list__link.link(href="#") 
+                      i(class="fa-solid fa-caret-right icon")
+                      span Partnerships
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span Company portrait
+                  li.list__elem
+                    a.list__link.link(href="#") 
+                      i(class="fa-solid fa-caret-right icon")
+                      span DHL Global Forwarding
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span Green solutions
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span Innovation
+              .nav__item.nav-item
+                h4.nav-item__title Social media
+                ul.nav-item__list.list
+                  li.list__elem
+                    a.list__link.link(href="#") 
+                      i(class="fa-solid fa-caret-right icon")
+                      span Facebook
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span Dribbble
+                  li.list__elem
+                    a.list__link.link(href="#") 
+                      i(class="fa-solid fa-caret-right icon")
+                      span Behance
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span Gmail
+                  li.list__elem
+                    a.list__link.link(href="#")
+                      i(class="fa-solid fa-caret-right icon")
+                      span Twitter
