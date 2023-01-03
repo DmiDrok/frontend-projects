@@ -1,0 +1,333 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head
+  body
+    include includes/header
+
+    main.main
+      include includes/attention
+      include includes/sidebar
+
+      //- Главная секция
+      section.welcome
+        .welcome__container.container
+          .welcome__row.row
+            .welcome__text.text(class="wow animate__animated animate__slideInLeft")
+              h5.text__description.
+                <strong>Рассчитаем стоимость</strong> <br> комплектующих и установки <br> <strong>системы заземления</strong> за 1 день
+              p.text__sub-description.
+                Получите подробную смету ответив <br> всего на 5 простых вопросов
+              .text__get-btn-block
+                a(href="#").text__get-btn.get-btn Получить расчёт
+              
+            .welcome__image-block(class="wow animate__animated animate__slideInRight")
+              picture
+                source(srcset="./images/welcome-mobile.webp 1x" media="(max-width: 850px)")
+                source(srcset="./images/welcome-mobile.png 1x" media="(max-width: 850px)")
+                source(srcset="./images/welcome-tablet.webp 1x" media="(max-width: 1410px)")
+                source(srcset="./images/welcome-tablet.png 1x" media="(max-width: 1410px)")
+                source(srcset="./images/welcome.webp 1x")
+                source(srcset="./images/welcome.png 1x")
+                img.welcome__image(src="./images/welcome.png" alt="welcome")
+
+            .advantages(class="wow animate__animated animate__backInUp" data-wow-delay=".5s")
+              .item
+                img.item__image(src="./images/advantage1.svg" alt="benefit 1")
+                p.item__about Собственное <br> производство
+              .item
+                img.item__image(src="./images/advantage2.svg" alt="benefit 1")
+                p.item__about Наличие товара <br> на складе
+              .item
+                img.item__image(src="./images/advantage3.svg" alt="benefit 1")
+                p.item__about Выдаем всю <br> документацию
+
+
+      //- Секция со специализацией на объектах
+      section.specialization#specialization.opacity-white
+        .specialization__container.container
+          .specialization__row.row
+            h3.specialization__title(class="wow animate__animated animate__fadeInLeft")
+              | Специализируемся
+              br
+              | на установке заземления
+              br
+              | по направлениям
+            .specialization__line
+              .specialization__item.item(class="wow animate__animated animate__fadeInLeft")
+                .item__image
+                  picture
+                    source(srcset="./images/specialization1.webp 1x")
+                    img(src="./images/specialization1.jpg" alt="")
+                .item__content
+                  h3.item__name Торговые центры
+                  ul.item__list
+                    li.item__point.point
+                      span.point__text Садовый центр Дарвин
+                    li.item__point.point
+                      span.point__text OBI
+                    li.item__point.point
+                      span.point__text Тц Вешняки
+                    li.item__point.point
+                      span.point__text ТЦ Любимый Мичуринский проспект
+              .specialization__item.item(class="wow animate__animated animate__fadeInRight")
+                .item__image
+                  picture
+                    source(src="./images/specialization2.webp 1x")
+                    img(src="./images/specialization2.jpg" alt="")
+                .item__content
+                  h3.item__name Частные дома
+                  ul.item__list.no-style
+                    li.item__point.point
+                      span.point__text Установили заземления и молние защиту для более 2000 домов
+              .specialization__item.item(class="wow animate__animated animate__fadeInLeft")
+                .item__image
+                  picture
+                    source(src="./images/specialization3.webp 1x")
+                    img(src="./images/specialization3.jpg" alt="")
+                .item__content
+                  h3.item__name Складские комплексы
+                  ul.item__list.no-style
+                    li.item__point.point
+                      span.point__text Установили заземление и молниезащиту для более 100 складских комплексов
+              .specialization__item.item(class="wow animate__animated animate__fadeInRight")
+                .item__image
+                  picture
+                    source(src="./images/specialization4.webp 1x")
+                    img(src="./images/specialization4.jpg" alt="")
+                .item__content
+                  h3.item__name Производственные здания
+                  ul.item__list
+                    li.item__point.point
+                      span.point__text Завод Renault
+                    li.item__point.point
+                      span.point__text Завод Майский Чай
+                    li.item__point.point
+                      span.point__text Завод Хохланд Рус
+                    li.item__point.point
+                      span.point__text Завод KERAMA MARAZZI
+
+      //- Секция с этапами работы
+      section.stages#stages.opacity-white
+        .stages__container.container
+          .stages__row.row
+            h3.stages__title(class="wow animate__animated animate__fadeInLeft")
+              | Выполняем весь цикл работ
+              br
+              | от расчета до оформления документации
+
+            ol.stages__line
+              li.stages__item.item(class="wow animate__animated animate__bounceInLeft")
+                strong.item__number 01
+                p.item__text
+                  | Предварительный расчет
+                  br
+                  | материалов и стоимости работ
+              li.stages__item.item(class="wow animate__animated animate__fadeIn")
+                strong.item__number 02
+                p.item__text
+                  | Бесплатный выезд 
+                  br
+                  | инженера на замер
+              li.stages__item.item(class="wow animate__animated animate__bounceInRight")
+                strong.item__number 03
+                p.item__text
+                  | Заключение договора                  
+              li.stages__item.item(class="wow animate__animated animate__bounceInLeft")
+                strong.item__number 04
+                p.item__text
+                  | Предоплата
+              li.stages__item.item(class="wow animate__animated animate__fadeIn")
+                strong.item__number 05
+                p.item__text
+                  | Выполнение работ
+              li.stages__item.item(class="wow animate__animated animate__bounceInRight")
+                strong.item__number 06
+                p.item__text
+                  | Оплата и выдача 
+                  br
+                  | исполнительной документации
+
+
+      //- Секция со слайдером отзывов
+      section.reviews#reviews
+        .reviews__container.container
+          .reviews__row.row
+            h3.reviews__title(class="wow animate__animated animate__fadeInLeft") Отзывы о работе с нами
+            .slider__container.slider.reviews(class="wow animate__animated animate__fadeInUp")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper1.jpg" src="./images/paper1.jpg" alt="paper1")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper2.jpg" src="./images/paper2.jpg" alt="paper2")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper3.jpg" src="./images/paper3.jpg" alt="paper3")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper4.jpg" src="./images/paper3.jpg" alt="paper4")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper1.jpg" src="./images/paper1.jpg" alt="paper1")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper2.jpg" src="./images/paper2.jpg" alt="paper2")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper3.jpg" src="./images/paper3.jpg" alt="paper3")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper4.jpg" src="./images/paper3.jpg" alt="paper4")
+              .slider__item
+                img(data-fancybox="reviews" data-src="./images/paper1.jpg" src="./images/paper1.jpg" alt="paper1")
+
+      //- Секция с фотографиями работ         
+      section.works#works
+        .works__container.container
+          .works__row.row
+            h3.works__title(class="wow animate__animated animate__fadeInLeft") Фото готовых работ
+            .slider__container.slider.works(class="wow animate__animated animate__fadeInUp")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work1.jpg" src="./images/work1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work2.jpg" src="./images/work2.jpg" alt="work2")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work3.jpg" src="./images/work3.jpg" alt="work3")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work1.jpg" src="./images/work1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work2.jpg" src="./images/work2.jpg" alt="work2")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work3.jpg" src="./images/work3.jpg" alt="work3")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work1.jpg" src="./images/work1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work2.jpg" src="./images/work2.jpg" alt="work2")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work3.jpg" src="./images/work3.jpg" alt="work3")
+              .slider__item
+                img(data-fancybox="works" data-src="./images/work1.jpg" src="./images/work1.jpg" alt="work1")
+
+
+      //- Секция с оформлением заказа
+      section.order#order.opacity-white
+        .order__container.container
+          .order__row.row
+            .order__form.form(class="wow animate__animated animate__lightSpeedInRight")
+              .form__image
+                picture
+                  source(srcset="./images/order-tablet.webp 1x" media="(max-width: 1180px)")
+                  source(srcset="./images/order-tablet.png 1x" media="(max-width: 1180px)")
+                  source(srcset="./images/order.webp 1x")
+                  source(srcset="./images/order.png 1x")
+                  img.builder(src="./images/order.png" alt="")
+
+                //- Молнии для мониторов
+                .zipper-block.desktop.zipper-block-1(class="wow animate__animated animate__tada" data-wow-delay="1s")
+                  <svg width="130" height="168" viewBox="0 0 130 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M66.2035 72.9968L104.662 0L0 97.329H73.5804L31.642 167.893L129.002 72.9968H66.2035Z" fill="#F2323D"/>
+                  </svg>
+                .zipper-block.desktop.zipper-block-2(class="wow animate__animated animate__tada" data-wow-delay="1s")
+                  <svg width="130" height="168" viewBox="0 0 130 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M66.2035 72.9968L104.662 0L0 97.329H73.5804L31.642 167.893L129.002 72.9968H66.2035Z" fill="#F2323D"/>
+                  </svg>
+                
+                //- Молнии для планшетов
+                .zipper-block.tablet.zipper-block-1
+                  <svg width="85" height="110" viewBox="0 0 85 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M43.5835 48.0152L68.6711 0.397705L0.397461 63.8877H48.3957L21.0383 109.918L84.5486 48.0152H43.5835Z" fill="#F2323D"/>
+                  </svg>
+                .zipper-block.tablet.zipper-block-2
+                  <svg width="85" height="110" viewBox="0 0 85 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M43.5835 48.0152L68.6711 0.397705L0.397461 63.8877H48.3957L21.0383 109.918L84.5486 48.0152H43.5835Z" fill="#F2323D"/>
+                  </svg>
+
+
+              .form__fields.fields
+                .fields__description
+                  | Закажите <strong>бесплатную консультацию</strong>
+                  br
+                  | инженера и получите полный расчет
+                  br
+                  | стоимости комплектующих и установки
+                .fields__line
+                  input.fields__input(type="text" name="username" placeholder="Ваше имя")
+                  input.fields__input(type="text" name="usertel" placeholder="Ваш телефон")
+                  button.get-btn.get-callback Заказать
+
+
+      //- Секция с сертификатами
+      section.certificates#certificates
+        .certificates__container.container
+          .certificates__row.row
+            h3.certificates__title(class="wow animate__animated animate__fadeInLeft")
+              | Комплектующие для систем заземления 
+              br
+              | и молниезащиты сертифицированны 
+              br
+              | в независимых лабораториях
+            .slider__container.slider.certificates(class="wow animate__animated animate__fadeInUp")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+              .slider__item
+                img(data-fancybox="certificates" data-src="./images/certificate1.jpg" src="./images/certificate1.jpg" alt="work1")
+      
+
+      //- Секция с ответами на вопросы
+      section.answers#answers.opacity-white
+        .answers__container.container
+          .answers__row.row
+            h3.answers__title(class="wow animate__animated animate__fadeInLeft") Фото готовых работ Ответы на частые вопросы
+            //- Аккордеон
+            .answers__line.line.accordeon(class="wow animate__animated animate__backInRight")
+              .line__section.line__section_1
+                .answers__item.item
+                  .item__row
+                    h3.item__title Сколько времени потребуется на расчет?
+                    p.item__text
+                      | Время от отправки заявки до готовой сметы 
+                      br
+                      |и проекта занимает в среднем 3-5 дней
+                .answers__item.item
+                  .item__row
+                    h3.item__title Какая документация предоставляется после монтажа?
+                    p.item__text
+                      | Время от отправки заявки до готовой сметы 
+                      br
+                      |и проекта занимает в среднем 3-5 дней
+              
+              .line__section.line__section_2
+                .answers__item.item
+                  .item__row
+                    h3.item__title Длительность монтажа для частного дома?
+                    p.item__text
+                      | Время от отправки заявки до готовой сметы 
+                      br
+                      |и проекта занимает в среднем 3-5 дней
+                .answers__item.item
+                  .item__row
+                    h3.item__title Какой материал используется в заземлении
+                    p.item__text
+                      | Время от отправки заявки до готовой сметы 
+                      br
+                      |и проекта занимает в среднем 3-5 дней
+                .answers__item.item
+                  .item__row
+                    h3.item__title Какие способы оплаты принимаете?
+                    p.item__text
+                      | Время от отправки заявки до готовой сметы 
+                      br
+                      |и проекта занимает в среднем 3-5 дней
+
+    include includes/footer

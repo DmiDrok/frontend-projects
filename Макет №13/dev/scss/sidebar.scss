@@ -1,0 +1,68 @@
+// Боковая панель
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: $color-text-white;
+  z-index: 100;
+  will-change: transform;
+  transition: transform ease .5s;
+  transform: translate3d(300%, 0, 0);
+  
+  &.hide {
+    transform: translate3d(300%, 0, 0);
+  }
+  
+  &.active {
+    transform: translate3d(0, 0, 0);
+    width: 40%;
+
+    @media (max-width: 630px) {
+      width: 60%;
+    }
+  }
+
+  &__close {
+    color: $color-text-black;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  &__container {
+    padding: 0;
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+  }
+
+  .nav {
+    height: 100%;
+    
+    &__list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      list-style: none;
+      text-align: center;
+      padding: 20px 0 0 0;
+    }
+
+    &__link {
+      padding: 15px 0px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      display: block;
+      text-decoration: none;
+      color: $color-text-black;
+      font-size: 18px;
+    }
+  }
+}
