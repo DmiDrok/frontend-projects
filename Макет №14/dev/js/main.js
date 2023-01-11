@@ -1,3 +1,5 @@
+"use strict";
+
 // Изменение CSS-переменной для эффекта параллакса
 function setCorrectParallax() {  
   window.addEventListener('scroll', () => {

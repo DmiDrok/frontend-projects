@@ -1,3 +1,5 @@
+"use strict";
+
 // настройка боковой панели
 function setCorrectSidebar() {
   const burger = document.querySelector('.burger');
