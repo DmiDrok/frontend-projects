@@ -51,6 +51,7 @@ function setCorrectSidebar() {
   }
 }
 
+
 // настройка аккордеона
 function setCorrectAccordeon() {
   const accordeon = document.querySelector('.accordeon');
@@ -96,6 +97,7 @@ function setCorrectAnchors() {
     });
   });
 }
+
 
 // настройка слайдеров
 function setCorrectSliders() {
@@ -192,10 +194,12 @@ function setCorrectSliders() {
   });
 }
 
+
 // настройка анимаций при скролле
 function setCorrectAnimations() {
   new WOW().init();
 }
+
 
 // настройка уведомления при регистрации обратного звонка
 function setCorrectAttention() {
@@ -243,6 +247,16 @@ function setCorrectAttention() {
   }
 }
 
+// установка маски на поле ввода телефона
+function setCorrectInputMask() {
+  const maskTel = new Inputmask('+7 (999)-999-99-99');
+  const inputsTel = document.querySelectorAll('input[type="tel"]');
+
+  inputsTel.forEach(input => {
+    maskTel.mask(input);
+  });
+}
+
 // применение всех настроек
 function setAllOptions() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -252,6 +266,7 @@ function setAllOptions() {
     setCorrectAttention();
     setCorrectAccordeon();
     setCorrectAnimations();
+    setCorrectInputMask();
 
     // то что должно меняться от размера экрана
     window.addEventListener('resize', function() {
@@ -260,6 +275,7 @@ function setAllOptions() {
     });
   });
 }
+
 
 try {
   setAllOptions();

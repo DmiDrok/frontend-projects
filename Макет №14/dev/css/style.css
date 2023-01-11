@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/open-sans.otf") format("opentype");
-  src: url("../fonts/open-sans.ttf") format("truetype");
-  src: url("../fonts/open-sans.woff") format("woff");
   src: url("../fonts/open-sans.woff2") format("woff2");
+  src: url("../fonts/open-sans.woff") format("woff");
+  src: url("../fonts/open-sans.ttf") format("truetype");
+  src: url("../fonts/open-sans.otf") format("opentype");
 }
 /*Обнуление*/
 * {
@@ -166,10 +166,10 @@ select::-ms-expand {
 /*--------------------*/
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/open-sans.otf") format("opentype");
-  src: url("../fonts/open-sans.ttf") format("truetype");
-  src: url("../fonts/open-sans.woff") format("woff");
   src: url("../fonts/open-sans.woff2") format("woff2");
+  src: url("../fonts/open-sans.woff") format("woff");
+  src: url("../fonts/open-sans.ttf") format("truetype");
+  src: url("../fonts/open-sans.otf") format("opentype");
 }
 .order-btn {
   text-transform: capitalize;
@@ -362,6 +362,10 @@ select::-ms-expand {
 .basics .slider__item {
   display: flex;
   justify-content: center;
+}
+
+*::selection {
+  background: #34C759;
 }
 
 h1,
