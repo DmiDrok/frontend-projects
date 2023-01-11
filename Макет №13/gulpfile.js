@@ -5,6 +5,7 @@ const minifyCss     = require('./assets/functions/minify-css.js');
 const pugToHtml     = require('./assets/functions/pug-to-html.js');
 const minifyHtml    = require('./assets/functions/minify-html.js');
 const uniteJs       = require('./assets/functions/unite-js.js');
+const uniteCss      = require('./assets/functions/unite-css.js');
 const minifyJs      = require('./assets/functions/minify-js.js');
 const minifyImages  = require('./assets/functions/minify-images.js');
 const startBrowser  = require('./assets/functions/start-browser.js');
@@ -25,4 +26,4 @@ exports.webp = generateWebp;
 
 // two ways
 exports.dev = parallel(scssToCss, pugToHtml, uniteJs, startBrowser, startWatching);
-exports.build = series(minifyHtml, minifyCss, minifyJs, minifyImages, moveCss, moveFonts);
+exports.build = series(scssToCss, pugToHtml, uniteJs, minifyImages, moveCss, moveFonts, minifyHtml, minifyJs, minifyCss, uniteCss);

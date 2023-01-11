@@ -1,0 +1,1138 @@
+@import "normalize";
+@import "fonts";
+@import "vars";
+@import "all";
+@import "sliders";
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+header,
+footer,
+section {
+  display: block;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+body {
+  background: $color-bg;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --scrollTop: 0px;
+  --index: calc(1vw + 1vh);
+}
+
+// === Описание шапки ===
+.header {
+  color: #fff;
+  position: relative;
+  will-change: transform;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  height: 160vh;
+  // background: url(../images/bg-1.webp) top center / cover no-repeat;
+
+  &__background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    // height: 100%;
+    z-index: 0;
+
+    @media (max-width: 610px) {
+      height: 100%;
+    }
+  }
+
+  // === Навигация ===
+  .nav {
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid rgba(#fff, .1);
+
+    &__row {
+      padding: 40px 0 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+
+      &__elem:not(:last-child) {
+        margin: 0 45px 0 0;
+      }
+
+      &__elem.active {
+        a { color: $color-1; }
+      }
+
+      a {
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        transition: color ease .2s;
+      }
+
+      a:hover {
+        color: $color-1;
+      }
+    }
+
+    
+  @media (max-width: 645px) {
+    &__row {
+      justify-content: center;
+    }
+
+    &__list {
+      display: none !important;
+    }
+  }
+  }
+
+  // === Приветственный контент ===
+  .welcome {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    height: 100%;
+    
+    &__row {
+      max-width: 860px;
+      margin: 0 auto;
+      margin: 12vh auto;
+      
+      @media (min-height: 750px) {
+        margin: 25vh auto;
+      }
+      
+      @media (min-height: 950px) {
+        margin: 30vh auto;
+      }
+
+      @media (min-height: 1150px) {
+        margin: 35vh auto;
+      }
+    }
+
+    &__slogan {
+      text-align: center;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 72px;
+      letter-spacing: 1px;
+      margin: 0;
+      text-transform: capitalize;
+
+      b {
+        font-weight: 700;
+      }
+
+      @media (max-width: 610px) {
+        font-size: 52px;
+      }
+
+      @media (max-width: 530px) {
+        font-size: 45px;
+      }
+    }
+    
+    &__subslogan {
+      text-align: center;
+      margin: 16px 0 0 0;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+      color: rgba(#fff, .7);
+      line-height: 28px;
+    }
+
+    &__get-order {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0 0 0;
+    }
+
+    &__advantages {
+      margin: 70px 0 0 0;
+
+      @media (max-width: 610px) {
+        .item:nth-child(2) {
+          transform: translate(0, 100%);
+        }
+      }
+    }
+  }
+}
+
+// === Основной контент ===
+.main {
+  z-index: 100;
+  position: relative;
+  // overflow-x: hidden; === ломается параллакс ===
+}
+
+
+// === Наплывающий слайдер ===
+.basics {
+  // height: 670px;
+
+  &__container {
+    @media (max-width: 480px) {
+      padding: 0 10px;
+    }
+  }
+
+  &__row {
+    padding: 100px 0 0 0;
+  }
+
+  .box {
+    max-width: 1110px;
+    position: relative;
+    transform: translate(0, -40%);
+    padding: 105px 0 90px 0;
+    margin: 0 auto;
+    background: $color-2;
+    border-radius: 5px;
+    color: #fff;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+      color: #A6A6A6;
+      width: 80%;
+      margin: 80px auto 0 auto;
+    }
+
+    .slider {
+      width: 80%;
+      margin: 90px auto 0 auto;
+    }
+
+    @media (min-height: 950px) {
+      transform: translate(0, -50%);
+    }
+
+    @media (max-height: 740px) {
+      transform: translate(0);
+      margin: 0 0 120px 0;
+
+      &__text {
+        margin: 50px auto 0 auto;
+      }
+    }
+    
+    @media (max-height: 650px) {
+      padding: 105px 0 90px 0;
+
+      &__text {
+        margin: 30px auto 0 auto;
+      }
+
+      .slider {
+        margin: 30px auto 0 auto;
+      }
+    }
+  }
+}
+
+// === Описание блока с процессом работы ===
+.works {
+  // &__title .default {
+  //   letter-spacing: 10px;
+  //   padding: 0 10px 0 0;
+  // }
+
+  &__title-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__line {
+    margin: 100px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+
+    .work-item {
+      color: #fff;
+      background: $color-2;
+      padding: 25px 25px 40px 25px;
+      cursor: default;
+      transition: background ease .5s;
+      border-radius: 6px;
+
+      &__title {
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 25.65px;
+        letter-spacing: -0.28px;
+        transition: color ease .5s;
+        position: relative;
+        
+        &::before {
+          content: "";
+          display: block;
+          background: $color-1;
+          width: 55px;
+          height: 2px;
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          transition: background ease .5s;
+        }
+      }
+      
+      &__text {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.16px;
+        color: rgba(#fff, .5);
+        margin: 36px 0 0 0;
+        transition: color ease .5s;
+      }
+
+      &:hover {
+        background: $color-1;
+        color: #000;
+
+        .work-item__title::before {
+          background: $color-2;
+        }
+
+        .work-item__text {
+          color: #000;
+        }
+      }
+    }
+
+    @media (max-width: 820px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      margin: 60px 0 0 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+// === Описание блока с карточками блюд ===
+.dishes {
+  margin: 30px 0 0 0;
+
+  &__row {
+    padding: 90px 0 0 0;
+  }
+
+  &__grid {
+    margin: 90px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    .card {
+      background: $color-2;
+      border-radius: 6px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &__share {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 8px;
+        background: rgba($color-2, .5);
+        border-radius: 50%;
+        z-index: 10;
+
+        svg rect {
+          transition: fill ease .3s;
+        }
+
+        &:hover svg rect {
+          fill: $color-1;
+        }
+      }
+      
+      &__image {
+        flex-basis: 270px;
+
+        img {
+          border-radius: 6px 6px 0 0;
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__content {
+        padding: 30px;
+        color: #fff;
+      }
+
+      &__title {
+        font-weight: 400;
+        font-size: 32px;
+        color: #D9D9D9;
+      }
+
+      &__about {
+        color: #A4A8B2;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -0.15px;
+        line-height: 19px;
+      }
+
+      &__text {
+        margin: 20px 0 0 0;
+        color: #85878C;
+      }
+
+      &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin: 31px 0 0 0;
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+
+        svg:not(:first-child) {
+          margin: 0 0 0 5px;
+        }
+
+        .reviews-count {
+          font-weight: 900;
+          font-size: 12px;
+          line-height: 30px;
+          color: #B3B3B3;
+          margin: 0 0 0 11px;
+        }
+      }
+
+      .order-btn {
+        padding: 16px 32px;
+        font-size: 14px;
+        font-weight: 400;
+        font-weight: 900;
+      }
+
+      @media (max-width: 480px) {
+        .reviews-count {
+          display: none;
+        }
+
+        .order-btn {
+          margin: 0 0 0 20px;
+        }
+      }
+      
+      &.unactive {
+        .order-btn {
+          background: transparent;
+          color: rgba(#fff, .5);
+          border: 2px solid #303030;
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+
+        .stars svg rect {
+          fill: #4D4D4D;
+        }
+      }
+    }
+
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 660px) {
+      margin: 60px 0 0 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 325px) {
+    &__container {
+      padding: 0 10px !important;
+    }
+  }
+}
+
+// === Описание блока с шеф-поварами ===
+.chefs {
+  margin: 120px 0 0 0;
+
+  &__line {
+    display: flex;
+    justify-content: center;
+    margin: 105px 0 0 0;
+
+    .chef {
+      flex: 0 1 33.333%;
+
+      .avatar {
+        border: 2px solid transparent;
+        border-radius: 50%;
+        transition: border-color ease .2s;
+      }
+
+      &:hover .avatar {
+        border-color: $color-1;
+      }
+
+      &:not(:last-child) {
+        margin: 0 30px 0 0;
+      }
+
+      &__info {
+        display: flex;
+        align-items: center;
+        color: #fff;
+      }
+
+      &__about {
+        margin: 0 0 0 23px;
+      }
+
+      &__name {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: -0.22px;
+      }
+
+      &__profession {
+        margin: 6px 0 0 0;
+        color: rgba(#fff, .5);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.15px;
+      }
+
+      &__images {
+        margin: 23px 0 0 0;
+        display: flex;
+        flex-wrap: nowrap;
+
+        img:not(:first-child) {
+          margin: 0 0 0 30px;
+        }
+      }
+    }
+
+    @media (max-width: 1160px) {
+      flex-wrap: wrap;
+
+      .chefs__item {
+        margin: 30px !important;
+      }
+    }
+
+    @media (max-width: 920px) {
+      margin: 40px 0 0 0;
+    }
+
+    @media (max-width: 450px) {
+      .chef__images img:not(:first-child) {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+}
+
+// === Описание блока с рецептами ===
+.recipes {
+  margin: 120px 0 0 0;
+
+  &__grid {
+    margin: 120px 0 0 0;
+    display: grid;
+    grid-template-columns: minmax(300px, min-content) 1fr;
+    grid-column-gap: 30px;
+  }
+
+  .recipe-block {
+    position: relative;
+  }
+
+  .big-recipe {
+    display: block;
+    border-radius: 6px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+
+    >img {
+      position: absolute;
+      border-radius: 6px;
+      max-width: 100%;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      text-align: center;
+    }
+
+    &__date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    &__about {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 40px;
+      margin: 25px 0 45px 0;
+    }
+
+    &__category {
+      position: absolute;
+      left: 50%;
+      top: 60px;
+      transform: translate(-50%, 0);
+    }
+
+    &__stats {
+      position: absolute;
+      left: 50%;
+      bottom: 60px;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 610px) {
+      &__category {
+        top: 30px;
+        left: 70px;
+      }
+      
+      &__about {
+        margin: 10px 0;
+        padding: 0 25px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      &__stats {
+        bottom: 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      &__category {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &__about {
+        font-size: 16px;
+      }
+
+      &__date {
+        display: none;
+      }
+
+      &__author {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .recipe-block .recipe__share {
+      display: none;
+    }
+  }
+
+  .recipe {
+    background: $color-2;
+    border: 1px solid transparent;
+    transition: border-color ease .5s;
+    color: #fff;
+
+    &:hover {
+      border-color: $color-1;
+    }
+
+    &__category {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 10px;
+      line-height: 25px;
+      letter-spacing: 1.25px;
+      padding: 5px 15px;
+      background: rgba(#000, .3);
+      border-radius: 6px;
+    }
+
+    .stats {
+      display: flex;
+
+      &__elem:not(:last-child) {
+        margin: 0 30px 0 0;
+      }
+
+      &__elem {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+
+        span {
+          margin: 0 0 0 12px;
+        }
+      }
+    }
+
+    &__share {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: rgba($color-2, .5);
+      padding: 13.6px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+
+      svg rect {
+        transition: fill ease .5s;
+      }
+
+      &:hover svg rect {
+        fill: $color-1;
+      }
+    }
+
+    &__author {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      height: auto;
+      background: $color-2;
+      border-radius: 6px;
+      padding: 15px;
+      transition: all ease .5s;
+
+      &__image img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+        transition: opacity ease .5s;
+        opacity: 0;
+      }
+
+      &.active img {
+        opacity: 1;
+      }
+
+      .about, .date, .stats {
+        transition: color ease .5s;
+      }
+
+      .category {
+        transition: background ease .5s;
+      }
+
+      .stats svg rect {
+        transition: fill ease .5s;
+      }
+
+      &:hover {
+        background: $color-1;
+
+        .about, .date, .stats {
+          color: $color-2 !important;
+        }
+
+        .category {
+          background: rgba(#000, .3);
+        }
+
+        .stats svg rect {
+          fill: #000;
+        }
+      }
+
+      &.active:hover {
+        background: $color-2;
+        color: #fff;
+        border-color: $color-1;
+
+        .about, .date, .stats {
+          color: #fff !important;
+        }
+
+        .category {
+          background: #000;
+        }
+
+        .stats svg rect {
+          fill: #fff;
+        }
+      }
+
+      &__content {
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+
+      .params {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        margin: 20px 0 0 0;
+
+        &__about {
+          display: flex;
+          align-items: center;
+          
+          .date {
+            color: #B3B3B3;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 25px;
+            margin: 0 0 0 15px;
+          }
+        }
+      }
+
+      @media (max-width: 420px) {
+        &__date {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1010px) {
+    &__grid {
+      margin: 90px 0 0 0;
+      grid-template-columns: unset;
+      grid-gap: 30px;
+      justify-items: center;
+    }
+
+    .big-recipe {
+      .big-image {
+        max-width: 100%;
+      }
+    }
+
+    &__column .recipe:not(:last-child) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  @media (max-width: 520px) {
+    &__grid {
+      margin: 50px 0 0 0;
+    }
+  }
+}
+
+// === Описание блока с социальными сетями ===
+.social {
+  margin: 120px 0 0 0;
+
+  &__line {
+    margin: 90px 0 0 0;
+    display: flex;
+    justify-content: center;
+
+    .item {
+      flex: 0 1 33.333%;
+      background: $color-2;
+      border-radius: 6px;
+      
+      &:not(:last-child) {
+        margin: 0 30px 0 0;
+      }
+      
+      .photos-grid {
+        max-height: 239px !important;
+
+        .simplebar-content {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          &::before {
+            content: '';
+            display: none;
+          }
+        }
+
+        .simplebar-scrollbar::before {
+          background: #fff !important;
+        }
+
+        img:nth-child(4) {
+          border-radius: 0 0 0 6px;
+        }
+
+        img:nth-child(6) {
+          border-radius: 0 0 6px 0;
+        }
+
+        .photo-link {
+          position: relative;
+
+          &__follow {
+            position: absolute;
+            padding: 13.5px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: $color-1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity ease .3s;
+            opacity: 0;
+          }
+
+          &:hover .follow {
+            opacity: 1;
+          }
+
+          &:nth-child(4),
+          &:nth-child(10) {
+            img { border-radius: 0 0 0 7px; }
+          }
+
+          &:nth-child(6),
+          &:nth-child(12) {
+            img { border-radius: 0 0 7px 0; }
+          }
+        }
+      }
+
+      &__social-link {
+        padding: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #303030;
+
+        .social-group {
+          display: flex;
+          align-items: center;
+        }
+
+        .icon {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          padding: 6px;
+          border: 2px solid #303030;
+          border-radius: 50%;
+        }
+
+        .name {
+          margin: 0 0 0 20px;
+          color: #BFBFBF;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 30px;
+          
+          @media (max-width: 1050px) {
+            margin: 0 7px;
+          }
+        }
+      }
+
+      &__social-follow {
+        padding: 10px 20px;
+        background: transparent;
+        border: 2px solid #303030;
+        color: #737373;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 40px;
+
+        &:hover {
+          border-color: #37ef65;
+          box-shadow: none;
+        }
+      }
+
+      &__content {
+        padding: 20px 10px 20px 30px;
+
+        &.photos {
+          padding: 0;
+        }
+
+        .post {
+          max-height: 200px;
+          overflow-y: auto;
+          padding: 0 30px 0 0;
+
+          .simplebar-scrollbar::before {
+            background: #303030;
+            width: 5px;
+          }
+
+          &__date {
+            color: #737373;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 30px;
+          }
+
+          &__paragraph {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+            color: rgba(#fff, .7);
+          }
+
+          &__link {
+            color: $color-1;
+            &:hover { text-decoration: underline; }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 980px) {
+      flex-direction: column;
+
+      .item:not(:last-child) {
+        margin: 0 0 30px 0;
+      }
+
+      .photos-grid {
+        max-height: 235px !important;
+
+        .simplebar-content {
+          grid-template-columns: repeat(3, min-content) !important;
+          justify-content: center !important;
+        }
+      }
+    }
+
+    @media (max-width: 510px) {
+      margin: 60px 0 0 0;
+    }
+  }
+}
+
+// === Описание подвала страницы ===
+.footer {
+  margin: 120px 0 0 0;
+  background: $color-2;
+  
+  .advantages {
+    border-bottom: 2px solid #303030;
+    padding: 40px 0;
+
+    @media (max-width: 610px) {
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      .item {
+        margin: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  .logo {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__subtext {
+      margin: 10px 0 0 0;
+      color: #737373;
+      font-weight: 400;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

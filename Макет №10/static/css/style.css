@@ -282,6 +282,10 @@ h1, h2, h3, h4, h5, h6 {
 .more-button.active::before {
   display: none;
 }
+.more-button.active span::before {
+  width: 0px;
+  height: 0px;
+}
 .more-button span::before {
   content: "";
   width: 10px;

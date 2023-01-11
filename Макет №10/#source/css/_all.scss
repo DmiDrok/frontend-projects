@@ -253,9 +253,15 @@
     background: $color-1;
     padding: rem(8) rem(16);
     color: #fff;
+    
 
     &::before {
       display: none;
+    }
+
+    span::before {
+      width: 0px;
+      height: 0px;
     }
   }
 
