@@ -1,8 +1,8 @@
 header.header(class="wow animate__animated animate__bounceInDown")
     .header__container.container
       .header__row.row
-        a(href="./index.html").header__logo.logo
-          img(src="./images/logo.svg" alt="logo")
+        a(href="./index.html" aria-label="Ссылка на главную страницу").header__logo.logo
+          img(src="./images/logo.svg" alt="logo" aria-hidden="true")
         nav.header__nav.nav
           ul.nav__list 
             li.nav__elem
@@ -16,7 +16,7 @@ header.header(class="wow animate__animated animate__bounceInDown")
             li.nav__elem
               a(href="#answers").nav__link Вопрос ответ
 
-        a(href="tel:78005554480" title="Заказать обратный звонок" tabindex="-1").header__tel.tel
+        a(href="tel:78005554480" title="Заказать обратный звонок" tabindex="0").header__tel.tel
           span.tel__number +7 800 555 44 80
           span.tel__text Заказать обратный звонок
         .burger

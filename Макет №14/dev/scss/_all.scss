@@ -1,0 +1,129 @@
+// Зелёная кнопка оформления заказа
+.order-btn {
+  text-transform: capitalize;
+  background: $color-1;
+  color: #1A1A1A;
+  padding: 25px 58px;
+  border-radius: 43px;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 20%;
+  transition: all ease .4s;
+
+  &:hover {
+    background: #37ef65;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 1);
+  }
+}
+
+// Заголовок секций
+.section-title {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: capitalize;
+  
+  &.underline {
+    &::before {
+      content: "";
+      display: block;
+      background: $color-1;
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      width: 60px;
+      height: 2px;
+      transform: translate(-50%, 0);
+
+      @media (max-width: 650px) {
+        bottom: -25px;
+      }
+    }
+  }
+
+  .default {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__background-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #303030;
+    z-index: 0;
+    font-size: 100px;
+    font-weight: 900;
+    text-transform: uppercase;
+    user-select: none;
+
+    @media (max-width: 650px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 40px;
+    }
+  }
+}
+
+// Блок преимуществ
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  
+  .item {
+    font-family: "Open Sans";
+
+    &__title {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 16px 0 0 0;
+      color: #fff;
+    }
+    
+    &__text {
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(#fff, .5);
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+// Логотип
+.logo {
+  &__link {
+    transition: opacity ease .3s;
+  
+    &:hover {
+      opacity: .7;
+    }
+
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    text-decoration: none;
+
+    .text {
+      margin: 0 0 0 9px;
+      text-transform: uppercase;
+      color: $color-1;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+  }
+}

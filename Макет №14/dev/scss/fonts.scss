@@ -1,31 +1,7 @@
 @font-face {
-  font-family: "Gilroy";
-  font-weight: 400;
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"),
-       url("../fonts/Gilroy-Regular.woff") format("woff"),
-       url("../fonts/Gilroy-Regular.ttf") format("opentype"),
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-weight: 500;
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"),
-       url("../fonts/Gilroy-Medium.woff") format("woff"),
-       url("../fonts/Gilroy-Medium.ttf") format("opentype"),
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-weight: 600;
-  src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"),
-       url("../fonts/Gilroy-Bold.woff") format("woff"),
-       url("../fonts/Gilroy-SemiBold.ttf") format("opentype"),
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-weight: 700;
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"),
-       url("../fonts/Gilroy-Bold.woff") format("woff"),
-       url("../fonts/Gilroy-Bold.ttf") format("opentype"),
+  font-family: "Open Sans";
+  src: url("../fonts/open-sans.woff2") format("woff2");
+  src: url("../fonts/open-sans.woff") format("woff");
+  src: url("../fonts/open-sans.ttf") format("truetype");
+  src: url("../fonts/open-sans.otf") format("opentype");
 }
