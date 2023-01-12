@@ -6,11 +6,10 @@ const errorHandler = require('./error-handler.js');
 
 // minify main js file
 function minifyJs() {
-  return src([paths.dev.js, `!${paths.dev.jsRoot}/main.js`])
+  return src(`${paths.dev.jsRoot}/${paths.dev.mainJs}`)
     .pipe(plugins.plumber({ errorHandler }))
-    // .pipe(plugins.babel({ presets: ["@babel/preset-env"] }))
-    .pipe(plugins.concat('main.min.js'))
-    .pipe(plugins.uglifyjs())
+    .pipe(src(`${paths.build.jsRoot}/${paths.build.babelJs}`))
+    .pipe(plugins.concat(paths.dev.mainJs))
     .pipe(dest(paths.build.jsRoot));
 }
 

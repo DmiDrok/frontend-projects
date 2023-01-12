@@ -26,7 +26,9 @@ const paths = {
     imagesRoot: './dist/images',
     fontsRoot: './dist/fonts',
 
-    mainCss: 'style.min.css'
+    mainCss: 'style.min.css',
+    mainJs: 'main.min.js',
+    babelJs: 'babelify.min.js'
   }
 };
 

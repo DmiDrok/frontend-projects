@@ -485,17 +485,17 @@ body {
 }
 @media (min-height: 750px) {
   .header .welcome__row {
-    margin: 25vh auto;
+    margin: 20vh auto;
   }
 }
 @media (min-height: 950px) {
   .header .welcome__row {
-    margin: 30vh auto;
+    margin: 25vh auto;
   }
 }
 @media (min-height: 1150px) {
   .header .welcome__row {
-    margin: 35vh auto;
+    margin: 30vh auto;
   }
 }
 .header .welcome__slogan {
