@@ -1,0 +1,875 @@
+@import "null";
+@import "vars";
+@import "fonts";
+@import "all";
+@import "fixed";
+@import "burger";
+@import "dish";
+@import "basket";
+@import "deliver";
+@import "actions";
+@import "order";
+
+
+.container {
+  max-width: 1365px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+*::selection {
+  background: #638c69;
+}
+
+:root {
+  --scrollTop: 0px;
+}
+
+body {
+  background: $bg-color;
+  font-family: "Gilroy", Arial, sans-serif;
+  overflow-x: hidden;
+  min-width: 360px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// === Описание шапки ===
+.header {
+  background: #403c3b;
+
+  &__row {
+    padding: 23px 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 72% auto;
+    grid-template-areas: "logo center basket";
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 680px) {
+      padding: 12px 15px;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    transition: opacity ease .1s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__center {
+    grid-area: center;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1170px) {
+      justify-content: center;
+    }
+  }
+
+  &__basket {
+    grid-area: basket;
+  }
+
+  @media (max-width: 870px) {
+    &__row {
+      grid-template-columns: none;
+      grid-template-areas: 
+        "burger logo basket"
+        "center center center"
+      ;
+      justify-content: initial;
+    }
+
+    .logo {
+      grid-column: 1/4;
+      justify-self: center;
+    }
+
+    .search {
+      flex-basis: 100%;
+    }
+
+    .tel { display: none; }
+
+    .center {
+      margin: 9px 0 0 0;
+    }
+
+    .basket {
+      justify-self: end;
+    }
+  }
+}
+
+// === Описание уникального содержимого ===
+.main {
+  flex-grow: 1;
+}
+
+// === Описание большой картинки со слоганом
+.banner {
+  // user-select: none;
+
+  &__row {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    will-change: transform;
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translate(55px, -40%) rotate(-10deg);
+    text-align: center;
+    font-family: "Zing Rust", sans-serif;
+    
+    color: #fff;
+    
+    @media (max-width: 410px) {
+      transform: translate(40px, -40%) rotate(-10deg);
+    }
+
+    @media (max-width: 385px) {
+      transform: translate(30px, -40%) rotate(-10deg);
+    }
+
+    @media (max-width: 350px) {
+      transform: translate(10px, -40%) rotate(-10deg);
+    }
+
+    @media (max-width: 330px) {
+      transform: translate(0, -40%) rotate(-10deg);
+    }
+
+    @media (max-width: 300px) {
+      transform: translate(-10px, -40%) rotate(-10deg);
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 400;
+    font-size: 67px;
+    text-transform: uppercase;
+  }
+
+  &__title_back {
+    @extend .banner__title;
+
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(#fff, .5);
+    top: 5px;
+    left: -5px;
+
+    @media (max-width: 340px) {
+      display: none;
+    }
+  }
+
+  &__title_attention {
+    display: inline-block;
+    margin: 40px 0 0 0;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+    
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      transform: translate(-50%, -50%) skew(-20deg);
+    }
+
+    &::after {
+      background: $green-color;
+      width: 130%;
+      height: 170%;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+    }
+
+    &::before {
+      background: transparent;
+      border: 1px solid rgba(#fff, .5);
+      width: 140%;
+      height: 170%;
+      z-index: -1;
+      top: 100%;
+      left: 49%;
+    }
+  }
+
+  @media (max-width: 1095px) {
+    &__title {
+      font-size: 60px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &__title {
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 910px) {
+    &__image {
+      height: 296px;
+      object-fit: cover;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__title_back {
+      -webkit-text-stroke: 1px rgba(#fff, .2);
+    }
+  }
+}
+
+
+// === Описание меню (якорные ссылки) ===
+.menu {
+  background: #403c3b;
+  border-bottom: 1px solid rgba(#fff, .1);
+  z-index: 100;
+  
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.with-basket .menu__row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10px 0 0;
+  }
+
+  &.with-basket .menu-list {
+    flex: 0 1 80%;
+  }
+
+  &.with-basket .basket {
+    align-self: center;
+    margin: 0 70px 0 0;
+  }
+  
+  .menu-list {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+
+    &__link {
+      color: #CFCFCF;
+      transition: color ease .3s;
+      white-space: nowrap;
+      
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      padding: 30px 0px;
+
+      &::before {
+        content: "";
+        display: block;
+        opacity: 0;
+        transition: opacity ease .2s;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #618967;
+        bottom: 0;
+        left: 0;
+      }
+
+      &.active {
+        font-weight: 500;
+        a { color: #fff; }
+      }
+
+      &.active::before {
+        opacity: 1;
+      }
+
+      @media (max-width: 410px) {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  @media (max-width: 1210px) {
+    &.with-basket .menu-list {
+      justify-content: stretch;
+    }
+
+    &.with-basket .basket {
+      margin: 0 30px 0 35px;
+
+      @media (max-width: 680px) {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+
+  @media (max-width: 1110px) {
+    .menu-list {
+      justify-content: stretch;
+    }
+
+    &__item {
+      text-align: center;
+    }
+  }
+
+  &__slider {
+    overflow: hidden !important;
+  }
+
+  @media (max-width: 1210px) {
+    &__slider {
+      padding: 0 15px;
+    }
+  }
+}
+
+// === Описание блока блюд ===
+.dishes {
+  border-top: 1px solid rgba(#fff, .2);
+  
+  &__container {
+    overflow-x: hidden;
+  }
+
+  &__row {
+    padding: 50px 0;
+
+    @media (max-width: 1370px) {
+      padding: 50px 20px;
+    }
+  }
+
+  &__title-block {
+    padding: 0 0 0 51px;
+
+    @media (max-width: 1210px) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+    padding: 0 0 0 19px;
+    border-left: 4px solid #618967;
+    text-transform: uppercase;
+
+    @media (max-width: 450px) {
+      font-size: 20px;
+    }
+  }
+
+  &__line {
+    margin: 50px 0 0 0;
+    display: flex;
+    overflow: visible;
+  }
+}
+
+// === Описание блока "О нас" ===
+.about {
+  margin: 95px 0 0 0;
+  position: relative;
+  
+  &__container {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__row {
+    position: relative;
+    padding: 100px 70px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+
+  &__text {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+
+    .about-card {
+      background: rgba(#504B4AE5, .9);
+      padding: 66px 20px 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      cursor: default;
+      transition: all ease .3s;
+
+      svg path {
+        transition: fill ease .3s;
+      }
+
+      &__name {
+        margin: 23px 0 0 0;
+        font-weight: 400;
+        font-size: 18px;
+        transition: color ease .3s;
+      }
+
+      &:hover {
+        box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(2px);
+        z-index: 5;
+        
+        .about-card__name { color: #638c69; }
+      }
+
+      &:hover svg path {
+        fill: #618967;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  &__paragraph {
+    margin: 26px 0 0 0;
+    font-size: 20px;
+    line-height: 25px;
+    color: #CFCFCF;
+  }
+
+  &__link-block {
+    margin: 60px 0 0 0;
+  }
+
+  @media (max-width: 1150px) {
+   
+    &__row {
+      flex-direction: column;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+      margin: 60px 0 0 0;
+
+      .about-card {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 780px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__link-block {
+      align-self: center;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+// === Описание блока контактов ===
+.contacts {
+  height: 600px;
+  background: #353535;
+  position: relative;
+
+  &__container {
+    position: relative;
+
+    @media (max-width: 910px) {
+      position: static;
+    }
+  }
+
+  .contacts-card {
+    position: absolute;
+    left: 100px;
+    bottom: 70px;
+    border-radius: 10px;
+    background: #2E2B2C;
+    color: #fff;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+
+    &__title-block {
+      padding: 25px 43px;
+    }
+
+    &__bordered-block {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: url(../images/contact-border.svg);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    &__info-block {
+      padding: 15px 48px 25px 80px;
+    }
+
+    .info {
+      &__block:not(:first-child) {
+        margin: 20px 0 0 0;
+      }
+
+      &__block {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 24px;
+          height: 24px;
+          left: -31px;
+        }
+      }
+      
+      .address::before {
+        background: url(../images/contact-address.svg);
+      }
+      .email::before {
+        background: url(../images/contact-email.svg);
+      }
+
+      &__title {
+        color: #CFCFCF;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.24px;
+      }
+
+      &__text {
+        margin: 5px 0 0 0;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19.09px;
+
+        a {
+          color: #fff;
+          &:hover { text-decoration: underline; }
+        }
+      }
+    }
+
+    &__order-block {
+      padding: 17px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &::before {
+        top: 0;
+        left: 0;
+      }
+
+      .tel {
+        display: flex;
+        flex-direction: column;
+        
+        &__numbers {
+          font-weight: 700;
+          font-size: 23px;
+          line-height: 15.08px;
+          color: #fff;
+          white-space: nowrap;
+        }
+        
+        &__subtext {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 24.08px;
+          color: #CFCFCF;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &__get-order {
+      background: $green-color;
+      font-family: "Proxima Nova", "Gilroy", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+      padding: 22px 30px;
+      border-radius: 10px;
+      transition: opacity ease .2s;
+      text-transform: uppercase;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &__get-route {
+      display: none;
+      font-family: "Proxima Nova", "Gilroy", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .socials {
+      padding: 24px 0;
+      display: flex;
+      align-self: center;
+
+      &__text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19.09px;
+        margin: 0 16px 0 0;
+      }
+
+      &__link:not(:first-child) {
+        margin: 0 0 0 10px;
+      }
+
+      &__link:hover {
+        opacity: .7;
+      }
+    }
+
+    @media (max-width: 910px) {
+      top: 20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: unset;
+    }
+
+    @media (max-width: 910px) {
+      width: 90%;
+
+      &__title {
+        text-align: center;
+      }
+
+      &__order-block {
+        flex-direction: column;
+      }
+
+      .get-route {
+        display: block !important;
+        margin: 20px 0;
+        padding: 22px 30px;
+      }
+    }
+  }
+
+  .mobile-iframe {
+    display: none;
+  }
+
+  @media (max-width: 910px) {
+    height: auto;
+
+    .desktop-iframe {
+      height: 1000px;
+      display: none;
+    }
+
+    .mobile-iframe {
+      height: 1000px;
+      display: block;
+    }
+  }
+}
+
+// === Описание подвала ===
+.footer {
+  background: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%);
+
+  &__row {
+    padding: 26px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .scroll-top {
+    padding: 27px 22px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity ease .3s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 0 0 55px;
+
+    &__copyright {
+      margin: 15px 0 0 0;
+      color: #cfcfcf;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14.12px;
+    }
+
+    &__links {
+      margin: 7px 0 0 0;
+    }
+
+    &__list-elem:not(:first-child) {
+      margin: 7px 0 0 0;
+    }
+
+    &__link {
+      color: #fff;
+      position: relative;
+      white-space: nowrap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        opacity: .2;
+        bottom: -3px;
+        left: 0;
+        transition: opacity ease .3s;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-elem:not(:first-child) {
+    margin: 0 0 0 40px;
+  }
+
+  &__link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    transition: opacity ease .2s;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  @media (max-width: 1075px) {
+    &__list-elem:not(:first-child) {
+      margin: 0 0 0 20px;
+    }
+
+    &__link {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 940px) {
+    &__info {
+      flex-grow: 1;
+      align-items: center;
+      width: auto !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .scroll-top {
+      padding: 21px 16px;
+    }
+  }
+
+  @media (max-width: 345px) {
+    &__row {
+      flex-direction: column;
+    }
+    
+    &__info {
+      margin: 30px 0 0 0 !important;
+    }
+  }
+}

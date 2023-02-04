@@ -1,0 +1,17 @@
+@media (max-width: 410px) {
+  .header {
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &.hide-address .header__center {
+      display: none;
+    }
+  }
+
+  .main {
+    margin: 150px 0 0 0;
+  }
+}

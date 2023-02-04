@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ресторан</title>
+    <link rel="shortcut icon" href="./images/icon.ico">
+    <link rel="stylesheet" href="./css/simplebar.min.css">
+    <script defer src="./js/simplebar.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script defer src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/inputmask.min.js"></script>
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <script defer src="./js/choices.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/addresses.js"> </script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="top"></div>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container container">
+          <div class="header__row">
+            <div class="header__burger burger">
+              <div class="burger__lines"><i class="burger__line burger__line_1"></i><i class="burger__line burger__line_2"></i><i class="burger__line burger__line_3"></i></div><span class="burger__text">Меню</span>
+            </div><a class="header__logo logo" href="./index.html">
+              <div class="logo__image"><img src="./images/logo.svg" alt="Логотип"/></div></a>
+            <div class="header__center center">
+              <div class="header__search search"><svg class="search__image location" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23926 9.39129C1.25367 5.15071 4.70302 1.72471 8.94361 1.73912C13.1842 1.75353 16.6102 5.20288 16.5958 9.44347V9.53042C16.5436 12.2869 15.0045 14.8348 13.1175 16.8261C12.0384 17.9467 10.8333 18.9388 9.52621 19.7826C9.17672 20.0849 8.65832 20.0849 8.30882 19.7826C6.36033 18.5143 4.65019 16.9131 3.25665 15.0522C2.01461 13.4294 1.30942 11.4597 1.23926 9.41738L1.23926 9.39129Z" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="8.9179" cy="9.53912" r="2.46087" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <input class="header__input" type="text" placeholder="Введите адрес доставки"/><svg class="search__image start-search" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9.76657" cy="9.7666" r="8.98856" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.0183 16.4851L19.5423 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <div class="search__live-container">
+                  <ul class="search__live-list live-list"></ul>
+                </div>
+              </div><a class="header__tel tel" href="tel:79175105759">
+                <div class="tel__image"><img src="./images/tel.svg" alt=""/></div>
+                <div class="tel__text"><span class="tel__title">Контакты</span><span class="tel__numbers">+7 (917) 510-57-59</span></div></a>
+            </div><a class="header__basket basket adaptive undefined" href="./basket.html"><span class="basket__title">Корзина</span><span class="basket__count">0</span><img class="basket__image" src="./images/basket.svg" alt="Корзина"/></a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="menu">
+          <h1 class="hidden-title menu__title">Меню</h1>
+          <div class="menu__container container">
+            <div class="menu__row">
+              <div class="menu__slider swiper">
+                <ul class="menu__list menu-list swiper-wrapper">
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#cold">Холодные закуски</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#hot">Горячие закуски</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#meat">Мясные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Супы</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Рыбные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Гриль меню</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Фирменные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Напитки</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="dish-item">
+          <div class="dish-item__container container">
+            <div class="dish-item__row">
+              <div class="dish-item__go-back-block go-back"><a class="go-back__link" href="./index.html">
+                  <div class="go-back__icon"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.6967C6.01041 0.403806 5.53553 0.403806 5.24264 0.696699L0.46967 5.46967ZM2 5.25L1 5.25L1 6.75L2 6.75L2 5.25Z" fill="white"/>
+</svg>
+                  </div><span class="go-back__text">Вернуться назад</span></a></div>
+              <div class="dish-item__card dish-card">
+                <div class="dish-card__image"><img src="./images/dish1.jpg" alt="Блюдо"></div>
+                <div class="dish-card__stats stats">
+                  <div class="stats__row">
+                    <div class="stats__top">
+                      <h1 class="stats__name">Ягненок</h1>
+                      <p class="stats__about">
+                         помидор, сыр фета, масло подсолнечное, капуста пекинская, <br>перец сладкий красный, огурцы, оливки без косточек</p>
+                    </div>
+                    <div class="stats__bottom">
+                      <p class="stats__weight">Вес: <span class="stats__weight-numbers">210</span> г</p>
+                      <div class="stats__add-basket-block">
+                        <button class="stats__add-basket basket" type="button"><span class="basket__title">Корзина</span><img class="basket__image-default" src="./images/bag.svg" alt="Корзина"></button>
+                        <p class="stats__price">259 ₽</p>
+                      </div>
+                      <table class="stats__info stats-info">
+                        <thead>
+                          <tr>
+                            <td class="stats-info__title">Белки</td>
+                            <td class="stats-info__title">Жиры</td>
+                            <td class="stats-info__title">Углеводы</td>
+                            <td class="stats-info__title">Ккал</td>
+                            <td class="stats-info__title">Вес</td>
+                          </tr>
+                        </thead>
+                        <tr class="stats-info__values-row">
+                          <td class="stats-info__value">17.23</td>
+                          <td class="stats-info__value">7.63</td>
+                          <td class="stats-info__value">22.35</td>
+                          <td class="stats-info__value">234</td>
+                          <td class="stats-info__value">210 г</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="dishes" id="buying">
+          <div class="dishes__container container">
+            <div class="dishes__row">
+              <div class="dishes__title-block">
+                <h1 class="dishes__title">С ЭТИМ ТОВАРОМ ПОКУПАЮТ</h1>
+              </div>
+              <div class="dishes__line swiper no-loop">
+                <div class="dishes__wrapper swiper-wrapper">
+                  <div class="dishes__card dish dish-card swiper-slide" data-dish="dish-1"><a class="dish__link" href="./dish.html"></a>
+                    <p class="dish__count dish-count">0</p>
+                    <div class="dish__image"><img class="swiper-lazy" data-src="./images/card1.jpg" src="#" alt="Блюдо">
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="dish__content">
+                      <div class="dish__field dish__top">
+                        <h3 class="dish__name">Ягненок</h3><span class="dish__weight">Вес: 225 г</span>
+                      </div>
+                      <p class="dish__about">
+                        Фаршированный гречневой кашей, 
+                        курагой, апельсином и зеленым яблоком
+                      </p>
+                      <div class="dish__field dish__bottom">
+                        <button class="dish__minus dish-minus" type="button"><svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+</svg>
+                        </button>
+                        <p class="dish__price">620 ₽</p>
+                        <button class="dish__add dish-add" type="button"><span class="dish-add__text">В корзину</span><img src="./images/basket.svg" alt="В корзину"></button>
+                        <button class="dish__plus dish-plus" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+<rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+</svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dishes__card dish dish-card swiper-slide" data-dish="dish-2"><a class="dish__link" href="./dish.html"></a>
+                    <p class="dish__count dish-count">0</p>
+                    <div class="dish__image"><img class="swiper-lazy" data-src="./images/card2.jpg" src="#" alt="Блюдо">
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="dish__content">
+                      <div class="dish__field dish__top">
+                        <h3 class="dish__name">Индейка</h3><span class="dish__weight">Вес: 225 г</span>
+                      </div>
+                      <p class="dish__about">
+                        Фаршированный гречневой кашей, 
+                        курагой, апельсином и зеленым яблоком
+                      </p>
+                      <div class="dish__field dish__bottom">
+                        <button class="dish__minus dish-minus" type="button"><svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+</svg>
+                        </button>
+                        <p class="dish__price">450 ₽</p>
+                        <button class="dish__add dish-add" type="button"><span class="dish-add__text">В корзину</span><img src="./images/basket.svg" alt="В корзину"></button>
+                        <button class="dish__plus dish-plus" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+<rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+</svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dishes__card dish dish-card swiper-slide" data-dish="dish-3"><a class="dish__link" href="./dish.html"></a>
+                    <p class="dish__count dish-count">0</p>
+                    <div class="dish__image"><img class="swiper-lazy" data-src="./images/card3.jpg" src="#" alt="Блюдо">
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="dish__content">
+                      <div class="dish__field dish__top">
+                        <h3 class="dish__name">Гусь</h3><span class="dish__weight">Вес: 225 г</span>
+                      </div>
+                      <p class="dish__about">Фаршированный яблоками</p>
+                      <div class="dish__field dish__bottom">
+                        <button class="dish__minus dish-minus" type="button"><svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+</svg>
+                        </button>
+                        <p class="dish__price">7 900 ₽</p>
+                        <button class="dish__add dish-add" type="button"><span class="dish-add__text">В корзину</span><img src="./images/basket.svg" alt="В корзину"></button>
+                        <button class="dish__plus dish-plus" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+<rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+</svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dishes__card dish dish-card swiper-slide" data-dish="dish-4"><a class="dish__link" href="./dish.html"></a>
+                    <p class="dish__count dish-count">0</p>
+                    <div class="dish__image"><img class="swiper-lazy" data-src="./images/card4.jpg" src="#" alt="Блюдо">
+                      <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="dish__content">
+                      <div class="dish__field dish__top">
+                        <h3 class="dish__name">Утка</h3><span class="dish__weight">Вес: 225 г</span>
+                      </div>
+                      <p class="dish__about">Фаршированная рисом, курагой и айвой</p>
+                      <div class="dish__field dish__bottom">
+                        <button class="dish__minus dish-minus" type="button"><svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+</svg>
+                        </button>
+                        <p class="dish__price">3 230 ₽</p>
+                        <button class="dish__add dish-add" type="button"><span class="dish-add__text">В корзину</span><img src="./images/basket.svg" alt="В корзину"></button>
+                        <button class="dish__plus dish-plus" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+<rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+</svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__map"></div>
+          <div class="contacts__container container">
+            <div class="contacts__row">
+              <div class="contacts__card contacts-card">
+                <div class="contacts-card__bordered-block contacts-card__title-block">
+                  <h2 class="contacts-card__title">Контакты</h2>
+                </div>
+                <div class="contacts-card__info-block info">
+                  <div class="info__block address"><span class="info__title address__title">Наш адрес</span>
+                    <address class="info__text address__text">МО, городской округ Красногорск, село Ильинское, Экспериментальная улица, 10</address>
+                  </div>
+                  <div class="info__block email"><span class="info__title email__title">Наша почта</span>
+                    <address class="info__text email__text"><a href="mailto:restaurant@gmail.com">restaurant@gmail.com</a></address>
+                  </div>
+                </div>
+                <div class="contacts-card__bordered-block contacts-card__order-block">
+                  <button class="contacts-card__get-order" type="button">ЗАБРОНИРОВАТЬ СТОЛ</button>
+                  <button class="contacts-card__get-route get-route bordered-btn" type="button">Проложить маршрут</button><a class="contacts-card__tel tel" href="tel:79175105759"><span class="tel__numbers">+7 (917) 510-57-59</span><span class="tel__subtext">Звоните или оставляйте заявку</span></a>
+                </div>
+                <div class="contacts-card__social-block socials">
+                  <p class="socials__text">Мы в соц сетях:</p><a class="socials__link" href="#"><img src="./images/facebook.svg" alt="Фейсбук"></a><a class="socials__link" href="#"><img src="./images/vkontakte.svg" alt="Вконтакте"></a><a class="socials__link" href="#"><img src="./images/youtube.svg" alt="Ютуб"></a><a class="socials__link" href="#"><img src="./images/instagram.svg" alt="Инстаграмм"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__row"><a class="scroll-top anchor" href="#top"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0607 0.939577C12.4749 0.353795 11.5252 0.353801 10.9394 0.939592L1.3935 10.4856C0.807718 11.0714 0.807724 12.0211 1.39351 12.6069C1.9793 13.1927 2.92905 13.1927 3.51483 12.6069L12.0001 4.12156L20.4854 12.6068C21.0712 13.1926 22.0209 13.1926 22.6067 12.6068C23.1925 12.021 23.1925 11.0712 22.6067 10.4855L13.0607 0.939577ZM13.5001 4.0001L13.5 2.00023L10.5 2.00025L10.5001 4.00012L13.5001 4.0001Z" fill="#222021"/>
+</svg></a>
+            <div class="footer__info footer-info"><a class="footer__logo logo" href="/">
+                <div class="logo__image"><img src="./images/logo.svg" alt="Логотип"></div></a>
+              <div class="footer-info__copyright">© ООО СК «АПШЕРОН» <br>Все права защищены. 2010-2020</div>
+              <nav class="footer-info__links">
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Пользовательское соглашение</a></li>
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Карта сайта</a></li>
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </nav>
+            </div>
+            <nav class="footer__links">
+              <ul class="footer__list">
+                <li class="footer__list-elem"><a class="footer__link" href="#">О ресторане</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="./deliver.html">Условия доставки</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="#">Возврат товара</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="./actions.html">Акции</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

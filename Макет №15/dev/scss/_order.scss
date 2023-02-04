@@ -1,0 +1,603 @@
+.order {
+  &__container {
+    max-width: 900px;
+  }
+
+  &__row {
+    padding: 50px 20px 80px 20px;
+  }
+
+  .order-form {
+    margin: 55px 0 0 0;
+
+    // Блок для заголовка и полей ввода
+    &__block {
+      color: #fff;
+      background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+      border-radius: 10px;
+      padding: 30px 30px 50px 30px;
+
+      &:not(:first-child) {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    // Блок с полями ввода
+    &__inputs {
+      margin: 30px -7.5px 0 -7.5px;
+      display: flex;
+      justify-content: space-between;
+
+      .order-form__input {
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 20px 30px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        flex-grow: 1;
+        margin: 0 7.5px;
+        // position: relative;
+
+        &.order-form__small-input { flex-grow: 0 !important; }
+
+        &:focus {
+          ~.input-text { display: none; }
+        }
+
+        &.hide-text-on-hover:hover ~.input-text {
+          display: none;
+        }
+
+        &::placeholder {
+          color: #fff;
+          display: block;
+        }
+      }
+
+      .order-form__input[required]::before {
+        content: "*";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #72A479;
+        font-size: 20px;
+      }
+    }
+
+    // Блок с одним полем ввода
+    &__input-block {
+      position: relative;
+      flex-grow: 1;
+      margin: 0 7.5px;
+
+      &.shrink {
+        flex-grow: 0;
+      }
+
+      .input-text {
+        display: none;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translate(0, -50%);
+        pointer-events: none;
+
+        &.hide {
+          display: none;
+        }
+
+        &.active {
+          display: initial;
+        }
+
+        &__star { color: #72A479; }
+      }
+
+      .order-form__input {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    // Заголовок блока
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+
+      &_subtitle { font-size: 16px; }
+    }
+
+    // Блок с радио
+    &__radio-block {
+      display: flex;
+    }
+
+    // Текст, по клику на который активируется radio
+    &__label_radio {
+      padding: 20px 55px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      cursor: pointer;
+      transition: background ease .3s;
+
+      &.small-radio {
+        padding: 20px 25px;
+      }
+    }
+
+    &__labels {
+      display: flex;
+
+      &.margin-top { margin: 32px 0 0 0; }
+
+      label {
+        border-top: 1px solid #72A479;
+        border-bottom: 1px solid #72A479;
+        border-right: 1px solid #72A479;
+      }
+      label:first-child {
+        border-radius: 10px 0 0 10px;
+        border-left: 1px solid #72A479;
+      }
+      label:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+
+    // Сами радиокнопки
+    &__radio {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &__radio_1:checked ~ .order-form__labels .order-form__label_radio_1 {
+      background: #72A479;
+    }
+    &__radio_2:checked ~ .order-form__labels .order-form__label_radio_2 {
+      background: #72A479;
+    }
+    &__radio_3:checked ~ .order-form__labels .order-form__label_radio_3 {
+      background: #72A479;
+    }
+
+    // Ввод способа доставки
+    &__inputs_delivery {
+      align-items: center;
+      justify-content: stretch;
+    }
+
+    .form-note {
+      margin: 0 0 0 40px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+
+      &__icon {
+        margin: 0 10px 0 0;
+        align-items: center;
+      }
+    }
+
+    &__field {
+      margin: 30px 0 0 0;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &__odd-money {
+      flex-grow: 0 !important;
+      display: flex;
+    }
+
+    // Ввод адреса
+    &__inputs_address {
+      display: grid;
+      grid-template-areas:
+        "street street house"
+        "flat porch level"
+        "comment comment comment"
+      ;
+      grid-gap: 15px;
+      justify-content: stretch;
+
+      input,
+      .order-form__input-block { margin: 0 !important; }
+
+      .order-form__input-block.street { grid-area: street; }
+      .order-form__input-block.house { grid-area: house; }
+      .order-form__input-block.flat { grid-area: flat; }
+      .order-form__input-block.porch { grid-area: porch; }
+      .order-form__input-block.level { grid-area: level; }
+      .order-form__input-block.comment { grid-area: comment; }
+    }
+
+    // Счётчик персон
+    .counter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__options {
+        margin: 0 0 0 33px;
+        display: flex;
+      }
+
+      &__count {
+        margin: 0 20px;
+      }
+
+      &__minus,
+      &__plus {
+        cursor: pointer;
+        transition: transform ease .3s;
+        position: relative;
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          rect {
+            transition: fill ease .3s;
+          } 
+        }
+
+        &:hover svg rect {
+          fill: #72A479;
+        }
+
+        &:active{
+          transform: scale(.8);
+        }
+      }
+
+      &__minus {
+        width: 14px;
+        height: 19px;
+      }
+
+      &__plus {
+        width: 14px;
+        height: 17px;
+      }
+    }
+
+    // Предложение перезвонить
+    .recall {
+      margin: 22px 0 0 0;
+
+      &__opts {
+        margin: 22px 0 0 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__label-wrapper:not(:first-child) {
+        margin: 16px 0 0 0;
+      }
+
+      &__label {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        &:not(:first-child) {
+          margin: 20px 0 0 0;
+        }
+      }
+      &__radio {
+        position: relative;
+        z-index: 0;
+        opacity: 1;
+        margin: 0 9px 0 0;
+        background: transparent;
+        border: 1px solid #E7EEF1;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &__radio:checked {
+        border-color: #72A479;
+      }
+
+      &__radio:checked::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #72A479;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+    }
+
+    // Выбор ресторана
+    &__select-block {
+      margin: 20px 0 0 0;
+    }
+    &__select-wrapper {
+      display: inline-block;
+      position: relative;
+      width: 45%;
+
+      .choices {
+        &__inner {
+          padding: 20px 100px 20px 30px;
+          background: transparent;
+          border: 1px solid rgba(#fff, .1);
+          border-radius: 10px;
+          color: #fff;
+          cursor: pointer;
+          font-family: Gilroy, sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          appearance: none;
+          position: relative;
+        }
+
+        .choices__list--dropdown {
+          background: #504B4A;
+          border-radius: 0 0 10px 10px;
+          border: 1px solid rgba(#fff, .1);
+          padding: 0;
+        }
+
+        &__item {
+          font-size: 15px;
+
+          &.is-highlighted {
+           opacity: .8;
+           background: #2B2829;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 13px;
+          height: 9px;
+          right: 23px;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 9px 6.5px 0 6.5px;
+          border-color: #72A479 transparent transparent transparent;
+          line-height: 0px;
+          _border-color: #72A479 #000000 #000000 #000000;
+          _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        }
+
+        &.is-open::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    // Финальное согласие при оформлении заказа
+    .accept-info {
+      padding: 35px;
+
+      &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__row label {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        cursor: pointer;
+        transition: opacity ease .3s;
+
+        input[type="checkbox"] {
+          appearance: none;
+          background: #fff;
+          border: none;
+          border-radius: 3px;
+          width: 17px;
+          height: 17px;
+          position: relative;
+          flex-shrink: 0;
+          cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 15px;
+          height: 15px;
+          background: url('../images/check.svg') no-repeat center / cover;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+          opacity: .8;
+        }
+
+        a {
+          color: #72A479;
+
+          &:hover { text-decoration: underline; }
+        }
+
+        input {
+          margin: 0 10px 0 0;
+        }
+      }
+
+      &__get-order {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  // Примечание
+  .no-order {
+    padding: 23px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2B2829;
+    border-radius: 10px;
+    color: #fff;
+    cursor: default;
+
+    &__title {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    &__about {
+      margin: 20px 0 0 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 40px 30px;
+      &__image { display: none; }
+    }
+  }
+
+  @media (max-width: 910px) {
+    .order-form__select-wrapper {
+      width: auto;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .contact-info__inputs .order-form__input-block {
+      margin: 10px 0 0 0;
+    }
+
+    .order-form {
+      &__inputs {
+        margin: 16px -7.5px 0 -7.5px;
+      }
+
+      &__delivery-info {
+        .form-note { display: none !important; }
+      }
+
+      &__inputs_address {
+        grid-template-areas: 
+          "street"
+          "house"
+          "flat"
+          "porch"
+          "level"
+          "comment" !important
+        ;
+      }
+    }
+
+    .contact-info {
+      &__inputs {
+        flex-direction: column;
+      }
+
+      .order-form__input {
+        margin: 0 !important;
+      }
+
+      .order-form__input:not(:first-child) {
+        margin: 15px 0 0 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 830px) {
+    .accept-info {
+      &__row { flex-direction: column-reverse; }
+      &__label { margin: 33px 0 0 0; }
+      input[type="checkbox"] { width: 22px !important; height: 22px !important; }
+    }
+  }
+
+  @media (max-width: 785px) {
+    .order-form {
+      &__labels label {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 20px 40px;
+      }
+
+      .pay-radios label {
+        padding: 20px 13px;
+        white-space: nowrap;
+      }
+
+      .delivery-radios label {
+        padding: 20px 11px;
+        white-space: nowrap;
+      }
+
+      &__radio-block {
+        flex-direction: column;
+        .order-form__note { margin: 0 !important; }
+      }
+
+      &__note {
+        display: block !important;
+      }
+
+      &__inputs,
+      &__input {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .order-form__odd-money {
+      flex-grow: 1 !important;
+    }
+
+    .order-form__labels {
+      display: flex;
+    }
+
+    .order-form__label {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    .order-form__radio-block {
+      flex: 1 1 auto;
+    }
+  }
+}

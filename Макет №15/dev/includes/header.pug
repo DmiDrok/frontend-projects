@@ -1,0 +1,45 @@
+mixin header(emptyBasketClass)
+  header.header#header
+    .header__container.container
+      .header__row
+        //- Меню-бургер
+        .header__burger.burger
+          .burger__lines
+            i.burger__line.burger__line_1
+            i.burger__line.burger__line_2
+            i.burger__line.burger__line_3
+
+          span.burger__text Меню
+
+        a.header__logo.logo(href="./index.html")
+          .logo__image: img(src="./images/logo.svg" alt="Логотип")
+
+        .header__center.center
+          .header__search.search
+            //- img.search__image(src="./images/location.svg" alt="")
+            <svg class="search__image location" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.23926 9.39129C1.25367 5.15071 4.70302 1.72471 8.94361 1.73912C13.1842 1.75353 16.6102 5.20288 16.5958 9.44347V9.53042C16.5436 12.2869 15.0045 14.8348 13.1175 16.8261C12.0384 17.9467 10.8333 18.9388 9.52621 19.7826C9.17672 20.0849 8.65832 20.0849 8.30882 19.7826C6.36033 18.5143 4.65019 16.9131 3.25665 15.0522C2.01461 13.4294 1.30942 11.4597 1.23926 9.41738L1.23926 9.39129Z" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="8.9179" cy="9.53912" r="2.46087" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            input.header__input(type="text" placeholder="Введите адрес доставки")
+            <svg class="search__image start-search" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9.76657" cy="9.7666" r="8.98856" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.0183 16.4851L19.5423 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+
+            .search__live-container
+              ul.search__live-list.live-list
+              
+
+          a.header__tel.tel(href="tel:79175105759")
+            .tel__image: img(src="./images/tel.svg" alt="")
+            .tel__text
+              span.tel__title Контакты
+              span.tel__numbers +7 (917) 510-57-59
+
+        a.header__basket.basket.adaptive(href="./basket.html" class=`${emptyBasketClass}`)
+          span.basket__title Корзина
+          span.basket__count 0
+          img(src="./images/basket.svg" alt="Корзина").basket__image

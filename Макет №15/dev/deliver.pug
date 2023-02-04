@@ -1,0 +1,113 @@
+include includes/header
+
+doctype html
+html(lang="ru")
+  include includes/head
+
+  body
+    #top
+    .wrapper
+      //- Шапка сайта
+      +header
+
+      //- Основное содержимое
+      main.main
+        include includes/menu
+
+        section.deliver
+          .deliver__container.container
+            .deliver__row
+              .section-title
+                h1.deliver__title.section-title__text Условия доставки
+
+              //- Ответы на вопросы (аккордеон)
+              .deliver__content
+                .deliver__answers.answers
+                  .answers__answer.answer
+                    .answer__visible 
+                      p.answer__question У наших курьеров всегда должна быть сдача!
+                    .answer__hidden
+                      p.answer__paragraph
+                        |Мы очень внимательно следим за качеством нашей работы, 
+                        br
+                        |поэтому, если у вас будут какие-либо замечания или предложения, 
+                        br
+                        |то обязательно сообщайте их нам
+
+                  .answers__answer.answer
+                    .answer__visible
+                      p.answer__question Вам что-то не довезли?
+                    .answer__hidden
+                      p.answer__paragraph
+                        |Мы очень внимательно следим за качеством нашей работы, 
+                        br
+                        |поэтому, если у вас будут какие-либо замечания или предложения, 
+                        br
+                        |то обязательно сообщайте их нам
+
+                  .answers__answer.answer
+                    .answer__visible
+                      p.answer__question Не понравился продукт?
+                    .answer__hidden
+                      p.answer__paragraph
+                        |Мы очень внимательно следим за качеством нашей работы, 
+                        br
+                        |поэтому, если у вас будут какие-либо замечания или предложения, 
+                        br
+                        |то обязательно сообщайте их нам
+
+                  .answers__answer.answer
+                    .answer__visible
+                      p.answer__question Если появились замечания
+                    .answer__hidden
+                      p.answer__paragraph
+                        |Мы очень внимательно следим за качеством нашей работы, 
+                        br
+                        |поэтому, если у вас будут какие-либо замечания или предложения, 
+                        br
+                        |то обязательно сообщайте их нам
+
+                  .answers__answer.answer
+                    .answer__visible 
+                      p.answer__question Оплата Visa, MasterCard и МИР
+                    .answer__hidden
+                      p.answer__paragraph
+                        |Мы очень внимательно следим за качеством нашей работы, 
+                        br
+                        |поэтому, если у вас будут какие-либо замечания или предложения, 
+                        br
+                        |то обязательно сообщайте их нам
+
+                  .answers__answer.answer
+                    .answer__visible
+                      p.answer__question Реквизиты
+                    .answer__hidden
+                      p.answer__paragraph
+                        |Мы очень внимательно следим за качеством нашей работы, 
+                        br
+                        |поэтому, если у вас будут какие-либо замечания или предложения, 
+                        br
+                        |то обязательно сообщайте их нам
+
+                .deliver__map.map
+                  include includes/desktop-map
+              
+              //- График работы
+              .deliver__schedule.schedule
+                .schedule__block
+                  h3.schedule__title График работы доставки:
+                  .schedule__value с 10:00-21:00
+                .schedule__block
+                  h3.schedule__title График работы кафе:
+                  .schedule__value с 10:00-21:00
+
+              //- Примечание
+              .deliver__note.note
+                h3.note__title Минимальный заказ:
+                .note__value.
+                  Бесплатная доставка пешим курьером при сумме заказа от 400 ₽
+                  Доставка оператором такси от любой суммы заказа - по тарифам 
+                  перевозчика.
+
+
+      include includes/footer

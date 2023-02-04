@@ -1,0 +1,208 @@
+include includes/header
+
+doctype html
+html(lang="ru")
+  include includes/head
+
+  body
+    #top
+    .wrapper
+      //- Шапка сайта
+      +header
+
+      //- Основное содержимое
+      main.main
+
+        //- Якорные ссылки
+        include includes/menu
+
+        //- Блок с блюдом
+        section.dish-item
+          .dish-item__container.container
+            .dish-item__row
+              .dish-item__go-back-block.go-back
+                a.go-back__link(href="./index.html")
+                  .go-back__icon
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.6967C6.01041 0.403806 5.53553 0.403806 5.24264 0.696699L0.46967 5.46967ZM2 5.25L1 5.25L1 6.75L2 6.75L2 5.25Z" fill="white"/>
+                    </svg>
+                  span.go-back__text Вернуться назад
+
+              .dish-item__card.dish-card
+                .dish-card__image
+                  img(src="./images/dish1.jpg" alt="Блюдо")
+
+                .dish-card__stats.stats
+                  .stats__row
+                    .stats__top
+                      h1.stats__name Ягненок
+                      p.stats__about 
+                        |помидор, сыр фета, масло подсолнечное, капуста пекинская, 
+                        br
+                        |перец сладкий красный, огурцы, оливки без косточек
+
+                    .stats__bottom
+                      p.stats__weight Вес: <span class="stats__weight-numbers">210</span> г
+                      
+                      .stats__add-basket-block
+                        button.stats__add-basket.basket(type="button")
+                          span.basket__title Корзина
+                          img(src="./images/bag.svg" alt="Корзина").basket__image-default
+                        p.stats__price 259 ₽
+                      
+                      table.stats__info.stats-info
+                        thead
+                          tr
+                            td.stats-info__title Белки
+                            td.stats-info__title Жиры
+                            td.stats-info__title Углеводы
+                            td.stats-info__title Ккал
+                            td.stats-info__title Вес
+
+                        tr.stats-info__values-row
+                          td.stats-info__value 17.23
+                          td.stats-info__value 7.63
+                          td.stats-info__value 22.35
+                          td.stats-info__value 234
+                          td.stats-info__value 210 г
+
+        //- С этим товаром покупают
+        section.dishes#buying
+          .dishes__container.container
+            .dishes__row
+              .dishes__title-block
+                h1.dishes__title С ЭТИМ ТОВАРОМ ПОКУПАЮТ
+              
+              .dishes__line.swiper.no-loop
+                .dishes__wrapper.swiper-wrapper
+                  .dishes__card.dish.dish-card.swiper-slide(data-dish="dish-1")
+                    a.dish__link(href="./dish.html")
+
+                    p.dish__count.dish-count 0
+                    .dish__image
+                      img.swiper-lazy(data-src="./images/card1.jpg" src="#" alt="Блюдо")
+                      .swiper-lazy-preloader
+                    .dish__content
+                      .dish__field.dish__top
+                        h3.dish__name Ягненок
+                        span.dish__weight Вес: 225 г
+                      p.dish__about.
+                        Фаршированный гречневой кашей, 
+                        курагой, апельсином и зеленым яблоком
+                      .dish__field.dish__bottom
+                        button.dish__minus.dish-minus(type="button")
+                          <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+                          </svg>
+
+                        p.dish__price 620 ₽
+
+                        button.dish__add.dish-add(type="button")
+                          span.dish-add__text В корзину
+                          img(src="./images/basket.svg" alt="В корзину")
+
+                        button.dish__plus.dish-plus(type="button")
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+                            <rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+                          </svg>
+
+                  .dishes__card.dish.dish-card.swiper-slide(data-dish="dish-2")
+                    a.dish__link(href="./dish.html")
+
+                    p.dish__count.dish-count 0
+                    .dish__image
+                      img.swiper-lazy(data-src="./images/card2.jpg" src="#" alt="Блюдо")
+                      .swiper-lazy-preloader
+                    .dish__content
+                      .dish__field.dish__top
+                        h3.dish__name Индейка
+                        span.dish__weight Вес: 225 г
+                      p.dish__about.
+                        Фаршированный гречневой кашей, 
+                        курагой, апельсином и зеленым яблоком
+                      .dish__field.dish__bottom
+                        button.dish__minus.dish-minus(type="button")
+                          <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+                          </svg>
+
+                        p.dish__price 450 ₽
+
+                        button.dish__add.dish-add(type="button")
+                          span.dish-add__text В корзину
+                          img(src="./images/basket.svg" alt="В корзину")
+
+                        button.dish__plus.dish-plus(type="button")
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+                            <rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+                          </svg>
+
+                  .dishes__card.dish.dish-card.swiper-slide(data-dish="dish-3")
+                    a.dish__link(href="./dish.html")
+
+                    p.dish__count.dish-count 0
+                    .dish__image
+                      img.swiper-lazy(data-src="./images/card3.jpg" src="#" alt="Блюдо")
+                      .swiper-lazy-preloader
+                    .dish__content
+                      .dish__field.dish__top
+                        h3.dish__name Гусь
+                        span.dish__weight Вес: 225 г
+                      p.dish__about.
+                        Фаршированный яблоками
+                      .dish__field.dish__bottom
+                        button.dish__minus.dish-minus(type="button")
+                          <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+                          </svg>
+
+                        p.dish__price 7 900 ₽
+
+                        button.dish__add.dish-add(type="button")
+                          span.dish-add__text В корзину
+                          img(src="./images/basket.svg" alt="В корзину")
+
+                        button.dish__plus.dish-plus(type="button")
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+                            <rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+                          </svg>
+        
+                  .dishes__card.dish.dish-card.swiper-slide(data-dish="dish-4")
+                    a.dish__link(href="./dish.html")
+
+                    p.dish__count.dish-count 0
+                    .dish__image
+                      img.swiper-lazy(data-src="./images/card4.jpg" src="#" alt="Блюдо")
+                      .swiper-lazy-preloader
+                    .dish__content
+                      .dish__field.dish__top
+                        h3.dish__name Утка
+                        span.dish__weight Вес: 225 г
+                      p.dish__about.
+                        Фаршированная рисом, курагой и айвой
+                      .dish__field.dish__bottom
+                        button.dish__minus.dish-minus(type="button")
+                          <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="3.63635" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 3.63635)" fill="white"/>
+                          </svg>
+
+                        p.dish__price 3 230 ₽
+
+                        button.dish__add.dish-add(type="button")
+                          span.dish-add__text В корзину
+                          img(src="./images/basket.svg" alt="В корзину")
+
+                        button.dish__plus.dish-plus(type="button")
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="7.36365" width="3.27273" height="18" rx="1.63636" fill="white"/>
+                            <rect y="10.6364" width="3.27273" height="18" rx="1.63636" transform="rotate(-90 0 10.6364)" fill="white"/>
+                          </svg>
+
+        //- Контакты
+        include includes/contacts
+
+      //- Подвал
+      include includes/footer

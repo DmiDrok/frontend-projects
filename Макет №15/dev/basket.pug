@@ -1,0 +1,195 @@
+include includes/header
+
+doctype html
+html(lang="ru")
+  include includes/head
+
+  body
+    include includes/empty-basket-modal
+    #top
+    .wrapper
+      //- Шапка сайта
+      +header('empty-basket')
+
+      //- Основное содержимое
+      main.main
+        include includes/menu
+
+        //- Секция, составляющая саму корзину
+        section.basket-bag
+          .basket-bag__container.container
+            .basket-bag__row
+              .basket-bag__head
+                .basket-bag__top-content.special-title
+                  .basket-bag__go-back-block.go-back
+                    
+                    a.go-back__link(href="./index.html") 
+                      <svg class="go-back__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.6967C6.01041 0.403806 5.53553 0.403806 5.24264 0.696699L0.46967 5.46967ZM1.5 5.25L1 5.25L1 6.75L1.5 6.75L1.5 5.25Z" fill="white"/>
+                      </svg>
+                      span.go-back__text к выбору блюд
+
+                  .section-title
+                    h1.basket-bag__title.section-title__text Корзина
+                      span.basket-bag__count (в корзине <span class="count">1</span> товар)
+              
+
+              .basket-bag__content
+                .basket-bag__item.basket-item.dish-card(data-dish="1")
+                  .basket-item__row
+                    .basket-item__image
+                      img(src="./images/dish1.jpg" alt="Блюдо в корзине")
+
+                    .basket-item__main
+                      a.basket-item__text(href="./dish.html")
+                        h3.basket-item__name ПИЦЦА ДВОЙНАЯ ПЕППЕРОНИ
+                        p.basket-item__about
+                          |Кальмары, мидии, креветки, сыр маасдам,
+                          br
+                          |красный лук, микс оливок, базилик, соус песто
+                    
+                      .basket-item__more
+                        .basket-item__counter
+                          .basket-item__minus.dish-minus.minus
+                            <svg width="12" height="4" viewBox="0 0 12 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1.89993C0 1.07151 0.671573 0.399933 1.5 0.399933H10.5C11.3284 0.399933 12 1.07151 12 1.89993C12 2.72836 11.3284 3.39993 10.5 3.39993H1.5C0.671573 3.39993 0 2.72836 0 1.89993Z" fill="white"/>
+                            </svg>
+
+                          .basket-item__count.dish-count 1
+                          .basket-item__plus.dish-plus.plus
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.2771 4.69675H7.34632V1.766C7.34632 1.04596 6.74157 0.456581 6.02127 0.456581C5.30097 0.456581 4.69622 1.04596 4.69622 1.766V4.69675H1.76547C1.04544 4.69675 0.456055 5.3015 0.456055 6.0218C0.456055 6.7421 1.04544 7.34685 1.76547 7.34685H4.69622V10.2776C4.69622 10.9976 5.30097 11.587 6.02127 11.587C6.74157 11.587 7.34632 10.9976 7.34632 10.2776V7.34685H10.2771C10.9971 7.34685 11.5865 6.7421 11.5865 6.0218C11.5865 5.3015 10.9971 4.69675 10.2771 4.69675Z" fill="white"/>
+                            </svg>
+                        .basket-item__price 1640 ₽
+                        .basket-item__delete.dish-delete.delete
+                          <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.60349 7.14369L6.53113 5.07133L8.60349 2.99898C9.11263 2.48984 9.10176 1.64546 8.59243 1.13613C8.0831 0.626803 7.23872 0.615935 6.72958 1.12508L4.65723 3.19743L2.58487 1.12508C2.07573 0.615935 1.23135 0.626803 0.722023 1.13613C0.212695 1.64546 0.201827 2.48984 0.710967 2.99898L2.78332 5.07133L0.710968 7.14369C0.201827 7.65283 0.212695 8.49721 0.722023 9.00654C1.23135 9.51587 2.07573 9.52673 2.58487 9.01759L4.65723 6.94524L6.72958 9.01759C7.23872 9.52673 8.0831 9.51587 8.59243 9.00654C9.10176 8.49721 9.11263 7.65283 8.60349 7.14369Z" fill="white"/>
+                          </svg>
+                
+                .basket-bag__item.basket-item.dish-card(data-dish="2")
+                  .basket-item__row
+                    .basket-item__image
+                      img(src="./images/dish1.jpg" alt="Блюдо в корзине")
+
+                    .basket-item__main
+                      a.basket-item__text(href="./dish.html")
+                        h3.basket-item__name ПИЦЦА ДВОЙНАЯ ПЕППЕРОНИ
+                        p.basket-item__about
+                          |Кальмары, мидии, креветки, сыр маасдам,
+                          br
+                          |красный лук, микс оливок, базилик, соус песто
+                    
+                      .basket-item__more
+                        .basket-item__counter
+                          .basket-item__minus.dish-minus.minus
+                            <svg width="12" height="4" viewBox="0 0 12 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1.89993C0 1.07151 0.671573 0.399933 1.5 0.399933H10.5C11.3284 0.399933 12 1.07151 12 1.89993C12 2.72836 11.3284 3.39993 10.5 3.39993H1.5C0.671573 3.39993 0 2.72836 0 1.89993Z" fill="white"/>
+                            </svg>
+
+                          .basket-item__count.dish-count 1
+                          .basket-item__plus.dish-plus.plus
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.2771 4.69675H7.34632V1.766C7.34632 1.04596 6.74157 0.456581 6.02127 0.456581C5.30097 0.456581 4.69622 1.04596 4.69622 1.766V4.69675H1.76547C1.04544 4.69675 0.456055 5.3015 0.456055 6.0218C0.456055 6.7421 1.04544 7.34685 1.76547 7.34685H4.69622V10.2776C4.69622 10.9976 5.30097 11.587 6.02127 11.587C6.74157 11.587 7.34632 10.9976 7.34632 10.2776V7.34685H10.2771C10.9971 7.34685 11.5865 6.7421 11.5865 6.0218C11.5865 5.3015 10.9971 4.69675 10.2771 4.69675Z" fill="white"/>
+                            </svg>
+                        .basket-item__price 1640 ₽
+                        .basket-item__delete.dish-delete.delete
+                          <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.60349 7.14369L6.53113 5.07133L8.60349 2.99898C9.11263 2.48984 9.10176 1.64546 8.59243 1.13613C8.0831 0.626803 7.23872 0.615935 6.72958 1.12508L4.65723 3.19743L2.58487 1.12508C2.07573 0.615935 1.23135 0.626803 0.722023 1.13613C0.212695 1.64546 0.201827 2.48984 0.710967 2.99898L2.78332 5.07133L0.710968 7.14369C0.201827 7.65283 0.212695 8.49721 0.722023 9.00654C1.23135 9.51587 2.07573 9.52673 2.58487 9.01759L4.65723 6.94524L6.72958 9.01759C7.23872 9.52673 8.0831 9.51587 8.59243 9.00654C9.10176 8.49721 9.11263 7.65283 8.60349 7.14369Z" fill="white"/>
+                          </svg>
+
+        //- Предложение с дополнительными товарами
+        section.more-add
+          .more-add__container.container
+            .more-add__row
+              h1.more-add__title ДОБАВИТЬ К ЗАКАЗУ
+              .more-add__line
+                a.more-add-item.add-item(href="./dish.html")
+                  .add-item__row
+                    .add-item__image
+                      img(src="./images/dish1.jpg" alt="")
+                    .add-item__options
+                      .add-item__name-block
+                        h3.add-item__name КВАС АНАНАСОВЫЙ
+                      .add-item__other-block
+                        .add-item__add.ignore-link
+                          |Добавить
+                          .plus
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.05886 3.04762H4.95238V0.941143C4.95238 0.423619 4.51771 0 4 0C3.48229 0 3.04762 0.423619 3.04762 0.941143V3.04762H0.941143C0.423619 3.04762 0 3.48229 0 4C0 4.51771 0.423619 4.95238 0.941143 4.95238H3.04762V7.05886C3.04762 7.57638 3.48229 8 4 8C4.51771 8 4.95238 7.57638 4.95238 7.05886V4.95238H7.05886C7.57638 4.95238 8 4.51771 8 4C8 3.48229 7.57638 3.04762 7.05886 3.04762Z" fill="white"/>
+                            </svg>
+
+                        p.add-item__price 1640 ₽
+                a.more-add-item.add-item(href="./dish.html")
+                  .add-item__row
+                    .add-item__image
+                      img(src="./images/dish1.jpg" alt="")
+                    .add-item__options
+                      .add-item__name-block
+                        h3.add-item__name ГРИСССИНИ
+                      .add-item__other-block
+                        .add-item__add.ignore-link
+                          |Добавить
+                          .plus
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.05886 3.04762H4.95238V0.941143C4.95238 0.423619 4.51771 0 4 0C3.48229 0 3.04762 0.423619 3.04762 0.941143V3.04762H0.941143C0.423619 3.04762 0 3.48229 0 4C0 4.51771 0.423619 4.95238 0.941143 4.95238H3.04762V7.05886C3.04762 7.57638 3.48229 8 4 8C4.51771 8 4.95238 7.57638 4.95238 7.05886V4.95238H7.05886C7.57638 4.95238 8 4.51771 8 4C8 3.48229 7.57638 3.04762 7.05886 3.04762Z" fill="white"/>
+                            </svg>
+
+                        p.add-item__price 1640 ₽
+                a.more-add-item.add-item(href="./dish.html")
+                  .add-item__row
+                    .add-item__image
+                      img(src="./images/dish1.jpg" alt="")
+                    .add-item__options
+                      .add-item__name-block
+                        h3.add-item__name ПИЦЦА ПЕППЕРОНИ
+                      .add-item__other-block
+                        .add-item__add.ignore-link
+                          |Добавить
+                          .plus
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.05886 3.04762H4.95238V0.941143C4.95238 0.423619 4.51771 0 4 0C3.48229 0 3.04762 0.423619 3.04762 0.941143V3.04762H0.941143C0.423619 3.04762 0 3.48229 0 4C0 4.51771 0.423619 4.95238 0.941143 4.95238H3.04762V7.05886C3.04762 7.57638 3.48229 8 4 8C4.51771 8 4.95238 7.57638 4.95238 7.05886V4.95238H7.05886C7.57638 4.95238 8 4.51771 8 4C8 3.48229 7.57638 3.04762 7.05886 3.04762Z" fill="white"/>
+                            </svg>
+
+                        p.add-item__price 1640 ₽
+                .more-add-item.add-item
+                  .add-item__row
+                    .add-item__image
+                      img(src="./images/dish1.jpg" alt="")
+                    .add-item__options                      
+                      .add-item__name-block
+                        h3.add-item__name ПИЦЦА ПЕППЕРОНИ
+                      .add-item__other-block
+                        .add-item__add.ignore-link
+                          |Добавить
+                          .plus
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.05886 3.04762H4.95238V0.941143C4.95238 0.423619 4.51771 0 4 0C3.48229 0 3.04762 0.423619 3.04762 0.941143V3.04762H0.941143C0.423619 3.04762 0 3.48229 0 4C0 4.51771 0.423619 4.95238 0.941143 4.95238H3.04762V7.05886C3.04762 7.57638 3.48229 8 4 8C4.51771 8 4.95238 7.57638 4.95238 7.05886V4.95238H7.05886C7.57638 4.95238 8 4.51771 8 4C8 3.48229 7.57638 3.04762 7.05886 3.04762Z" fill="white"/>
+                            </svg>
+
+                        p.add-item__price 1640 ₽
+
+        //- Результат (цена и оформление заказа)          
+        section.result
+          h1.hidden-title.result__title Результат собранной корзины
+
+          .result__container.container
+            .result__row
+              .result__content
+                .result__info.result-info
+                  h4.result-info__price
+                    |Итого:
+                    span.price 500 ₽
+                  .result-info__note.result-info__note_1.note
+                    .note__text
+                      |До бесплатной доставки не хватает:
+                      span.note__value 100 ₽
+                  .result-info__note.result-info__note_2.note
+                    .note__text
+                      |Минимальная сума заказа:
+                      span.note__value 1500 ₽
+                    
+                .result-get-order
+                  a.get-order(href="./order.html") Оформить заказ
+
+
+      include includes/footer

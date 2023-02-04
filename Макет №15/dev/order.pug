@@ -1,0 +1,212 @@
+include includes/header
+
+doctype html
+html(lang="ru")
+  include includes/head
+
+  body
+    #top
+    .wrapper
+      //- Шапка сайта
+      +header
+
+      //- Основное содержимое
+      main.main
+
+        //- Якорные ссылки
+        include includes/menu
+
+        //- Оформление заказа
+        section.order
+          .order__container.container
+            .order__row
+              .order__top-content.special-title
+                .order__go-back-block.go-back
+                  
+                  a.go-back__link(href="./basket.html") 
+                    <svg class="go-back__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.6967C6.01041 0.403806 5.53553 0.403806 5.24264 0.696699L0.46967 5.46967ZM1.5 5.25L1 5.25L1 6.75L1.5 6.75L1.5 5.25Z" fill="white"/>
+                    </svg>
+                    span.go-back__text в корзину
+
+                .section-title
+                  h1.order__title.section-title__text Оформление заказа
+
+              //- Поля ввода и т.д.
+              form.order__content.order-form(action="/")
+                .order-form__attention.no-order
+                  .no-order__text
+                    h3.no-order__title Сегодня мы уже не доставляем.
+                    p.no-order__about Заказы принимаем до 20:50, доставляем с 8:30 до 21:30
+                  
+                  .no-order__image
+                    img(src="./images/no-order.png" alt="В такое время не принимаем заказы")
+
+                fieldset.order-form__block.order-form__contact-info.contact-info
+                  legend.hidden-title Контактная информация
+
+                  h3.order-form__title 1. Контактная информация
+                  .order-form__inputs.contact-info__inputs
+                    .order-form__input-block
+                      input.order-form__input.order-form__name(type="text" placeholder="" required)
+                      span.input-text
+                        |Имя
+                        b.input-text__star *
+                    
+                    .order-form__input-block
+                      input.order-form__input.order-form__tel.hide-text-on-hover(type="text" placeholder="" required)
+                      span.input-text
+                        |Телефон
+                        b.input-text__star *
+        
+                fieldset.order-form__block.order-form__delivery-info
+                  legend.hidden-title Доставка
+
+                  h3.order-form__title 2. Доставка
+                  .order-form__inputs.order-form__inputs_delivery
+                    .order-form__radio-block
+                      input.order-form__radio.order-form__radio_1(type="radio" name="delivery" id="you" value="you" checked)
+                      input.order-form__radio.order-form__radio_2(type="radio" name="delivery" id="me" value="me")
+                      
+                      .order-form__labels
+                        label.order-form__label.order-form__label_radio.order-form__label_radio_1(for="you") Доставка
+                        label.order-form__label.order-form__label_radio.order-form__label_radio_2(for="me") Самовывоз
+                    .order-form__note.form-note
+                      img.form-note__icon(src="./images/clock.svg" alt="")
+                      span.form-note__text Доставим через  1 час 30 минут
+                  
+                  //- Будет показано при выборе "Доставка"
+                  .order-form__field.order-form__you-radio-area.active
+                    h3.order-form__title.order-form__title_subtitle Адрес доставки
+                    .order-form__inputs.order-form__inputs_address
+                      .order-form__input-block.street
+                        input.order-form__input(type="text" name="street" placeholder="" required)
+                        span.input-text
+                          |Укажите улицу
+                          b.input-text__star *
+
+                      .order-form__input-block.house
+                        input.order-form__input(type="text" name="house" placeholder="" required)
+                        span.input-text
+                          |Номер дома
+                          b.input-text__star *
+                      
+                      .order-form__input-block.flat
+                        input.order-form__input(type="text" name="flat" placeholder="")
+                        span.input-text
+                          |№ квартиры/офиса
+                          b.input-text__star
+
+                      .order-form__input-block.porch
+                        input.order-form__input(type="text" name="porch" placeholder="")
+                        span.input-text
+                          |Подъезд
+                          b.input-text__star
+                        
+                      .order-form__input-block.level
+                        input.order-form__input(type="text" name="level" placeholder="")
+                        span.input-text
+                          |Этаж
+                          b.input-text__star
+
+                      .order-form__input-block.comment
+                        input.order-form__input(type="text" name="comment" placeholder="")
+                        span.input-text
+                          |Комментарий
+                          b.input-text__star
+
+                  //- Будет показано при выборе "Самовывоз"
+                  .order-form__field.order-form__me-radio-area
+                    h3.order-form__title.order-form__title_subtitle Выберите ресторан
+                    .order-form__select-block
+                      .order-form__select-wrapper
+                        select.order-form__select.order-form__restaurant(name="restaurant")
+                          option(value="default" selected disabled) Выберите ресторан 
+                          option(value="rest-1") Первый ресторан 
+                          option(value="rest-2") Второй ресторан 
+                          option(value="rest-3") Третий ресторан 
+                          option(value="rest-4") Четвёртый ресторан
+                             
+                fieldset.order-form__block.order-form__pay-info
+                  legend.hidden-title Оплата
+
+                  h3.order-form__title 3. Оплатить
+                  .order-form__radio-block
+                    input.order-form__radio.order-form__radio_1(type="radio" name="pay" id="online" value="online")
+                    input.order-form__radio.order-form__radio_2(type="radio" name="pay" id="card" value="card")
+                    input.order-form__radio.order-form__radio_3(type="radio" name="pay" id="self" value="self" checked)
+                    
+                    .order-form__labels.pay-radios.margin-top
+                      label.order-form__label.order-form__label_radio.order-form__label_radio_1(for="online") Оплата онлайн
+                      label.order-form__label.order-form__label_radio.order-form__label_radio_2(for="card") Курьеру картой
+                      label.order-form__label.order-form__label_radio.order-form__label_radio_3(for="self") Наличными
+
+                  .order-form__inputs
+                    .order-form__input-block.order-form__odd-money.shrink
+                      input.order-form__input.order-form__small-input(type="number" name="odd_money" placeholder="")
+                      span.input-text
+                        |Сдача с
+                        b.input-text__star
+              
+                fieldset.order-form__block.order-form__when-info
+                  legend.hidden-title Когда доставить
+
+                  h3.order-form__title 4. Когда доставить
+                  .order-form__radio-block
+                    input.order-form__radio.order-form__radio_1(type="radio" name="time" id="fast" value="fast" checked)
+                    input.order-form__radio.order-form__radio_2(type="radio" name="time" id="time" value="time")
+                    
+                    .order-form__labels.pay-radios.margin-top
+                      label.order-form__label.order-form__label_radio.order-form__label_radio_1.small-radio(for="fast") В ближайшее время
+                      label.order-form__label.order-form__label_radio.order-form__label_radio_2(for="time") Ко времени
+
+                    .order-form__note.form-note
+                      .order-form__inputs
+                        .order-form__input-block
+                          input.order-form__input.order-form__time.hide-text-on-hover(type="text" name="when-time" placeholder="")
+                          span.input-text
+                            |Укажите время
+                            b.input-text__star
+
+                  .order-form__inputs
+                    .order-form__input.order-form__small-input.order-form__counter.counter
+                      span.counter__text Кол-во персон
+                      .counter__options
+                        span.counter__minus
+                          <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="14" height="2" fill="white"/>
+                          </svg>
+                        span.counter__count 1
+                        span.counter__plus
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="6" width="14" height="2" fill="white"/>
+                            <rect x="8" width="14" height="2" transform="rotate(90 8 0)" fill="white"/>
+                          </svg>
+                  
+                  .order-form__recall.recall
+                    h3.order-form__title.order-form__title_subtitle Хотите мы позвоним?
+
+                    .order-form__radio-block.recall__opts
+                      .recall__label-wrapper
+                        label.order-form__label.recall__label
+                          input.order-form__radio.recall__radio(type="radio" name="recall" id="no-recall" value="no-recall")
+                          |Не перезванивать
+                      .recall__label-wrapper
+                        label.order-form__label.recall__label
+                          input.order-form__radio.recall__radio(type="radio" name="recall" id="yes-recall" value="yes-recall")
+                          |Потребуется звонок оператора
+      
+                .order-form__block.order-form__accept-info.accept-info
+                  .accept-info__row
+                    label.accept-info__label
+                      input.accept-info__checkbox(type="checkbox" name="accept")
+                      span.accept-info__text
+                        |Я согласен на обработку моих перс. данных в соответствии с 
+                        a.accept-info__link(href="#") Условиями
+
+                    .accept-info__get-order    
+                      button.get-order(type="submit") Оформить заказ
+
+
+      //- Подвал
+      include includes/footer

@@ -1,0 +1,27 @@
+// === Стилизация якорных ссылок (по блюдам) ===
+.menu__row {
+  .menu-list {
+    display: flex;
+  }
+
+  .swiper-slide {
+    width: auto !important;
+    flex: 0 1 auto;
+  }
+}
+
+// === Стилизация слайда блюд ===
+.dishes {
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper.no-loop {
+
+    @media (min-width: 1310px) {
+      .swiper-wrapper {
+        justify-content: center;
+      }
+    }
+  }
+}

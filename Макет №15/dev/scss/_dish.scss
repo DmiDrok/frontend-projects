@@ -1,0 +1,248 @@
+.dish-item {
+  display: flex;
+  align-items: center;
+  max-width: 1210px;
+  margin: 0 auto;
+  
+  &__row {
+    position: relative;
+    padding: 40px 15px 50px 15px;
+  }
+
+  // Ссылка назад
+  .go-back {
+    margin: 0 0 27px 0;
+    
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      transition: opacity ease .3s;
+
+      &:hover {
+        opacity: .8;
+
+        .go-back__text::before {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 26px;
+      height: 26px;
+      background: $green-color;
+      border-radius: 50%;
+      position: relative;
+
+      svg {
+        position: absolute;
+      }
+    }
+
+    &__text {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+      margin: 0 0 0 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: -4px;
+        transform: translateY(-4px);
+        opacity: 0;
+        width: 100%;
+        height: 1px;
+        background: #ccc;
+        transition: transform ease .3s, opacity ease .3s;
+      }
+    }
+  }
+
+  // Карточка блюда
+  .dish-card {
+    display: flex;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+
+    &__image {
+      flex: 0 1 50%;
+
+      img {
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .stats {
+      flex: 0 1 50%;
+      color: #fff;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 43.5px;
+        background: rgba(#fff, .1);
+        width: 100%;
+        height: 1px;
+      }
+
+      &__row {
+        padding: 38px 50px 12px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      &__bottom {
+        padding: 15px 0 0 0;
+      }
+
+      &__name {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      &__about {
+        color: #cfcfcf;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &__weight {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &__add-basket-block {
+        margin: 22px 0 0 0;
+        display: flex;
+        align-items: center;
+      }
+
+      &__price {
+        margin: 0 0 0 25px;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        white-space: nowrap;
+      }
+
+      &__add-basket {
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .stats-info {
+        width: 100%;
+        margin: 30px 0 0 0;
+
+        &__title {
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        &__value {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 34px;
+        }
+
+        &__values-row {
+          position: relative;
+          margin: 10px 0 0 0;
+
+          // &::before {
+          //   content: "";
+          //   position: absolute;
+          //   display: block;
+          //   width: 100%;
+          //   height: 2px;
+          //   left: 0;
+          //   top: 0;
+          //   background: #fff;
+          // }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .dish-card {
+      flex-direction: column;
+    }
+
+    .stats {
+      &__row {
+        text-align: center;
+      }
+
+      &__add-basket-block {
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    &__row {
+      padding: 40px 0 50px 0;
+    }
+
+    .go-back {
+      position: absolute;
+      margin: 0 !important;
+      left: 24px;
+      top: 60px;
+
+      &__text {
+        font-size: 0px !important;
+      }
+
+      &__icon {
+        background: #fff;
+        width: 37px;
+        height: 37px;
+
+        svg {
+          width: 24px;
+          height: 18px;
+          transform: translateX(-1px);
+
+          path {
+            fill: #6F9F76;
+          }
+        }
+      }
+    }
+
+    .stats {
+      &__name {
+        font-size: 20px !important;
+      }
+
+      &__about {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+}

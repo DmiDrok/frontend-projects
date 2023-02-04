@@ -1,0 +1,178 @@
+.deliver {
+  &__row {
+    padding: 50px 20px;
+  }
+
+  // Ответы на вопросы
+  &__content {
+    display: flex;
+    margin: 45px -20px;
+
+    .answer {
+      color: #fff;
+      cursor: pointer;
+      height: 66px;
+      overflow: hidden;
+      transition: height ease .3s;
+      border-radius: 10px;
+      
+      &:not(:first-child) {
+        margin: 10px 0 0 0;
+      }
+
+      &__visible {
+        padding: 16px 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 35px;
+        position: relative;
+        background: $green-color;
+        border-radius: 10px;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 34px;
+          background: #fff;
+          width: 14px;
+          height: 2px;
+          transform: translateY(-50%);
+          transition: transform ease .3s;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          right: 34px;
+        }
+        
+        &::after {
+          transform: rotate(-45deg);
+          right: 24px;
+        }
+      }
+
+      &__question {
+        width: 90%;
+      }
+
+      &.active {
+        .answer__visible::before {
+          transform: rotate(-45deg) !important;
+        }
+
+        .answer__visible::after {
+          transform: rotate(45deg) !important;
+        }
+      }
+
+      &__hidden {
+        padding: 50px 20px 40px 20px;
+        background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        transform: translateY(-20px);
+        position: relative;
+        z-index: -1;
+      }
+    }
+
+    .map {
+      position: relative;
+
+      iframe {
+        position: absolute;
+        max-height: 100%;
+      }
+    }
+  }
+
+  &__answers,
+  &__map {
+    flex: 0 1 50%;
+    margin: 0 10px;
+  }
+
+  // График работы
+  .schedule {
+    display: flex;
+    color: #fff;
+    line-height: 35px;
+    font-size: 22px;
+
+    &__block:not(:first-child) {
+      margin: 0 0 0 100px;
+    }
+    
+    &__title {
+      font-weight: 700;
+    }
+
+    &__value {
+      font-weight: 400;
+      color: #CFCFCF;
+    }
+  }
+
+  // Минимальный заказ
+  .note {
+    width: 52%;
+    margin: 40px 0 0 0;
+    color: #fff;
+    font-size: 22px;
+
+    &__title {
+      font-weight: 700;
+      line-height: 35px;
+    }
+
+    &__value {
+      font-weight: 400;
+      color: #CFCFCF;
+      margin: 10px 0 0 0;
+      line-height: 35px;
+    }
+  }
+
+  @media (max-width: 810px) {
+    &__content {
+      flex-direction: column-reverse;
+
+      .map iframe {
+        position: relative;
+      }
+
+      .answers {
+        margin: 40px 10px 0 10px;
+      }
+    }
+
+    .schedule {
+      font-size: 18px;
+      flex-direction: column;
+
+      &__block {
+        margin: 40px 0 0 0!important;
+      }
+    }
+
+    .note {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 490px) {
+    &__row {
+      padding: 40px 20px;
+    }
+
+    &__content {
+      border-top: 1px solid rgba(#fff, .2);
+      padding: 25px 0 0 0;
+    }
+  }
+}

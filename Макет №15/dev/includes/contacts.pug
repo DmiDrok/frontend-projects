@@ -1,0 +1,38 @@
+section.contacts
+  .contacts__map
+    //- include desktop-map
+
+    //- include mobile-map
+  .contacts__container.container
+    .contacts__row
+      .contacts__card.contacts-card
+        .contacts-card__bordered-block.contacts-card__title-block
+          h2.contacts-card__title Контакты
+
+        .contacts-card__info-block.info
+          .info__block.address
+            span.info__title.address__title Наш адрес
+            address.info__text.address__text.
+              МО, городской округ Красногорск, село Ильинское, Экспериментальная улица, 10
+          .info__block.email
+            span.info__title.email__title Наша почта
+            address.info__text.email__text
+              a(href="mailto:restaurant@gmail.com") restaurant@gmail.com
+
+        .contacts-card__bordered-block.contacts-card__order-block
+          button.contacts-card__get-order(type="button") ЗАБРОНИРОВАТЬ СТОЛ
+          button.contacts-card__get-route.get-route.bordered-btn(type="button") Проложить маршрут
+          a.contacts-card__tel.tel(href="tel:79175105759")
+            span.tel__numbers +7 (917) 510-57-59
+            span.tel__subtext Звоните или оставляйте заявку
+
+        .contacts-card__social-block.socials
+          p.socials__text Мы в соц сетях:
+          a.socials__link(href="#")
+            img(src="./images/facebook.svg" alt="Фейсбук")
+          a.socials__link(href="#")
+            img(src="./images/vkontakte.svg" alt="Вконтакте")
+          a.socials__link(href="#")
+            img(src="./images/youtube.svg" alt="Ютуб")
+          a.socials__link(href="#")
+            img(src="./images/instagram.svg" alt="Инстаграмм")

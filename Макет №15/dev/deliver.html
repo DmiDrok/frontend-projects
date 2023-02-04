@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ресторан</title>
+    <link rel="shortcut icon" href="./images/icon.ico">
+    <link rel="stylesheet" href="./css/simplebar.min.css">
+    <script defer src="./js/simplebar.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script defer src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/inputmask.min.js"></script>
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <script defer src="./js/choices.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/addresses.js"> </script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="top"></div>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container container">
+          <div class="header__row">
+            <div class="header__burger burger">
+              <div class="burger__lines"><i class="burger__line burger__line_1"></i><i class="burger__line burger__line_2"></i><i class="burger__line burger__line_3"></i></div><span class="burger__text">Меню</span>
+            </div><a class="header__logo logo" href="./index.html">
+              <div class="logo__image"><img src="./images/logo.svg" alt="Логотип"/></div></a>
+            <div class="header__center center">
+              <div class="header__search search"><svg class="search__image location" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23926 9.39129C1.25367 5.15071 4.70302 1.72471 8.94361 1.73912C13.1842 1.75353 16.6102 5.20288 16.5958 9.44347V9.53042C16.5436 12.2869 15.0045 14.8348 13.1175 16.8261C12.0384 17.9467 10.8333 18.9388 9.52621 19.7826C9.17672 20.0849 8.65832 20.0849 8.30882 19.7826C6.36033 18.5143 4.65019 16.9131 3.25665 15.0522C2.01461 13.4294 1.30942 11.4597 1.23926 9.41738L1.23926 9.39129Z" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="8.9179" cy="9.53912" r="2.46087" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <input class="header__input" type="text" placeholder="Введите адрес доставки"/><svg class="search__image start-search" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9.76657" cy="9.7666" r="8.98856" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.0183 16.4851L19.5423 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <div class="search__live-container">
+                  <ul class="search__live-list live-list"></ul>
+                </div>
+              </div><a class="header__tel tel" href="tel:79175105759">
+                <div class="tel__image"><img src="./images/tel.svg" alt=""/></div>
+                <div class="tel__text"><span class="tel__title">Контакты</span><span class="tel__numbers">+7 (917) 510-57-59</span></div></a>
+            </div><a class="header__basket basket adaptive undefined" href="./basket.html"><span class="basket__title">Корзина</span><span class="basket__count">0</span><img class="basket__image" src="./images/basket.svg" alt="Корзина"/></a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="menu">
+          <h1 class="hidden-title menu__title">Меню</h1>
+          <div class="menu__container container">
+            <div class="menu__row">
+              <div class="menu__slider swiper">
+                <ul class="menu__list menu-list swiper-wrapper">
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#cold">Холодные закуски</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#hot">Горячие закуски</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#meat">Мясные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Супы</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Рыбные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Гриль меню</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Фирменные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Напитки</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="deliver">
+          <div class="deliver__container container">
+            <div class="deliver__row">
+              <div class="section-title">
+                <h1 class="deliver__title section-title__text">Условия доставки</h1>
+              </div>
+              <div class="deliver__content">
+                <div class="deliver__answers answers">
+                  <div class="answers__answer answer">
+                    <div class="answer__visible"> 
+                      <p class="answer__question">У наших курьеров всегда должна быть сдача!</p>
+                    </div>
+                    <div class="answer__hidden">
+                      <p class="answer__paragraph">Мы очень внимательно следим за качеством нашей работы, <br>поэтому, если у вас будут какие-либо замечания или предложения, <br>то обязательно сообщайте их нам</p>
+                    </div>
+                  </div>
+                  <div class="answers__answer answer">
+                    <div class="answer__visible">
+                      <p class="answer__question">Вам что-то не довезли?</p>
+                    </div>
+                    <div class="answer__hidden">
+                      <p class="answer__paragraph">Мы очень внимательно следим за качеством нашей работы, <br>поэтому, если у вас будут какие-либо замечания или предложения, <br>то обязательно сообщайте их нам</p>
+                    </div>
+                  </div>
+                  <div class="answers__answer answer">
+                    <div class="answer__visible">
+                      <p class="answer__question">Не понравился продукт?</p>
+                    </div>
+                    <div class="answer__hidden">
+                      <p class="answer__paragraph">Мы очень внимательно следим за качеством нашей работы, <br>поэтому, если у вас будут какие-либо замечания или предложения, <br>то обязательно сообщайте их нам</p>
+                    </div>
+                  </div>
+                  <div class="answers__answer answer">
+                    <div class="answer__visible">
+                      <p class="answer__question">Если появились замечания</p>
+                    </div>
+                    <div class="answer__hidden">
+                      <p class="answer__paragraph">Мы очень внимательно следим за качеством нашей работы, <br>поэтому, если у вас будут какие-либо замечания или предложения, <br>то обязательно сообщайте их нам</p>
+                    </div>
+                  </div>
+                  <div class="answers__answer answer">
+                    <div class="answer__visible"> 
+                      <p class="answer__question">Оплата Visa, MasterCard и МИР</p>
+                    </div>
+                    <div class="answer__hidden">
+                      <p class="answer__paragraph">Мы очень внимательно следим за качеством нашей работы, <br>поэтому, если у вас будут какие-либо замечания или предложения, <br>то обязательно сообщайте их нам</p>
+                    </div>
+                  </div>
+                  <div class="answers__answer answer">
+                    <div class="answer__visible">
+                      <p class="answer__question">Реквизиты</p>
+                    </div>
+                    <div class="answer__hidden">
+                      <p class="answer__paragraph">Мы очень внимательно следим за качеством нашей работы, <br>поэтому, если у вас будут какие-либо замечания или предложения, <br>то обязательно сообщайте их нам</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="deliver__map map"><iframe class="desktop-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa49278fee8b4fc92e5fdb8aff3b9cb847ed4e4b7b3df97de61dfa7352ebc9939&amp;source=constructor" height="600"></iframe></div>
+              </div>
+              <div class="deliver__schedule schedule">
+                <div class="schedule__block">
+                  <h3 class="schedule__title">График работы доставки:</h3>
+                  <div class="schedule__value">с 10:00-21:00</div>
+                </div>
+                <div class="schedule__block">
+                  <h3 class="schedule__title">График работы кафе:</h3>
+                  <div class="schedule__value">с 10:00-21:00</div>
+                </div>
+              </div>
+              <div class="deliver__note note">
+                <h3 class="note__title">Минимальный заказ:</h3>
+                <div class="note__value">
+                  Бесплатная доставка пешим курьером при сумме заказа от 400 ₽
+                  Доставка оператором такси от любой суммы заказа - по тарифам 
+                  перевозчика.
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__row"><a class="scroll-top anchor" href="#top"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0607 0.939577C12.4749 0.353795 11.5252 0.353801 10.9394 0.939592L1.3935 10.4856C0.807718 11.0714 0.807724 12.0211 1.39351 12.6069C1.9793 13.1927 2.92905 13.1927 3.51483 12.6069L12.0001 4.12156L20.4854 12.6068C21.0712 13.1926 22.0209 13.1926 22.6067 12.6068C23.1925 12.021 23.1925 11.0712 22.6067 10.4855L13.0607 0.939577ZM13.5001 4.0001L13.5 2.00023L10.5 2.00025L10.5001 4.00012L13.5001 4.0001Z" fill="#222021"/>
+</svg></a>
+            <div class="footer__info footer-info"><a class="footer__logo logo" href="/">
+                <div class="logo__image"><img src="./images/logo.svg" alt="Логотип"></div></a>
+              <div class="footer-info__copyright">© ООО СК «АПШЕРОН» <br>Все права защищены. 2010-2020</div>
+              <nav class="footer-info__links">
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Пользовательское соглашение</a></li>
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Карта сайта</a></li>
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </nav>
+            </div>
+            <nav class="footer__links">
+              <ul class="footer__list">
+                <li class="footer__list-elem"><a class="footer__link" href="#">О ресторане</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="./deliver.html">Условия доставки</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="#">Возврат товара</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="./actions.html">Акции</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

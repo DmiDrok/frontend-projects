@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ресторан</title>
+    <link rel="shortcut icon" href="./images/icon.ico">
+    <link rel="stylesheet" href="./css/simplebar.min.css">
+    <script defer src="./js/simplebar.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script defer src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/inputmask.min.js"></script>
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <script defer src="./js/choices.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/addresses.js"> </script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="top"></div>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container container">
+          <div class="header__row">
+            <div class="header__burger burger">
+              <div class="burger__lines"><i class="burger__line burger__line_1"></i><i class="burger__line burger__line_2"></i><i class="burger__line burger__line_3"></i></div><span class="burger__text">Меню</span>
+            </div><a class="header__logo logo" href="./index.html">
+              <div class="logo__image"><img src="./images/logo.svg" alt="Логотип"/></div></a>
+            <div class="header__center center">
+              <div class="header__search search"><svg class="search__image location" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23926 9.39129C1.25367 5.15071 4.70302 1.72471 8.94361 1.73912C13.1842 1.75353 16.6102 5.20288 16.5958 9.44347V9.53042C16.5436 12.2869 15.0045 14.8348 13.1175 16.8261C12.0384 17.9467 10.8333 18.9388 9.52621 19.7826C9.17672 20.0849 8.65832 20.0849 8.30882 19.7826C6.36033 18.5143 4.65019 16.9131 3.25665 15.0522C2.01461 13.4294 1.30942 11.4597 1.23926 9.41738L1.23926 9.39129Z" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="8.9179" cy="9.53912" r="2.46087" stroke="#CFCFCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <input class="header__input" type="text" placeholder="Введите адрес доставки"/><svg class="search__image start-search" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9.76657" cy="9.7666" r="8.98856" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.0183 16.4851L19.5423 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                <div class="search__live-container">
+                  <ul class="search__live-list live-list"></ul>
+                </div>
+              </div><a class="header__tel tel" href="tel:79175105759">
+                <div class="tel__image"><img src="./images/tel.svg" alt=""/></div>
+                <div class="tel__text"><span class="tel__title">Контакты</span><span class="tel__numbers">+7 (917) 510-57-59</span></div></a>
+            </div><a class="header__basket basket adaptive undefined" href="./basket.html"><span class="basket__title">Корзина</span><span class="basket__count">0</span><img class="basket__image" src="./images/basket.svg" alt="Корзина"/></a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="menu">
+          <h1 class="hidden-title menu__title">Меню</h1>
+          <div class="menu__container container">
+            <div class="menu__row">
+              <div class="menu__slider swiper">
+                <ul class="menu__list menu-list swiper-wrapper">
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#cold">Холодные закуски</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#hot">Горячие закуски</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#meat">Мясные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Супы</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Рыбные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Гриль меню</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Фирменные блюда</a></li>
+                  <li class="menu-list__item swiper-slide"><a class="menu-list__link anchor" href="#">Напитки</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="order">
+          <div class="order__container container">
+            <div class="order__row">
+              <div class="order__top-content special-title">
+                <div class="order__go-back-block go-back"><a class="go-back__link" href="./basket.html">
+                     <svg class="go-back__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.6967C6.01041 0.403806 5.53553 0.403806 5.24264 0.696699L0.46967 5.46967ZM1.5 5.25L1 5.25L1 6.75L1.5 6.75L1.5 5.25Z" fill="white"/>
+</svg><span class="go-back__text">в корзину</span></a></div>
+                <div class="section-title">
+                  <h1 class="order__title section-title__text">Оформление заказа</h1>
+                </div>
+              </div>
+              <form class="order__content order-form" action="/">
+                <div class="order-form__attention no-order">
+                  <div class="no-order__text">
+                    <h3 class="no-order__title">Сегодня мы уже не доставляем.</h3>
+                    <p class="no-order__about">Заказы принимаем до 20:50, доставляем с 8:30 до 21:30</p>
+                  </div>
+                  <div class="no-order__image"><img src="./images/no-order.png" alt="В такое время не принимаем заказы"></div>
+                </div>
+                <fieldset class="order-form__block order-form__contact-info contact-info">
+                  <legend class="hidden-title">Контактная информация</legend>
+                  <h3 class="order-form__title">1. Контактная информация</h3>
+                  <div class="order-form__inputs contact-info__inputs">
+                    <div class="order-form__input-block">
+                      <input class="order-form__input order-form__name" type="text" placeholder="" required><span class="input-text">Имя<b class="input-text__star">*</b></span>
+                    </div>
+                    <div class="order-form__input-block">
+                      <input class="order-form__input order-form__tel hide-text-on-hover" type="text" placeholder="" required><span class="input-text">Телефон<b class="input-text__star">*</b></span>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="order-form__block order-form__delivery-info">
+                  <legend class="hidden-title">Доставка</legend>
+                  <h3 class="order-form__title">2. Доставка</h3>
+                  <div class="order-form__inputs order-form__inputs_delivery">
+                    <div class="order-form__radio-block">
+                      <input class="order-form__radio order-form__radio_1" type="radio" name="delivery" id="you" value="you" checked>
+                      <input class="order-form__radio order-form__radio_2" type="radio" name="delivery" id="me" value="me">
+                      <div class="order-form__labels">
+                        <label class="order-form__label order-form__label_radio order-form__label_radio_1" for="you">Доставка</label>
+                        <label class="order-form__label order-form__label_radio order-form__label_radio_2" for="me">Самовывоз</label>
+                      </div>
+                    </div>
+                    <div class="order-form__note form-note"><img class="form-note__icon" src="./images/clock.svg" alt=""><span class="form-note__text">Доставим через  1 час 30 минут</span></div>
+                  </div>
+                  <div class="order-form__field order-form__you-radio-area active">
+                    <h3 class="order-form__title order-form__title_subtitle">Адрес доставки</h3>
+                    <div class="order-form__inputs order-form__inputs_address">
+                      <div class="order-form__input-block street">
+                        <input class="order-form__input" type="text" name="street" placeholder="" required><span class="input-text">Укажите улицу<b class="input-text__star">*</b></span>
+                      </div>
+                      <div class="order-form__input-block house">
+                        <input class="order-form__input" type="text" name="house" placeholder="" required><span class="input-text">Номер дома<b class="input-text__star">*</b></span>
+                      </div>
+                      <div class="order-form__input-block flat">
+                        <input class="order-form__input" type="text" name="flat" placeholder=""><span class="input-text">№ квартиры/офиса<b class="input-text__star"></b></span>
+                      </div>
+                      <div class="order-form__input-block porch">
+                        <input class="order-form__input" type="text" name="porch" placeholder=""><span class="input-text">Подъезд<b class="input-text__star"></b></span>
+                      </div>
+                      <div class="order-form__input-block level">
+                        <input class="order-form__input" type="text" name="level" placeholder=""><span class="input-text">Этаж<b class="input-text__star"></b></span>
+                      </div>
+                      <div class="order-form__input-block comment">
+                        <input class="order-form__input" type="text" name="comment" placeholder=""><span class="input-text">Комментарий<b class="input-text__star"></b></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-form__field order-form__me-radio-area">
+                    <h3 class="order-form__title order-form__title_subtitle">Выберите ресторан</h3>
+                    <div class="order-form__select-block">
+                      <div class="order-form__select-wrapper">
+                        <select class="order-form__select order-form__restaurant" name="restaurant">
+                          <option value="default" selected disabled>Выберите ресторан </option>
+                          <option value="rest-1">Первый ресторан </option>
+                          <option value="rest-2">Второй ресторан </option>
+                          <option value="rest-3">Третий ресторан </option>
+                          <option value="rest-4">Четвёртый ресторан</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="order-form__block order-form__pay-info">
+                  <legend class="hidden-title">Оплата</legend>
+                  <h3 class="order-form__title">3. Оплатить</h3>
+                  <div class="order-form__radio-block">
+                    <input class="order-form__radio order-form__radio_1" type="radio" name="pay" id="online" value="online">
+                    <input class="order-form__radio order-form__radio_2" type="radio" name="pay" id="card" value="card">
+                    <input class="order-form__radio order-form__radio_3" type="radio" name="pay" id="self" value="self" checked>
+                    <div class="order-form__labels pay-radios margin-top">
+                      <label class="order-form__label order-form__label_radio order-form__label_radio_1" for="online">Оплата онлайн</label>
+                      <label class="order-form__label order-form__label_radio order-form__label_radio_2" for="card">Курьеру картой</label>
+                      <label class="order-form__label order-form__label_radio order-form__label_radio_3" for="self">Наличными</label>
+                    </div>
+                  </div>
+                  <div class="order-form__inputs">
+                    <div class="order-form__input-block order-form__odd-money shrink">
+                      <input class="order-form__input order-form__small-input" type="number" name="odd_money" placeholder=""><span class="input-text">Сдача с<b class="input-text__star"></b></span>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="order-form__block order-form__when-info">
+                  <legend class="hidden-title">Когда доставить</legend>
+                  <h3 class="order-form__title">4. Когда доставить</h3>
+                  <div class="order-form__radio-block">
+                    <input class="order-form__radio order-form__radio_1" type="radio" name="time" id="fast" value="fast" checked>
+                    <input class="order-form__radio order-form__radio_2" type="radio" name="time" id="time" value="time">
+                    <div class="order-form__labels pay-radios margin-top">
+                      <label class="order-form__label order-form__label_radio order-form__label_radio_1 small-radio" for="fast">В ближайшее время</label>
+                      <label class="order-form__label order-form__label_radio order-form__label_radio_2" for="time">Ко времени</label>
+                    </div>
+                    <div class="order-form__note form-note">
+                      <div class="order-form__inputs">
+                        <div class="order-form__input-block">
+                          <input class="order-form__input order-form__time hide-text-on-hover" type="text" name="when-time" placeholder=""><span class="input-text">Укажите время<b class="input-text__star"></b></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-form__inputs">
+                    <div class="order-form__input order-form__small-input order-form__counter counter"><span class="counter__text">Кол-во персон</span>
+                      <div class="counter__options"><span class="counter__minus"><svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="14" height="2" fill="white"/>
+</svg></span><span class="counter__count">1</span><span class="counter__plus"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="6" width="14" height="2" fill="white"/>
+<rect x="8" width="14" height="2" transform="rotate(90 8 0)" fill="white"/>
+</svg></span></div>
+                    </div>
+                  </div>
+                  <div class="order-form__recall recall">
+                    <h3 class="order-form__title order-form__title_subtitle">Хотите мы позвоним?</h3>
+                    <div class="order-form__radio-block recall__opts">
+                      <div class="recall__label-wrapper">
+                        <label class="order-form__label recall__label">
+                          <input class="order-form__radio recall__radio" type="radio" name="recall" id="no-recall" value="no-recall">Не перезванивать
+                        </label>
+                      </div>
+                      <div class="recall__label-wrapper">
+                        <label class="order-form__label recall__label">
+                          <input class="order-form__radio recall__radio" type="radio" name="recall" id="yes-recall" value="yes-recall">Потребуется звонок оператора
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="order-form__block order-form__accept-info accept-info">
+                  <div class="accept-info__row">
+                    <label class="accept-info__label">
+                      <input class="accept-info__checkbox" type="checkbox" name="accept"><span class="accept-info__text">Я согласен на обработку моих перс. данных в соответствии с <a class="accept-info__link" href="#">Условиями</a></span>
+                    </label>
+                    <div class="accept-info__get-order">   
+                      <button class="get-order" type="submit">Оформить заказ</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__row"><a class="scroll-top anchor" href="#top"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0607 0.939577C12.4749 0.353795 11.5252 0.353801 10.9394 0.939592L1.3935 10.4856C0.807718 11.0714 0.807724 12.0211 1.39351 12.6069C1.9793 13.1927 2.92905 13.1927 3.51483 12.6069L12.0001 4.12156L20.4854 12.6068C21.0712 13.1926 22.0209 13.1926 22.6067 12.6068C23.1925 12.021 23.1925 11.0712 22.6067 10.4855L13.0607 0.939577ZM13.5001 4.0001L13.5 2.00023L10.5 2.00025L10.5001 4.00012L13.5001 4.0001Z" fill="#222021"/>
+</svg></a>
+            <div class="footer__info footer-info"><a class="footer__logo logo" href="/">
+                <div class="logo__image"><img src="./images/logo.svg" alt="Логотип"></div></a>
+              <div class="footer-info__copyright">© ООО СК «АПШЕРОН» <br>Все права защищены. 2010-2020</div>
+              <nav class="footer-info__links">
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Пользовательское соглашение</a></li>
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Карта сайта</a></li>
+                  <li class="footer-info__list-elem"><a class="footer-info__link" href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </nav>
+            </div>
+            <nav class="footer__links">
+              <ul class="footer__list">
+                <li class="footer__list-elem"><a class="footer__link" href="#">О ресторане</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="./deliver.html">Условия доставки</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="#">Возврат товара</a></li>
+                <li class="footer__list-elem"><a class="footer__link" href="./actions.html">Акции</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
