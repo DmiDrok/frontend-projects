@@ -37,7 +37,3 @@ exports.build = series(deleteDist, scssToCss, pugToHtml, uniteJs, minifyImages, 
 
 // in build (dist)
 exports.buildHtml = minifyHtml;
-
-exports.unite = uniteJs;
-exports.babelify = babelify;
-exports.minify = minifyJs;
