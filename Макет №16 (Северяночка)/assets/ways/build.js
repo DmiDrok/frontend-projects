@@ -49,6 +49,7 @@ const build = {
   moveCss: function() {
     return src(paths.files.dev.css)
       .pipe(plugins.plumber( utils.errorHandler('MOVE CSS') ))
+      .pipe(plugins.cssnano())
       .pipe(dest(paths.folders.build.css))
   },
 

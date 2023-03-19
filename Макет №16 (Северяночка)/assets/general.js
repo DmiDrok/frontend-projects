@@ -8,7 +8,6 @@ const plugins = require('./plugins');
 const general = {
   startWatch: function() {
     // Переход из препроцессоров в чистый формат при внесении изменений в файлы
-    // watch(paths.files.dev.pug, dev.pugToHtml);
     watch('./src/**/*.pug', dev.pugToHtml);
     watch(paths.files.dev.scss, dev.scssToCss);
     watch(paths.files.dev.js, plugins.browserSync.reload);

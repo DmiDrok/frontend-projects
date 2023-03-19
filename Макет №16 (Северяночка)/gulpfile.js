@@ -25,8 +25,12 @@ const buildJs = series(buildWay.babelifyJsMain, buildWay.uniteJsAll);
 module.exports.buildJs = buildJs;
 
 // === Перенос файлов на продакшн ===
+// Перенос CSS - файлов
+const moveCss = buildWay.moveCss;
+module.exports.moveCss = moveCss;
+
 // Перенос основных типов файлов
-const moveFiles = series(buildWay.deleteBuildFolder, (process.argv.includes('--min-pug') ? buildWay.minifyAndMoveHtml : buildWay.moveHtml), buildWay.moveCss, buildWay.moveImages, buildWay.moveFonts, buildJs);
+const moveFiles = series(buildWay.deleteBuildFolder, (process.argv.includes('--min-pug') ? buildWay.minifyAndMoveHtml : buildWay.moveHtml), moveCss, buildWay.moveImages, buildWay.moveFonts, buildJs);
 module.exports.moveFiles = moveFiles;
 
 // === Режим разработки ===

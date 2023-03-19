@@ -9,6 +9,8 @@ const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const appendPrepend = require('gulp-append-prepend');
 const del = require('del');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
 
 
 const browserSync = require('browser-sync').create();
@@ -26,4 +28,6 @@ module.exports = {
   appendPrepend,
   del,
   browserSync,
+  autoprefixer,
+  cssnano,
 };

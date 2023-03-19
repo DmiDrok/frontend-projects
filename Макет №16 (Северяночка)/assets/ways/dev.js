@@ -24,6 +24,7 @@ const dev = {
       .pipe(plugins.scss({
         outputStyle: 'expanded'
       }))
+      .pipe(plugins.autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
       .pipe(plugins.rename({
         extname: '.min.css'
       }))
