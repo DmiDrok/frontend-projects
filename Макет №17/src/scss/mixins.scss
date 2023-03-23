@@ -1,0 +1,5 @@
+@mixin smallOnClick() {
+  &:active {
+    transform: scale(.95);
+  }
+}

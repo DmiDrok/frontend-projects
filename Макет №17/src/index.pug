@@ -1,0 +1,796 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Innoma.vc
+
+    link(rel="shortcut icon" href="./images/favicon.ico")
+    link(rel="stylesheet" href="./css/style.min.css")
+    script(defer src="./js/swiper.js")
+    script(defer src="./js/intlTelInput.js")
+    script(defer src="./js/lazyload.js")
+    script(defer src="./js/wow.js")
+    script(defer src="./js/main.js")
+  body
+    //- Попап входа в аккаунт
+    .popup.login-popup
+      .popup__content.popup-content
+        button.popup-content__close(type="button")
+          svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M20 1L1 20" stroke="white" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M1 1L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round")
+
+        h3.popup-content__title Вход
+        form.popup-content__form.popup-form.login-form(name="login" method="#" action="#")
+          input.popup-form__input(type="email" placeholder="Е-маил")
+          input.popup-form__input(type="password" placeholder="Пароль")
+          button.popup-form__submit(type="submit") Войти
+        a.popup-content__link(href="#") Зарегистрироваться
+
+    //- Шапка сайта
+    header.header#header
+      .container.header__container
+        .header__row
+          img.bg-image.header__bg-image(src="./images/bg-1.png" alt="#" aria-hidden="true")
+
+          .header__top.header-top
+            a.logo.header__logo(href="./index.html")
+              img(src="./images/logo.svg" alt="логотип")
+            
+            nav.nav.header__nav
+              ul.nav__list
+                li.nav__item
+                  a.nav__link(href="#who-we") Кто мы?
+                li.nav__item
+                  a.nav__link(href="#services") Услуги
+                li.nav__item
+                  a.nav__link(href="#about-programm") Акселератор
+                li.nav__item
+                  a.nav__link(href="#events") Новости
+
+            .header-top__buttons
+              button.login-btn.header__login(type="button") Войти
+              button.burger-btn(type="button")
+
+          .header__content.header-content
+            h1.header-content__title
+              | Запустите 
+              br
+              | #[strong технологический IT-бизнес] 
+              br
+              | на международных рынках
+            span.header-content__subtitle Открыт набор заявок на акселератор
+            .header-content__btn-block
+              button.request-btn.header-content__request(type="button") Подать заявку      
+    
+    main.main
+      //- Услуги
+      section.services#services
+        .container.services__container
+          .services__row
+            h2.section-title.services__title Наши услуги
+
+            .services__content
+              article.services__service.service
+                .service__text
+                  h3.service__title Аналитические исследования
+                  p.service__about Одним из наших ключевых направлений является анализ технологических трендов на международных рынках. Мы проводим анализ на основе публичных исследований McKinsey, BCG, PWC, Deloitte, Accenture, BCG, EY,  Crunchbase, Dealroom, F6S, PitchBook а также агрегируем и анализируем данные из открытых международных источников патенты, медиа, научные публикации
+                  button.service__button-more(type="button") Узнать подробнее
+                .service__image-block
+                  img.service__image(src="./images/service-1.png" alt="#" aria-hidden="true")
+
+              article.services__service.service
+                .service__text
+                  h3.service__title Онлайн акселератор для IT бизнеса
+                  p.service__about Онлайн программа аскелерации IT бизнеса позволит вашей команде открыть новые горизонты и возможности для бизнеса на глобальных рынках. В результате программы вы получите возможность презентовать свой проект для международных инвесторов и локальных партнеров
+                  button.service__button-more(type="button") Узнать подробнее
+                .service__image-block
+                  img.service__image(src="./images/service-2.png" alt="#" aria-hidden="true")
+
+      //-  Шаги
+      section.steps#steps
+        .container.steps__container
+          .steps__row
+            h2.section-title.steps__title Для кого мы?
+
+            .steps__grid
+              ol.steps__list
+                li.steps__item.step.card
+                  span.card__count.step__count 01
+                  h3.card__title.step__title IT проекты на стадии идеи
+                  p.card__about.step__about Для стартапов, которые планируют привлечь международные инвестиции, протестировать спрос и запустить продукт
+                li.steps__item.step.card
+                  span.card__count.step__count 02
+                  h3.card__title.step__title Инновационный бизнес
+                  p.card__about.step__about Для уже работающего технологического бизнес, позволим найти новые международне рынки сбыта, масштабировать бизнес
+                li.steps__item.step.card
+                  span.card__count.step__count 03
+                  h3.card__title.step__title Корпорации
+                  p.card__about.step__about Для уже работающего технологического бизнес, позволим найти новые международне рынки сбыта, масштабировать бизнес
+
+
+      //- Предложение
+      section.offer#offer
+        img.offer__bg-image.lazy(src="#" data-src="./images/offer.png" alt="#" aria-hidden="true")
+
+        .container.offer__container
+          .offer__row
+            .offer__content.offer-content
+              h2.offer-content__title
+                span Научитесь исследовать иностранные рынки и откройте новые возможности для своего бизнеса
+              p.offer-content__subtitle Наша команда поможет вам изучить рынки Ближнего Востока, Азии, Латинской Америки и Африки
+              button.request-btn.offer-content__button(type="button") Получить консультацию
+      
+      //- Рынки
+      section.markets#markets
+        .container.markets__container
+          .markets__row
+            h2.section-title.markets__title С какими рынками мы работаем?
+
+            .markets__content
+              .markets__tabs.markets-tabs
+                button#near-east.markets-tabs__tab.market-tab.active(type="button") Ближний восток
+                button#asia.markets-tabs__tab.market-tab(type="button") Азия
+                button#latin-america.markets-tabs__tab.market-tab(type="button") Латинская Америка
+                button#africa.markets-tabs__tab.market-tab(type="button") Африка
+
+              .markets__info
+                img.markets__decor-image(src="./images/market-1.png" alt="#" aria-hidden="true")
+
+                .markets__about.markets-about
+                  h3.markets-about__title Чем интересен #[br] #[b Рынок MENA:]
+                  p.markets-about__countries ОАЭ, Саудовская Аравия, Израиль, Оман, Бахрейн, Катар, Тунис, Йемен, Египет, Алжир
+                  button.request-btn.markets-about__button(type="button") Выйти на рынок
+                
+                  a.markets-about__author.author(href="#")
+                    .author__photo
+                      img(src="./images/author-1.png" alt="автор")
+                    .author__info
+                      span.author__name Фатима
+                      span.author__position Менеджер по MENA
+
+                .markets__blocks.markets-blocks
+                  .markets-blocks__card.investments.card
+                    span.card__count > #[b 5,5] #[span Млрд]
+                    p.card__about Инвестиции pre-seed, seed
+                  .markets-blocks__card.accelerators.card
+                    span.card__count > #[b 300]
+                    p.card__about Акселераторов, инкубаторов
+                  .markets-blocks__card.fonds.card
+                    span.card__count #[b 73]
+                    p.card__about Венчурных фонда
+                  a.markets-blocks__card.card.card-download(href="#")
+                    img.card__icon(src="./images/download-arrow.svg" alt="#" aria-hidden="true")
+                    p.card__about Скачать отчет #[br] по рынку MENA
+
+                  button.request-btn.markets-blocks__button(type="button") Выйти на рынок
+
+      //- Информация акселераторе
+      section.about-programm#about-programm
+        .container.about-programm__container
+          .about-programm__row
+            h2.section-title.about-programm__title Об акселераторе IT бизнеса
+            p.about-programm__subtitle Программа акселератора расчитана на 8 недель интенсивного онлайн  курса с вебинарами приглашенных экспертов по международным рынкам, разборами ваших идей и проектов 
+
+            .about-programm__line
+              .about-programm__card.card
+                img.card__icon(src="./images/about-programm-1.svg" alt="#" aria-hidden="true")
+                p.card__about Месяца обучения
+              .about-programm__card.card
+                img.card__icon(src="./images/about-programm-2.svg" alt="#" aria-hidden="true")
+                p.card__about Приглашенные эксперты
+              .about-programm__card.card
+                img.card__icon(src="./images/about-programm-3.svg" alt="#" aria-hidden="true")
+                p.card__about Персональный менеджер
+
+            .about-programm__video.video-block
+              .video-block__content.video-content
+                span.video-content__about Об акселерационной программе
+                button.play-video(type="button" title="Воспроизвести видео")
+                  svg(class="play-video__icon" width="38" height="41" viewBox="0 0 38 41" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M35.2444 16.1555C38.6108 18.0735 38.6108 22.9261 35.2444 24.8441L8.3805 40.15C5.04725 42.0491 0.90529 39.6419 0.905291 35.8056L0.905292 5.19398C0.905292 1.35767 5.04725 -1.0495 8.3805 0.849634L35.2444 16.1555Z" fill="white")
+                  
+      
+      //- Модули акселератора
+      section.modules#modules
+        .container.modules__container
+          .modules__row
+            h2.section-title.modules__title(class="animate__animated animate__fadeIn wow") Программа акселератора
+
+            .modules__info.modules-info
+              .modules-info__accordeon.accordeon
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title
+                        b Модуль 1
+                        span Тенденции и тренды современного мира
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title
+                        b Модуль 2
+                        span Стартап подход к созданию международного IT продукта
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title
+                        b Модуль 3
+                        span Бизнес моделирование и поиск Product Market Fit
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title
+                        b Модуль 4
+                        span Определение рынка, поиск и исследование Целевой аудитории
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title 
+                        b Модуль 5
+                        span Что такое MVP и почему это важно
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title
+                        b Модуль 6
+                        span Unit экономика и финансовое моделирование
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+                    
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title 
+                        b Модуль 7
+                        span Что такое дорожная карта продукта?
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title
+                        b Модуль 8
+                        span Документы для международных инвесторов
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    .accordeon-item__top
+                      p.accordeon-item__title 
+                        b Модуль 9
+                        span Открытие юридического лица. Возможности для стартапов
+                      img.accordeon-item__icon(src="./images/arrow.svg" alt="#" aria-hidden="true")
+
+                    .accordeon-item__bottom
+                      a.accordeon-item__link(href="#") Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний
+                      a.accordeon-item__link(href="#") Тема 2. Рынки Ближнего Востока, Азии, Латинской Америки
+                      a.accordeon-item__link(href="#") Тема 3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?
+                      a.accordeon-item__link(href="#") 9 видео роликов, вебинар с приглашенным экспертом
+
+                .accordeon__item.accordeon-item(class="animate__animated animate__fadeInUp wow" tabindex="0")
+                  .accordeon-item__row
+                    a.accordeon-item__top(href="#")
+                      p.accordeon-item__title
+                        b Демо день
+                      
+
+            .modules-info__button-block
+              button.request-btn.modules-info__button(class="animate__animated animate__fadeInUp wow" type="button") Получить полную программу
+
+
+      //- Блок с словами, направленными на привлечение
+      section.attraction#attraction
+
+        .container.attraction__container
+          img.attraction__decor-img.decor-img(src="./images/decor-companies.png" alt="#" aria-hidden="true")
+
+          .attraction__row
+            .attraction__text
+              h2.attraction__title Попадите на радары инвесторов и партнеров
+              p.attraction__subtitle В результате прохождения обучения мы создадим профили вашей компании на всех международных скаутинговых площадках
+              button.attraction__button(type="button") Записаться в акселератор
+            
+            .attraction__companies
+              .company-card
+                img.company-card__logo(src="./images/company-1.png" alt="компания 1")
+              .company-card
+                img.company-card__logo(src="./images/company-2.png" alt="компания 2")
+              .company-card
+                img.company-card__logo(src="./images/company-3.png" alt="компания 3")
+              .company-card
+                img.company-card__logo(src="./images/company-4.png" alt="компания 4")
+              .company-card
+                img.company-card__logo(src="./images/company-5.png" alt="компания 5")
+              .company-card
+                img.company-card__logo(src="./images/company-6.png" alt="компания 6")
+
+      //- Блок с результатами
+      section.results#results
+        .container.results__container
+          .results__row
+            h2.section-title.results__title Что вы получите в результате?
+
+            .results__grid
+              ol.results__list
+                li.steps__item.step.card
+                  span.card__count.step__count 01
+                  h3.card__title.step__title Документы по продукту
+                  p.card__about.step__about Бизнес план, отчет по анализу рынка, маркетинговый план, unit экономика, список гипотез, проект MVP
+                li.steps__item.step.card
+                  span.card__count.step__count 02
+                  h3.card__title.step__title Обратная связь от рынка
+                  p.card__about.step__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+                li.steps__item.step.card
+                  span.card__count.step__count 03
+                  h3.card__title.step__title Продвижение продукта
+                  p.card__about.step__about Продвижение продукта через аналитические системы партнеров
+                li.steps__item.step.card
+                  span.card__count.step__count 04
+                  h3.card__title.step__title Подписка на отчеты
+                  p.card__about.step__about Подписка на аналитические отчеты по международным рынкам высокотехнологичных сфер
+                li.steps__item.step.card
+                  span.card__count.step__count 05
+                  h3.card__title.step__title Подписка на отчеты
+                  p.card__about.step__about Подписка на аналитические отчеты по международным рынкам высокотехнологичных сфер
+                li.steps__item.step.card
+                  span.card__count.step__count 06
+                  h3.card__title.step__title Подписка на отчеты
+                  p.card__about.step__about Подписка на аналитические отчеты по международным рынкам высокотехнологичных сфер
+
+      //- Стоимость услуг
+      section.prices#prices
+        .container.prices__container
+          .prices__row
+            h2.section-title.prices__title Стоимость
+
+            .prices__line
+              article.prices__price-item.price-item
+                .price-item__field.price-item__head
+                  img.price-item__icon(src="./images/price-1.svg" alt="#" aria-hidden="true")
+                  h3.price-item__name Анализ международных рынков 
+
+                .price-item__field.price-item__info.price-item-info
+                  span.price-item-info__title Что входит в отчет?
+                  ul.price-item-info__list.info-list
+                    li.info-list__item
+                      p.info-list__text 1. Анализ конкурентов
+                    li.info-list__item
+                      p.info-list__text 2. Анализ инвесторов
+                    li.info-list__item
+                      p.info-list__text 3. Размеры рынка (TAM,SAM,SOM)
+                    li.info-list__item
+                      p.info-list__text 4. Анализ СМИ
+                    li.info-list__item
+                      p.info-list__text 5. Анализ запросов в сети интернет
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Готовность
+                  span.info-field__value 7 раб. дней
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Язык
+                  span.info-field__value рус. / англ.
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Стоимость
+                  span.info-field__value.price $1 000 
+
+                .price-item__button-block
+                  button.request-btn.price-item__button(type="button") Оставить заявку
+
+              article.prices__price-item.price-item
+                .price-item__field.price-item__head
+                  img.price-item__icon(src="./images/price-2.svg" alt="#" aria-hidden="true")
+                  h3.price-item__name Упаковка стартапа под локальные рынки
+
+                .price-item__field.price-item__info.price-item-info
+                  span.price-item-info__title Что входит в услугу?
+                  ul.price-item-info__list.info-list
+                    li.info-list__item
+                      p.info-list__text 1. Анализ локальных рынков
+                    li.info-list__item
+                      p.info-list__text 2. Бизнес план
+                    li.info-list__item
+                      p.info-list__text 3. Питч презентация
+                    li.info-list__item
+                      p.info-list__text 4. Финансовый план
+                    li.info-list__item
+                      p.info-list__text 5. Расчет юнит экономики
+                    li.info-list__item
+                      p.info-list__text 6. Проведение каст дева
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Готовность
+                  span.info-field__value 7 раб. дней
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Язык
+                  span.info-field__value рус. / англ.
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Стоимость
+                  span.info-field__value.price $1 000 
+
+                .price-item__button-block
+                  button.request-btn.price-item__button(type="button") Оставить заявку
+
+              article.prices__price-item.price-item
+                .price-item__field.price-item__head
+                  img.price-item__icon(src="./images/price-3.svg" alt="#" aria-hidden="true")
+                  h3.price-item__name Анализ международных рынков 
+
+                .price-item__field.price-item__info.price-item-info
+                  span.price-item-info__title Что входит в акселератор?
+                  ul.price-item-info__list.info-list
+                    li.info-list__item
+                      p.info-list__text 1. Онлайн доступ к курсам
+                    li.info-list__item
+                      p.info-list__text 2. Документы для бизнеса
+                    li.info-list__item
+                      p.info-list__text 3. Питч презентация
+                    li.info-list__item
+                      p.info-list__text 4. Демо день
+                    li.info-list__item
+                      p.info-list__text 5. Провдижение по результатам 
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Готовность
+                  span.info-field__value 7 раб. дней
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Язык
+                  span.info-field__value рус. / англ.
+
+                .price-item__field.price-item__info-field.info-field
+                  span.info-field__name Стоимость
+                  span.info-field__value.price $1 000 
+
+                .price-item__button-block
+                  button.request-btn.price-item__button(type="button") Оставить заявку
+                
+      //- Кто мы
+      section.who-we#who-we
+        .container.who-we__container
+          .who-we__row
+            h2.section-title.who-we__title Кто мы?
+
+            .who-we__line
+              .who-we__image-block
+                img.who-we__image(src="./images/who-we.png" alt="#" aria-hidden="true")
+              
+              .who-we__text
+                p.who-we__paragraph #[strong.who-we__company-name INNOMA.VC]  - Международное аналитическое агентство по запуску IT бизнеса на локальных рынках регионов Азии, Ближнего Востока, Латинской Америки, Африки.
+                p.who-we__paragraph Наша команда состоит из профессионалов своего дела и основной нашей целью является помощь IT компаниям получить необходимые знания и пакеты документов, чтобы успешно запустить свой продукт на международных рынках. 
+              
+      //- Об авторе
+      section.author#author
+        .container.author__container
+          .author__row
+            h2.hidden.author__title Об авторе
+
+            .author__content
+              .author__photo-block
+                img.author__photo.lazy(src="#" data-src="./images/author-project.png" alt="автор проекта")
+                .author__info
+                  span.author__name Роман Гайн
+                  span.author__position Основатель #[br] INNOMA.VC
+
+              figure.author__about
+                blockquote.author__quote.author-quote
+                  p.author-quote__paragraph
+                    | Всем привет!
+                    br
+                    | Меня зовут Роман. Последние 6 лет я являюсь частью 
+                    | инновационной экосистемы СНГ,  прошел путь от проектного 
+                    | менеджера до руководителя продукта по автоматизированному скаутингу и скорингу стартапов. За 6 лет работы я увидел  множество ошибок и отсутствие ориентации акселерационных программ под запросы стартапов. Все акселераторы выполнялись ради акселераторв и выполнения КПЭ. 
+                
+                figcaption.author__info
+                  span.author__name Роман Гайн
+                  span.author__position Основатель INNOMA.VC
+
+      //- Фотографии (слайдер)
+      section.photos#photos
+        .container.photos__container
+          .photos__row
+            h2.hidden.photos__title Фотографии
+
+            .photos__slider.photos-slider.swiper
+              .swiper-wrapper
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-1.png" alt="фото 1")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-2.png" alt="фото 2")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-3.png" alt="фото 3")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-4.png" alt="фото 4")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-5.png" alt="фото 5")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-1.png" alt="фото 6")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-2.png" alt="фото 7")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-3.png" alt="фото 8")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-4.png" alt="фото 9")
+                .swiper-slide
+                  img.lazy(src="#" data-src="./images/photo-5.png" alt="фото 10")
+
+      //- Эксперты (слайдер)
+      section.experts#experts
+        .container.experts__container
+          .experts__row
+            h2.section-title.experts__title Эксперты и трекеры программы
+
+            .experts__line
+              .experts-slider.swiper
+                .swiper-wrapper
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-1.png" alt="Юрий Ким")
+
+                    span.expert__fullname Юрий Ким
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-2.png" alt="Юрий Ким")
+
+                    span.expert__fullname Эшли Абрамс
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-3.png" alt="Юрий Ким")
+
+                    span.expert__fullname Фатими Юсуф
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-4.png" alt="Юрий Ким")
+
+                    span.expert__fullname Майкл Донован
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-1.png" alt="Юрий Ким")
+
+                    span.expert__fullname Юрий Ким
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-2.png" alt="Юрий Ким")
+
+                    span.expert__fullname Эшли Абрамс
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-3.png" alt="Юрий Ким")
+
+                    span.expert__fullname Фатими Юсуф
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+                  .experts__expert.expert.swiper-slide
+                    img.expert__photo(src="./images/expert-4.png" alt="Юрий Ким")
+
+                    span.expert__fullname Майкл Донован
+                    p.expert__about Проведение исследования целевой аудитории позволит сформировать Product market fit
+
+              .experts-slider__nav.experts-slider__nav_prev.circle
+                svg(width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  ellipse(cx="19.5" cy="20.3926" rx="19.5" ry="19.5" transform="rotate(90 19.5 20.3926)" fill="#2A79C2")
+                  path(d="M15.2929 19.1855C14.9024 19.576 14.9024 20.2092 15.2929 20.5997L21.6569 26.9636C22.0474 27.3542 22.6805 27.3542 23.0711 26.9636C23.4616 26.5731 23.4616 25.94 23.0711 25.5494L17.4142 19.8926L23.0711 14.2357C23.4616 13.8452 23.4616 13.212 23.0711 12.8215C22.6805 12.431 22.0474 12.431 21.6569 12.8215L15.2929 19.1855ZM17 18.8926L16 18.8926L16 20.8926L17 20.8926L17 18.8926Z" fill="white")
+
+              .experts-slider__nav.experts-slider__nav_next.circle
+                svg(width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  ellipse(cx="19.5" cy="20.3926" rx="19.5" ry="19.5" transform="rotate(-90 19.5 20.3926)" fill="#2A79C2")
+                  path(d="M23.7071 21.5997C24.0976 21.2092 24.0976 20.576 23.7071 20.1855L17.3431 13.8215C16.9526 13.431 16.3195 13.431 15.9289 13.8215C15.5384 14.212 15.5384 14.8452 15.9289 15.2357L21.5858 20.8926L15.9289 26.5494C15.5384 26.94 15.5384 27.5731 15.9289 27.9636C16.3195 28.3542 16.9526 28.3542 17.3431 27.9636L23.7071 21.5997ZM22 21.8926L23 21.8926L23 19.8926L22 19.8926L22 21.8926Z" fill="white")
+
+              .experts-slider__nav.experts-slider__nav_next.arrow
+                svg(width="155" height="16" viewBox="0 0 155 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M154.707 8.70711C155.098 8.31658 155.098 7.68342 154.707 7.29289L148.343 0.928932C147.953 0.538408 147.319 0.538408 146.929 0.928932C146.538 1.31946 146.538 1.95262 146.929 2.34315L152.586 8L146.929 13.6569C146.538 14.0474 146.538 14.6805 146.929 15.0711C147.319 15.4616 147.953 15.4616 148.343 15.0711L154.707 8.70711ZM0 9H154V7H0V9Z" fill="#B1B1B1")
+
+              .experts-slider__nav.experts-slider__nav_prev.arrow
+                svg(width="155" height="16" viewBox="0 0 155 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M0.292892 7.29289C-0.0976257 7.68342 -0.0976257 8.31658 0.292892 8.70711L6.65686 15.0711C7.04738 15.4616 7.68054 15.4616 8.07108 15.0711C8.46159 14.6805 8.46159 14.0474 8.07108 13.6569L2.41422 8L8.07108 2.34315C8.46159 1.95262 8.46159 1.31946 8.07108 0.928932C7.68054 0.538408 7.04738 0.538408 6.65686 0.928932L0.292892 7.29289ZM155 7H1V9H155V7Z" fill="#B1B1B1")
+
+      //- Партнёры
+      section.partners#partners
+        .container.partners__container
+          .partners__row
+            h2.section-title.partners__title Наши партнеры
+
+            .partners__grid
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-2.png" alt="компания 1")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-3.png" alt="компания 2")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-7.png" alt="компания 3")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-8.png" alt="компания 4")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-9.png" alt="компания 5")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-10.png" alt="компания 6")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-11.png" alt="компания 7")
+              .company-card.light-shadow
+                img.company-card__logo(src="./images/company-12.png" alt="компания 8")
+
+      //- Предложение стать партнёром
+      section.offer#offer
+        img.offer__bg-image.lazy(src="#" data-src="./images/offer-2.png" alt="#" aria-hidden="true")
+
+        .container.offer__container
+          .offer__row
+            .offer__content.offer-content
+              h2.offer-content__title.default Мы создаем международное сообщество экспертов и партнеров
+              p.offer-content__subtitle.default Если вы или ваш бизнес может быть полезен IT  командам при выходе на международные рынки,  приглашем вас стать нашим партнером
+              button.request-btn.offer-content__button.default(type="button") Стать партнером
+
+      //- События
+      section.events#events
+        .container.events__container
+          .events__row
+            h2.section-title.events__title Мероприятия и события
+
+            .events__line
+              article.events__event.event
+                a.event__link(href="#")
+                  .event__image-block
+                    picture
+                      source(srcset="./images/event-1-rotated.png 1x" media="(max-width: 550px)")
+                      source(srcset="./images/event-1-default.png 1x")
+                      img.event__image(src="#" alt="событие")
+
+                  .event__content
+                    h3.event__title Новый отчет по MENA
+                    p.event__about Аналитический отчет по рынкам Ближнего Востока (инвесторы, объем раундов, ТОП сферы)
+                    span.event__date 22.11.2022
+
+              article.events__event.event
+                a.event__link(href="#")
+                  .event__image-block
+                    picture
+                      source(srcset="./images/event-2-rotated.png 1x" media="(max-width: 550px)")
+                      source(srcset="./images/event-2-default.png 1x")
+                      img.event__image(src="#" alt="событие")
+
+                  .event__content
+                    h3.event__title Вебинар по особенностям рынков Ближнего Востока
+                    p.event__about Поговорим с экспертами рынков в формате дискуссии
+                    span.event__date 22.11.2022
+
+              article.events__event.event
+                a.event__link(href="#")
+                  .event__image-block
+                    picture
+                      source(srcset="./images/event-3-rotated.png 1x" media="(max-width: 550px)")
+                      source(srcset="./images/event-3-default.png 1x")
+                      img.event__image(src="#" alt="событие")
+
+                  .event__content
+                    h3.event__title Вебинар по особенностям рынков Ближнего Востока
+                    p.event__about Поговорим с экспертами рынков в формате дискуссии
+                    span.event__date 22.11.2022
+
+      //- Форма для заполнения (Обратная связь)
+      section.feedback#feedback
+        h2.hidden.section-title Обратная связь
+
+        .container.feedback__container
+          .feedback__row
+            .feedback-content
+              .feedback-content__head
+                span.feedback-content__title Остались вопросы?
+                p.feedback-content__subtitle Оставьте заявку и наша команда свяжется с вами
+
+              .feedback-content__bottom.contact-us
+                span.contact-us__title Или напишите нам:
+
+                ul.contact-us__list
+                  li.contact-us__item
+                    a.contact-us__link(href="#")
+                      .contact-us__icon-block
+                        img.contact-us__icon(src="./images/telegram.svg" alt="телеграм")
+                      span.contact-us__text Telegram
+
+                  li.contact-us__item
+                    a.contact-us__link(href="#")
+                      .contact-us__icon-block
+                        img.contact-us__icon(src="./images/whatsapp.svg" alt="вацап")
+                      span.contact-us__text Whatsapp
+
+
+            .feedback__form-block
+              form.feedback__form.feedback-form(name="feedback" action="#")
+                input.feedback-form__input(type="text" placeholder="Имя")
+                input.feedback-form__input(type="email" placeholder="Почта")
+                input.feedback-form__input#phone(type="tel")
+
+                .feedback-form__submit-block
+                  button.feedback-form__submit(type="submit") Оставить заявку
+              
+      //- Подвал сайта
+      footer.footer#footer
+        .container.footer__container
+          .footer__row
+            .logo.footer__logo
+              img(src="./images/logo.svg" alt="логотип")
+              .logo__text Все права защищены
+
+            nav.nav.footer__nav
+              ul.nav__list
+                li.nav__item
+                  a.nav__link(href="#who-we") Кто мы?
+                li.nav__item
+                  a.nav__link(href="#services") Услуги
+                li.nav__item
+                  a.nav__link(href="#about-programm") Акселератор
+                li.nav__item
+                  a.nav__link(href="#events") Новости
+
+            address.footer__address.address
+              span.address__place Dubai, Single Business Tower 1503, Business Bay
+              a.address__email(href="mailto:Sales@innoma.vc") Sales@innoma.vc
+
+            
