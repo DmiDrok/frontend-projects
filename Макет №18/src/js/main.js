@@ -52,7 +52,6 @@ function setCorrectPopups() {
 
   triggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
-      console.log('Click')
       const popupSelector = trigger.dataset.popupSelector;
       const popup = document.querySelector(popupSelector);
       const closeButton = popup.querySelector('.close');
@@ -79,7 +78,10 @@ function setCorrectPopups() {
         }, 0);
       } else {
         popup.classList.add('active');
-        document.documentElement.classList.add('active');
+        // Без микротаски происходит сброс класса при нажатии на кнопку в шапке
+        setTimeout(() => {
+          document.documentElement.classList.add('active');
+        }, 0);
 
         document.addEventListener('click', hidePopup);
         closeButton?.addEventListener('click', hidePopup);

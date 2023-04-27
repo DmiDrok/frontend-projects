@@ -33,6 +33,7 @@ body {
   font-family: vars.$main-font;
   overflow: hidden;
   min-width: 300px;
+  width: 100vw;
   color: vars.$color-text;
   overflow-anchor: none;
 }

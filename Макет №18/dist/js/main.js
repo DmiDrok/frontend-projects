@@ -54,7 +54,6 @@ function setCorrectPopups() {
   var resetTriggers = document.querySelectorAll('.reset-trigger');
   triggers.forEach(function (trigger) {
     trigger.addEventListener('click', function () {
-      console.log('Click');
       var popupSelector = trigger.dataset.popupSelector;
       var popup = document.querySelector(popupSelector);
       var closeButton = popup.querySelector('.close');
@@ -77,7 +76,10 @@ function setCorrectPopups() {
         }, 0);
       } else {
         popup.classList.add('active');
-        document.documentElement.classList.add('active');
+        // Без микротаски происходит сброс класса при нажатии на кнопку в шапке
+        setTimeout(function () {
+          document.documentElement.classList.add('active');
+        }, 0);
         document.addEventListener('click', hidePopup);
         closeButton === null || closeButton === void 0 ? void 0 : closeButton.addEventListener('click', hidePopup);
       }
