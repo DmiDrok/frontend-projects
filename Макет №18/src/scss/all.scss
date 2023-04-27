@@ -10,6 +10,9 @@
   cursor: pointer;
   position: relative;
   transition: transform ease .1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__icon-block {
     position: absolute;
@@ -19,6 +22,7 @@
     padding: 25px;
     border: 2px dashed #fff;
     border-radius: 50%;
+    background: none;
   }
 
   &__rotate {
@@ -66,10 +70,11 @@
   &__inner {
     width: 20px;
     height: 20px;
-    // background: green;
     z-index: 1;
     position: relative;
-    transform: translateY(20%);
+    transform: translateY(-20%);
+    background: none;
+    border: none;
   }
 
   &__line {

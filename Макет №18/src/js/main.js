@@ -52,6 +52,7 @@ function setCorrectPopups() {
 
   triggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
+      console.log('Click')
       const popupSelector = trigger.dataset.popupSelector;
       const popup = document.querySelector(popupSelector);
       const closeButton = popup.querySelector('.close');

@@ -765,6 +765,9 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   position: relative;
   transition: transform ease 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-action__icon-block {
   position: absolute;
@@ -774,6 +777,7 @@ button.swiper-pagination-bullet {
   padding: 25px;
   border: 2px dashed #fff;
   border-radius: 50%;
+  background: none;
 }
 .main-action__rotate {
   animation-name: rotate;
@@ -815,7 +819,9 @@ button.swiper-pagination-bullet {
   height: 20px;
   z-index: 1;
   position: relative;
-  transform: translateY(20%);
+  transform: translateY(-20%);
+  background: none;
+  border: none;
 }
 .burger__line {
   position: absolute;
@@ -1634,6 +1640,7 @@ body {
   overflow: hidden;
   min-width: 300px;
   color: #5E5E5E;
+  overflow-anchor: none;
 }
 
 .wrapper {
@@ -1760,6 +1767,7 @@ section {
   font-size: 18px;
   line-height: 22px;
   position: relative;
+  vertical-align: middle;
 }
 .header-content__note i {
   color: #93DA49;
@@ -1938,7 +1946,7 @@ section {
     margin-left: 0;
   }
   .header .nav.active .burger__inner {
-    transform: translate(0, 40%);
+    transform: translate(0, 0);
   }
   .header .nav.active .burger__line_1 {
     transform: translate(0, 5px);
@@ -3634,6 +3642,7 @@ section {
 }
 .appeal__wrapper {
   margin-top: 65px;
+  text-align: center;
 }
 .appeal__video-container {
   position: relative;
@@ -4078,6 +4087,17 @@ section {
   position: relative;
   cursor: pointer;
 }
+.answers .question__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .answers .question__marker {
   position: absolute;
   left: -50px;
@@ -4129,7 +4149,7 @@ section {
     padding-left: 0;
     row-gap: 100px;
   }
-  .answers .question {
+  .answers .question__button {
     text-align: center;
   }
   .answers .question__marker {
@@ -4372,6 +4392,7 @@ section {
   font-size: 24px;
   line-height: 30px;
   display: flex;
+  align-items: center;
   column-gap: 30px;
   width: 70%;
 }
