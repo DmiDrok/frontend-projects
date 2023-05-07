@@ -1,0 +1,557 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Мультистория | Мастерская мультфильмов
+
+    style
+      include css/critical.css
+
+    link(rel="icon" href="./images/favicon.ico")
+
+    //- Swiper
+    script(defer src="./js/libs/swiper-bundle.min.js")
+
+    //- Lazyload
+    script(defer src="./js/libs/lazyload.min.js")
+
+    //- IntlTelInput
+    script(defer src="./js/libs/intlTelInput-utils.js")
+    script(defer src="./js/libs/intlTelInput.min.js")
+    
+    //- Jquery
+    script(defer src="./js/libs/jquery@3.6.4.min.js")
+
+    //- MagnificPopup
+    script(defer src="./js/libs/magnific-popup.min.js")
+
+    //- Gsap
+    script(defer src="./js/libs/ScrollTrigger.min.js")
+    script(defer src="./js/libs/gsap.min.js")
+
+    link(rel="stylesheet" href="./css/style.min.css")
+    script(defer src="./js/main.js")
+    script(defer src="./js/animations.js")
+  body
+    include includes/popup-form
+    include includes/popup-accept
+
+    .wrapper
+
+      header.header#header
+        .top-note
+          span.top-note__text #[strong Мультистория] - мастерская мультфильмов
+
+        .container.header__container
+          .header__row
+            .logo.header__logo
+              img(src="./images/logo-desktop.svg" alt="Логотип")
+
+            .contacts.header__contacts
+              ul.contacts__list
+                li.contacts-item.contacts__item
+                  img.contacts-item__icon(src="./images/map-pin-light.svg" alt="" aria-hidden="true")
+                  .contacts-item__info
+                    span.contacts-item__title г. Самара
+                    span.contacts-item__value ул. Печерская, 20А
+
+                li.contacts-item.contacts__item
+                  a.contacts-item__link(href="tel:89951310490")
+                    img.contacts-item__icon(src="./images/phone-icon-light.svg" alt="" aria-hidden="true")
+                    .contacts-item__info
+                      span.contacts-item__title 8 (995) 131-04-90
+                      span.contacts-item__value Позвоните нам
+
+            button.trigger.action-btn.header__get-action(type="button" data-popup-selector=".popup-form")
+              | Заказать звонок
+
+
+      main.main
+        section.welcome#welcome
+          .container.welcome__container
+            .welcome__row
+              .welcome__text-block
+                h1.welcome__title
+                  span.welcome__title_top Увлекательные #[br] мастер-классы для детей
+                  span.welcome__title_bottom Мультфильмы своими руками
+                  em.welcome__title_note Каждую неделю!
+
+                button.trigger.red-action-btn.welcome__action(type="button" data-popup-selector=".popup-form")
+                  | Узнайте расписание
+              
+              .welcome-slider
+                .welcome-slider__main.swiper
+                  .swiper-wrapper
+                    .swiper-slide.welcome-slider__slide
+                      img.welcome-slider__slide-content(src="./images/slide-photo-1.jpg" alt="Дети на мастер-классе")
+                    .swiper-slide.welcome-slider__slide
+                      img.welcome-slider__slide-content(src="./images/slide-photo-2.jpg" alt="Дети на мастер-классе")
+                    .swiper-slide.welcome-slider__slide
+                      img.welcome-slider__slide-content(src="./images/slide-photo-3.jpg" alt="Дети на мастер-классе")
+                    .swiper-slide.welcome-slider__slide
+                      img.welcome-slider__slide-content(src="./images/slide-photo-4.jpg" alt="Дети на мастер-классе")
+
+                .pagination.welcome-slider__pagination
+
+        section.what#what
+          .container.what__container
+            .what__row
+              .anim-decor
+                picture
+                  source(type="image/webp" srcset="./images/anim-1-default.webp")
+                  img.anim-decor__image.anim-decor__image_default(src="./images/anim-1-default.png" alt="" aria-hidden="true")
+
+                picture
+                  source(type="image/webp" srcset="./images/anim-1-active.webp")
+                  img.anim-decor__image.anim-decor__image_active(src="./images/anim-1-active.png" alt="" aria-hidden="true")
+
+              h2.what__title Что такое мастер-класс по мультипликации?
+
+              .what__wrapper
+                .what__text-block
+                  span.what__subtitle Это незабываемое событие для каждого ребенка 
+                  p.what__text На мастер-классе дети узнают о мультипликации, фантазируют, создают настоящий мультфильм, играют и веселятся!
+                  .decor-image
+                    .decor-image__add-image-block
+                      picture
+                        source(type="image/webp" srcset="#" data-srcset="./images/message-1.webp")
+                        img.lazy(src="#" data-src="./images/message-1.png" alt="" aria-hidden="true")
+                      p.decor-image__text.
+                        Снимать мультики - это весело!
+                    .decor-image__main-image-block
+                      picture
+                        source(type="image/webp" srcset="#" data-srcset="./images/lumi-large.webp")
+                        img.lazy(src="#" data-src="./images/lumi-large.png" alt="" aria-hidden="true")
+
+                .what__grid
+                  ul.what-list
+                    li.what-item
+                      img.what-item__icon(src="./images/what-icon-1.svg" alt="" aria-hidden="true")
+                      .what-item__info
+                        span.what-item__title от 1,5 часов
+                        span.what-item__value Длительность мастер-класса
+                    li.what-item
+                      img.what-item__icon(src="./images/what-icon-2.svg" alt="" aria-hidden="true")
+                      .what-item__info
+                        span.what-item__title 5-14 лет 
+                        span.what-item__value Программы для разных возрастов
+                    li.what-item
+                      img.what-item__icon(src="./images/what-icon-3.svg" alt="" aria-hidden="true")
+                      .what-item__info
+                        span.what-item__title Мультфильм своими руками
+                        span.what-item__value Удивите родных и друзей
+                    li.what-item
+                      img.what-item__icon(src="./images/what-icon-4.svg" alt="" aria-hidden="true")
+                      .what-item__info
+                        span.what-item__title от 300 руб.
+                        span.what-item__value Стоимость участия
+
+                  picture
+                    source(type="image/webp" srcset="#" data-srcset="./images/lumi-small.webp")
+                    img.lazy.what__image.what__image_small(src="#" data-src="./images/lumi-small.png" alt="Снимать мультики - это весело!")
+
+        section.actions#actions
+          .container.actions__container
+            .actions__row
+              h2.actions__title Что дети делают на мастер-классе?
+
+              .actions__grid
+                ul.actions-list
+                  li.action
+                    span.action__about придумывают сюжет
+
+                    .action__slider-container
+                      .action__slider.swiper
+                        .swiper-wrapper
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/thinking-1.jpg" alt="Дети придумывают сюжет")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/thinking-2.jpg" alt="Дети придумывают сюжет")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/thinking-3.jpg" alt="Дети придумывают сюжет")
+                  li.action
+                    span.action__about создают персонажей
+
+                    .action__slider-container
+                      .action__slider.swiper
+                        .swiper-wrapper
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/making-1.jpg" alt="Дети создают персонажей")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/making-2.jpg" alt="Дети создают персонажей")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/making-3.jpg" alt="Дети создают персонажей")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/making-4.jpg" alt="Дети создают персонажей")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/making-5.jpg" alt="Дети создают персонажей")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/making-6.jpg" alt="Дети создают персонажей")
+
+                  li.action
+                    span.action__about снимают мультфильм
+
+                    .action__slider-container
+                      .action__slider.swiper
+                        .swiper-wrapper
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/record-1.jpg" alt="Дети снимают мультфильм")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/record-2.jpg" alt="Дети снимают мультфильм")
+
+                  li.action
+                    span.action__about озвучивают героев
+
+                    .action__slider-container
+                      .action__slider.swiper
+                        .swiper-wrapper
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/speak-1.jpg" alt="Дети озвучивают героев")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/speak-2.jpg" alt="Дети озвучивают героев")
+
+                  li.action
+                    span.action__about вместе смотрят что получилось!
+
+                    .action__slider-container
+                      .action__slider.swiper
+                        .swiper-wrapper
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/see-1.jpg" alt="Дети вместе смотрят что получилось!")
+                          .swiper-slide
+                            img.lazy(data-swiper-parallax-duration="400" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.5" src="#" data-src="./images/see-2.jpg" alt="Дети вместе смотрят что получилось!")
+
+        section.points#points
+          .container.points__container
+            .points__row
+              h2.points__title Почему стоит побывать на мастер-классе по мультипликации?
+
+              .points__content
+                ul.points-list
+                  li.point
+                    .point__content
+                      span.point__title Это незабываемое событие для ребенка
+                      p.point__about Дети обожают мультики, а создать настоящий мультфильм своими руками - это просто восторг! 
+                  li.point
+                    .point__content
+                      span.point__title Это эксклюзивный и уникальный вид досуга на рынке детских услуг
+                      p.point__about Где ещё, как не в Мультистории, можно прийти и создать настоящий мультфильм своими руками?
+                  li.point
+                    .point__content
+                      span.point__title Дети пробуют новые виды творчества
+                      p.point__about Придумывание сюжета, изготовление декораций и персонажей, работа с техникой, съемка на мульт-станке и озвучка может открыть таланты вашего ребенка, о которых Вы даже подозревали.
+                  li.point
+                    .point__content
+                      span.point__title Мастер-классы ещё и очень полезны для детей
+                      p.point__about На мастер-классе дети делают мультфильмы не в компьютере, а в реальной жизни. Формируются социальные навыки развивается воображение, а также навыки коммуникации и совместного творчества с другими детьми.
+                  li.point
+                    .point__content
+                      span.point__title Интересные и познавательные факты о мультипликации
+                      p.point__about Что такое мультипликация? Когда и как был снят первый мультфильм? Какие техники мультипликации существуют? И мнногое-многое другое.
+                  
+        section.heroes#heroes
+          picture
+            source(type="image/webp" srcset="#" data-srcset="./images/pattern-stars.webp")
+            img.lazy.section-bg-img.heroes__bg(src="#" data-src="./images/pattern-stars.png" alt="" aria-hidden="true")
+
+          .container.heroes__container
+            .heroes__row
+              .anim-decor
+                picture
+                  source(type="image/webp" srcset="./images/anim-2-default.webp")
+                  img.anim-decor__image.anim-decor__image_default(src="./images/anim-2-default.png" alt="" aria-hidden="true")
+
+                picture
+                  source(type="image/webp" srcset="./images/anim-2-active.webp")
+                  img.anim-decor__image.anim-decor__image_active(src="./images/anim-2-active.png" alt="" aria-hidden="true")
+
+              h2.heroes__title Ваш ребенок встретится с любимыми героями
+              p.heroes__subtitle Динозавры, Пираты, LEGO, Гарри Поттер, Монстры на каникулах, Черепашки ниндзя, Мимимишки, Роботы, Миньоны, Космос, Щенячий патруль, Ледибаг, Супер-кот, Майнкрафт и многие-многие другие!
+
+              .heroes__content
+                //- Mobile
+                .heroes-slider.swiper
+                  .heroes-slider__wrapper.swiper-wrapper
+                    .heroes-slider__slide.swiper-slide
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-1.jpg", alt="Любимые герои детей")
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-2.jpg", alt="Любимые герои детей")
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-3.jpg", alt="Любимые герои детей")
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-4.jpg", alt="Любимые герои детей")
+                    .heroes-slider__slide.swiper-slide
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-5.jpg", alt="Любимые герои детей")
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-6.jpg", alt="Любимые герои детей")
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-7.jpg", alt="Любимые герои детей")
+                      img.lazy.heroes-slider__image(src="#" data-src="./images/heroes-slider-photo-8.jpg", alt="Любимые герои детей")
+        
+                .pagination.heroes-slider__pagination
+
+                //- Desktop
+                .heroes-line
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-1.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-2.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-3.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-4.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-5.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-6.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-7.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-8.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-1.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    img.lazy(src="#" data-src="./images/heroes-slider-photo-2.jpg" alt="Любимые герои детей")
+                  .heroes-line__col
+                    .heroes-line__description-block.heroes__description-block
+                      p.heroes__descr-text Запишитесь на мастер-класс с любимыми героями вашего ребенка
+                      button.trigger.red-action-btn.heroes__action(type="button" data-popup-selector=".popup-form") Записаться заранее
+
+              .heroes__description-block
+                p.heroes__descr-text Запишитесь на мастер-класс с любимыми героями вашего ребенка
+                button.trigger.red-action-btn.heroes__action(type="button" data-popup-selector=".popup-form") Записаться заранее
+
+        section.videos#videos
+          .container.videos__container
+            .videos__row
+              h2.videos__title Посмотрите мультфильмы с мастер-классов
+              
+              .videos__content
+                a.video-iframe-link(href="./videos/video.mp4")
+                  picture
+                    source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
+                    img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
+                  .video-iframe-link__play-icon
+                a.video-iframe-link(href="./videos/video.mp4")
+                  picture
+                    source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
+                    img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
+                  .video-iframe-link__play-icon
+                a.video-iframe-link(href="./videos/video.mp4")
+                  picture
+                    source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
+                    img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
+                  .video-iframe-link__play-icon
+                a.video-iframe-link(href="./videos/video.mp4")
+                  picture
+                    source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
+                    img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
+                  .video-iframe-link__play-icon
+                a.video-iframe-link(href="./videos/video.mp4")
+                  picture
+                    source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
+                    img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
+                  .video-iframe-link__play-icon
+
+        section.events#events
+          .container.events__container
+            .events__row
+              h2.visually-hidden Мероприятия
+
+              span.events__title А ещё у нас проходят...
+
+              .events__line
+                article.event
+                  .event__image-block
+                    img.lazy.event__image(src="#" data-src="./images/event-1.jpg" alt="Праздничные мастер-классы")
+
+                  .event__content-block
+                    h3.event__title Праздничные мастер-классы
+                    p.event__description
+                      | Игровая программа, приуроченная к календарным праздникам: Новому году, 23 февраля, Хэллоуину и другим...
+                article.event
+                  .event__image-block
+                    img.lazy.event__image(src="#" data-src="./images/event-2.jpg" alt="Тематические мастер-классы с квестами")
+
+                  .event__content-block
+                    h3.event__title Тематические мастер-классы с квестами
+                    p.event__description
+                      | “Ночь в Мультистории”, “Супергеройская вечеринка”, “Время сладкоежек” и другие. Веселимся и снимаем мультики!
+                article.event
+                  .event__image-block
+                    img.lazy.event__image(src="#" data-src="./images/event-3.jpg" alt="Головокружительный мульт-марафон")
+
+                  .event__content-block
+                    h3.event__title Головокружительный мульт-марафон
+                    p.event__description
+                      | Целая неделя тематических мастер-классов,  где дети превращаются в настоящих мультийцев
+                    
+              .events__motivation.motivation
+                .motivation__text-block
+                  span.motivation__title Запишитесь заранее
+                  p.motivation__text Узнайте о предстоящих мероприятиях и забронируйте участие 
+
+                .motivation__action-block
+                  .motivation__action-wrapper
+                    .anim-decor
+                      picture
+                        source(type="image/webp" srcset="./images/anim-3-default.webp")
+                        img.anim-decor__image.anim-decor__image_default(src="./images/anim-3-default.png" alt="" aria-hidden="true")
+                      picture
+                        source(type="image/webp" srcset="./images/anim-3-active.png")
+                        img.anim-decor__image.anim-decor__image_active(src="./images/anim-3-active.png" alt="" aria-hidden="true")
+                    button.trigger.red-action-btn.motivation__action(type="button" data-popup-selector=".popup-form") Узнать расписание
+
+        section.reviews#reviews
+          .container.reviews__container
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/attractions-bg.webp")
+              img.lazy.reviews__bg.reviews__bg_main(src="#" data-src="./images/attractions-bg.png" alt="" aria-hidden="true")
+            //- Летающий шар
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/fly-1.webp")
+              img.lazy.reviews__bg.reviews__bg_fly-1(src="#" data-src="./images/fly-1.png" alt="" aria-hidden="true")
+            //- Два шарика
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/fly-2.webp")
+              img.lazy.reviews__bg.reviews__bg_fly-2(src="#" data-src="./images/fly-2.png" alt="" aria-hidden="true")
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/fly-3.webp")
+              img.lazy.reviews__bg.reviews__bg_fly-3(src="#" data-src="./images/fly-3.png" alt="" aria-hidden="true")
+            //- Два облачка
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/fly-4.webp")
+              img.lazy.reviews__bg.reviews__bg_fly-4(src="#" data-src="./images/fly-4.png" alt="" aria-hidden="true")
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/fly-5.webp")
+              img.lazy.reviews__bg.reviews__bg_fly-5(src="#" data-src="./images/fly-5.png" alt="" aria-hidden="true")
+            //- Ластик
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/fly-6.webp")
+              img.lazy.reviews__bg.reviews__bg_fly-6(src="#" data-src="./images/fly-6.png" alt="" aria-hidden="true")
+
+
+            .reviews__row
+              h2.visually-hidden Отзывы
+
+              span.reviews__title Что говорят родители?
+
+              .reviews__wrapper
+                .reviews__slider-container
+                  .reviews-slider.swiper
+                    .reviews-slider__wrapper.swiper-wrapper
+                      article.reviews-slider__slide.review.review-1.swiper-slide
+                        h2.visually-hidden Отзыв о мастер-классе
+
+                        .review__wrapper
+                          p.review__text.
+                            Хочу оставить отзыв о мастер-классе
+                            “Симпсоны”. Ребенок сказал, что это был
+                            лучший день в его жизни. 💪🏻 Было
+                            интересно как ребенку, так и мне)) Как
+                            хорошо, что у нас в городе есть такое.
+                            Мы ещё обязательно придём! Большое
+                            спасибо! 👍🏻👍🏻👍🏻
+                          span.review__author Елена Надтока
+
+                      article.reviews-slider__slide.review.review-2.swiper-slide
+                        h2.visually-hidden Отзыв о мастер-классе
+
+                        .review__wrapper
+                          p.review__text.
+                            Добрый вечер!получили от вас
+                            суперский мультик, как мы
+                            безмерно счастливы!огромное
+                            спасибо за трепетное
+                            и чуткое отношение и конечно
+                            профессионализм!!!будем вас
+                            советовать друзьям!спасибо за
+                            праздник, за такой памятный
+                            подарок!спасибо!!!!!спасибо!!! 💐
+                            💐💐💐💐💐
+
+                      article.reviews-slider__slide.review.review-3.swiper-slide
+                        h2.visually-hidden Отзыв о мастер-классе
+
+                        .review__wrapper
+                          p.review__text.
+                            Приводили детей на МК “Кругосветка. Сначала
+                            немного насторожила продолжительность в три
+                            часа. Но всё прошло как на одном дыхании.
+
+                          span.review__author Ника Зварич
+
+                  .pagination.reviews-slider__pagination
+
+        section.enroll#enroll
+          .enroll__bg-block
+            picture
+              source(type="image/webp" srcset="#" data-srcset="./images/pattern-cherries.webp")
+              img.lazy.section-bg-img.enroll__bg(src="#" data-src="./images/pattern-cherries.png" alt="" aria-hidden="true")
+
+          .container.enroll__container
+            .enroll__row
+              .enroll__line
+                .form-block.enroll__form-block
+                  h1.form-block__title #[b Запишитесь] на ближайший мастер-класс #[b прямо сейчас]
+
+                  form#req-form.request-form(action="#" method="POST")
+                    input.request-form__input(type="text" name="name" placeholder="Имя" required)
+                    input.request-form__input(type="tel" name="tel-nums" placeholder="" required)
+                    button.trigger.red-action-btn.request-form__submit(type="submit" data-popup-selector=".popup-accept") Записаться
+                  
+                  .form-block__note
+                    | Нажимая на кнопку “Отправить”, 
+                    br
+                    | вы даете согласие на обработку своих персональных данных
+                  
+                .decor-image
+                  .decor-image__add-image-block
+                    picture
+                      source(type="image/webp" srcset="#" data-srcset="./images/message-2.webp")
+                      img.lazy(src="data:image/gif;base64,R0lGODlh2QH7AIAAAP///wAAACH5BAEAAAEALAAAAADZAfsAAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8btjRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr16wQUAADs=" data-src="./images/message-2.png" alt="" aria-hidden="true")
+                    p.decor-image__text.
+                      Каждый ребенок в детстве 
+                      ну просто обязан нарисовать дом, 
+                      вылепить дерево
+                      и снять мультфильм!
+                  .decor-image__main-image-block
+                    picture
+                      source(type="image/webp" srcset="#" data-srcset="./images/lumi-2.webp")
+                      img.lazy(src="data:image/gif;base64,R0lGODlhpQBxAIAAAP///wAAACH5BAEAAAEALAAAAAClAHEAAAKnjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPEycVwAAOw==" data-src="./images/lumi-2.png" alt="" aria-hidden="true")
+                    
+
+      footer.footer#footer
+        .container.footer__container
+          .footer__row
+            .footer__wrapper-top
+              .logo.footer__logo
+                img(src="./images/logo-desktop-light.svg" alt="логотип")
+
+              .contacts.footer__contacts
+                ul.contacts__list
+                  li.contacts-item.contacts__item
+                    a.contacts-item__link
+                      .contacts-item__icon-block
+                        img.contacts-item__icon(src="./images/map-pin-light.svg" alt="" aria-hidden="true")
+                      .contacts-item__info
+                        span.contacts-item__title г. Самара
+                        span.contacts-item__value ул. Печерская, 20А
+
+                  li.contacts-item.contacts__item
+                    a.contacts-item__link(href="tel:89951310490")
+                      .contacts-item__icon-block
+                        img.contacts-item__icon(src="./images/phone-icon-light.svg" alt="" aria-hidden="true")
+                      .contacts-item__info
+                        span.contacts-item__title 8 (995) 131-04-90
+                        span.contacts-item__value Позвоните нам
+
+                  li.contacts-item.contacts__item.large
+                    a.contacts-item__link(href="#")
+                      img.contacts-item__icon.large__icon(src="./images/inst-large-icon.svg" alt="" aria-hidden="true")
+                    .contacts-item__info
+                      //- a.contacts-item__title(href="#")
+
+        .footer__bottom
+          a(href="#" title="Наш инстаграмм")
+            img(src="./images/inst-small-icon.svg" alt="Наш инстаграмм")
+
+          span 2016 - 2020 Мультистория
+

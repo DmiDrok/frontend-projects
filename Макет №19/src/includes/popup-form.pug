@@ -1,0 +1,15 @@
+.popup.popup-form
+  .popup__row
+    .popup__wrapper.popup-form__wrapper
+      .form-block.enroll__form-block
+        span.form-block__title #[b Запишитесь] на ближайший мастер-класс #[b прямо сейчас]
+
+        form.request-form(action="#" method="POST")
+          input.request-form__input(type="text" name="name" placeholder="Имя" required)
+          input.request-form__input(type="tel" name="tel" placeholder="Телефон" required)
+          button.trigger.red-action-btn.request-form__submit(type="submit" data-popup-selector=".popup-accept") Отправить
+        
+        .form-block__note
+          | Нажимая на кнопку “Отправить”, 
+          br
+          | вы даете согласие на обработку своих персональных данных

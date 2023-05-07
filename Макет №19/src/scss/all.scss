@@ -1,0 +1,258 @@
+@use 'vars';
+
+// Красная кнопка действия
+.red-action-btn {
+  background: vars.$color-accent-1;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  padding: 4px 50px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity ease .2s, scale ease .1s, box-shadow ease .2s;
+
+
+  @media (pointer: fine) {
+    &:hover {
+      // opacity: .6;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    }
+  }
+  
+  &:active {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    scale: .95;
+  }
+}
+
+// Пагинация
+.pagination {
+  position: absolute !important;
+  bottom: -30px !important;
+  display: flex;
+  justify-content: center;
+  column-gap: 6px;
+
+  &-bullet {
+    width: 4px;
+    height: 4px;
+    display: block;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &-bullet_active {
+    background: vars.$color-accent-2;
+  }
+}
+
+// Ссылка на видео с iframe
+.video-iframe-link {
+  position: relative;
+  z-index: 100;
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  iframe,
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+  }
+
+  &__play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #FBF18D;
+    z-index: 10;
+    transition: background ease .2s, scale ease .1s;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 50%;
+      transform: translate(-30%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 0 15px 30px;
+      border-color: transparent transparent transparent vars.$color-accent-1;
+      display: block;
+    }
+  }
+
+  &:hover .video-iframe-link__play-icon {
+    background: vars.$color-accent-1;
+
+    &::before {
+      border-color: transparent transparent transparent #FBF18D;
+    }
+  }
+
+  &:active .video-iframe-link__play-icon {
+    scale: .94;
+  }
+}
+
+// Анимированные картинки
+.anim-decor {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(10%, -80%);
+  width: 212px;
+  height: 239px;
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    max-width: 100%;
+
+    &_active {
+      display: none;
+    }
+  }
+
+  &:hover .anim-decor__image_active {
+    display: block;
+  }
+  &:hover .anim-decor__image_default {
+    display: none;
+  }
+
+  @media (min-width: 910px) {
+    display: block !important;
+  }
+}
+
+// Скрытые элементы
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+// Блок с формой
+.form-block {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid #E8E8E8;
+  padding: 20px 35px;
+  max-width: 440px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+
+    b {
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+
+  &__note {
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 6px;
+    line-height: 10px;
+    text-align: center;
+  }
+
+   // Форма
+  .request-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &__input {
+      border: 1.5px solid #E8E8E8;
+      border-radius: 5px;
+      font-weight: 400;
+      font-size: 12px;
+      padding: 8px 12px;
+      width: 100%;
+    }
+
+    &__submit {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      padding: 4px 20px;
+      margin-top: 15px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    margin: 0;
+    padding: 50px 25px 28px 25px;
+
+    &__title {
+      margin-bottom: 26px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+
+      b {
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+
+    &__note {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: 980px) {
+    padding: 50px 55px 28px 55px;
+  }
+}
+
+// Задний фон секции
+.section-bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
