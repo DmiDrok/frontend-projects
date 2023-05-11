@@ -120,6 +120,11 @@
     scale: .94;
   }
 }
+.fslightbox-source {
+  max-width: 950px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
 
 // Анимированные картинки
 .anim-decor {
@@ -167,7 +172,7 @@
   border-radius: 20px;
   box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
   border: 1.5px solid #E8E8E8;
-  padding: 20px 35px;
+  padding: 20px 15px;
   max-width: 440px;
   margin: 0 auto;
 
@@ -216,6 +221,10 @@
       padding: 4px 20px;
       margin-top: 15px;
     }
+  }
+
+  @media (min-width: 300px) {
+    padding: 20px 35px;
   }
 
   @media (min-width: 880px) {

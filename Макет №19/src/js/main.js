@@ -165,6 +165,13 @@ function setCorrectFormValidity() {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      form.dataset.isValid = false;
+      const formData = new FormData(form);
+      fetch('/wp-admin/admin.php', {
+        body: formData,
+        method: 'POST'
+      });
+      form.reset();
     });
     
     Array.from(form.children).forEach((child) => {
@@ -206,9 +213,15 @@ function setCorrectIntlInputs() {
 
 // Всплывающие окна с видео
 function setCorrectVideoPopups() {
-  $('.video-iframe-link').magnificPopup({
-    type:'iframe',
-  });
+  for (let i = 1; i < 6; i++) {
+    const videoKey = `video-${i}`;
+
+    fsLightboxInstances[videoKey].props.onOpen = function() {
+      const video = fsLightboxInstances[videoKey].elements.container.querySelector('video');
+      video.volume = 0.5;
+      video.play();
+    }
+  }
 }
 
 console.log = {};

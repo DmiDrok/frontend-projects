@@ -21,11 +21,8 @@ html(lang="ru")
     script(defer src="./js/libs/intlTelInput-utils.js")
     script(defer src="./js/libs/intlTelInput.min.js")
     
-    //- Jquery
-    script(defer src="./js/libs/jquery@3.6.4.min.js")
-
-    //- MagnificPopup
-    script(defer src="./js/libs/magnific-popup.min.js")
+    //- Fslightbox
+    script(defer src="./js/libs/fslightbox.js")
 
     //- Gsap
     script(defer src="./js/libs/ScrollTrigger.min.js")
@@ -324,27 +321,27 @@ html(lang="ru")
               h2.videos__title Посмотрите мультфильмы с мастер-классов
               
               .videos__content
-                a.video-iframe-link(href="./videos/video.mp4")
+                a.video-iframe-link(href="./videos/video.mp4" data-fslightbox="video-1")
                   picture
                     source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
                     img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
                   .video-iframe-link__play-icon
-                a.video-iframe-link(href="./videos/video.mp4")
+                a.video-iframe-link(href="./videos/video.mp4" data-fslightbox="video-2")
                   picture
                     source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
                     img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
                   .video-iframe-link__play-icon
-                a.video-iframe-link(href="./videos/video.mp4")
+                a.video-iframe-link(href="./videos/video.mp4" data-fslightbox="video-3")
                   picture
                     source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
                     img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
                   .video-iframe-link__play-icon
-                a.video-iframe-link(href="./videos/video.mp4")
+                a.video-iframe-link(href="./videos/video.mp4" data-fslightbox="video-4")
                   picture
                     source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
                     img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
                   .video-iframe-link__play-icon
-                a.video-iframe-link(href="./videos/video.mp4")
+                a.video-iframe-link(href="./videos/video.mp4" data-fslightbox="video-5")
                   picture
                     source(type="image/webp" srcset="#" data-srcset="./images/pattern-video.webp")
                     img.lazy.video-iframe-link__bg(src="#" alt="" data-src="./images/pattern-video.jpg" aria-hidden="true")
@@ -360,7 +357,7 @@ html(lang="ru")
               .events__line
                 article.event
                   .event__image-block
-                    img.lazy.event__image(src="#" data-src="./images/event-1.jpg" alt="Праздничные мастер-классы")
+                    img.lazy.event__image(src="data:image/gif;base64,R0lGODlhGQAQAIAAAP///wAAACH5BAEAAAEALAAAAAAZABAAAAIRjI+py+0Po5y02ouz3rz7rxUAOw==" data-src="./images/event-1.jpg" alt="Праздничные мастер-классы")
 
                   .event__content-block
                     h3.event__title Праздничные мастер-классы
@@ -368,7 +365,7 @@ html(lang="ru")
                       | Игровая программа, приуроченная к календарным праздникам: Новому году, 23 февраля, Хэллоуину и другим...
                 article.event
                   .event__image-block
-                    img.lazy.event__image(src="#" data-src="./images/event-2.jpg" alt="Тематические мастер-классы с квестами")
+                    img.lazy.event__image(src="data:image/gif;base64,R0lGODlhGQAQAIAAAP///wAAACH5BAEAAAEALAAAAAAZABAAAAIRjI+py+0Po5y02ouz3rz7rxUAOw==" data-src="./images/event-2.jpg" alt="Тематические мастер-классы с квестами")
 
                   .event__content-block
                     h3.event__title Тематические мастер-классы с квестами
@@ -376,7 +373,7 @@ html(lang="ru")
                       | “Ночь в Мультистории”, “Супергеройская вечеринка”, “Время сладкоежек” и другие. Веселимся и снимаем мультики!
                 article.event
                   .event__image-block
-                    img.lazy.event__image(src="#" data-src="./images/event-3.jpg" alt="Головокружительный мульт-марафон")
+                    img.lazy.event__image(src="data:image/gif;base64,R0lGODlhGQAQAIAAAP///wAAACH5BAEAAAEALAAAAAAZABAAAAIRjI+py+0Po5y02ouz3rz7rxUAOw==" data-src="./images/event-3.jpg" alt="Головокружительный мульт-марафон")
 
                   .event__content-block
                     h3.event__title Головокружительный мульт-марафон
@@ -490,7 +487,7 @@ html(lang="ru")
             .enroll__row
               .enroll__line
                 .form-block.enroll__form-block
-                  h1.form-block__title #[b Запишитесь] на ближайший мастер-класс #[b прямо сейчас]
+                  h2.form-block__title #[b Запишитесь] на ближайший мастер-класс #[b прямо сейчас]
 
                   form#req-form.request-form(action="#" method="POST")
                     input.request-form__input(type="text" name="name" placeholder="Имя" required)
